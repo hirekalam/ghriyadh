@@ -40,10 +40,9 @@ export default function Header() {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
-          {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 space-x-reverse">
-            <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-xl">GH</span>
+            <div className="w-12 h-12 bg-gray-200 rounded-lg flex items-center justify-center border-2 border-dashed border-gray-400">
+              <span className="text-gray-500 text-xs">LOGO</span>
             </div>
             <div className="text-right">
               <h1 className="font-heading font-bold text-xl text-primary">Green House</h1>
@@ -51,26 +50,24 @@ export default function Header() {
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8 space-x-reverse">
+          <nav className="hidden lg:flex items-center space-x-6 space-x-reverse">
             {navigationItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-gray-800 hover:text-primary transition-colors duration-200 font-medium text-base"
+                className="text-gray-800 hover:text-primary transition-colors duration-200 font-medium text-base px-2"
               >
                 {t(item.label)}
               </Link>
             ))}
           </nav>
 
-          {/* Action Buttons */}
-          <div className="hidden lg:flex items-center space-x-4 space-x-reverse">
+          <div className="hidden lg:flex items-center space-x-3 space-x-reverse">
             <Button
               variant="outline"
               size="sm"
               onClick={toggleLanguage}
-              className="flex items-center space-x-2 space-x-reverse bg-white/80 border-gray-300 text-gray-800 hover:bg-gray-50"
+              className="flex items-center space-x-2 space-x-reverse bg-white/80 border-gray-300 text-gray-800 hover:bg-primary hover:text-white hover:border-primary transition-all duration-200"
             >
               <Globe className="w-4 h-4" />
               <span>{language === "ar" ? "EN" : "العربية"}</span>
@@ -79,7 +76,7 @@ export default function Header() {
             <Button
               variant="outline"
               size="sm"
-              className="flex items-center space-x-2 space-x-reverse bg-white/80 border-gray-300 text-gray-800 hover:bg-gray-50"
+              className="flex items-center space-x-2 space-x-reverse bg-white/80 border-gray-300 text-gray-800 hover:bg-primary hover:text-white hover:border-primary transition-all duration-200"
               asChild
             >
               <a href="tel:+966502394828">
@@ -89,10 +86,14 @@ export default function Header() {
             </Button>
 
             <Button
-              className="bg-gradient-to-r from-primary to-accent hover:from-accent hover:to-primary transition-all duration-300"
+              className="bg-gradient-to-r from-primary to-accent hover:from-accent hover:to-primary transition-all duration-300 ml-2"
               asChild
             >
-              <a href="https://whatsform.com/rt2jpf" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://wa.me/966502394828?text=مرحبا، أريد عرض سعر مجاني لخدمات تنسيق الحدائق"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {t("getFreeQuote")}
               </a>
             </Button>
@@ -109,26 +110,25 @@ export default function Header() {
           </Button>
         </div>
 
-        {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden mt-4 pb-4 border-t border-gray-200 bg-white/95 backdrop-blur-md rounded-lg">
-            <nav className="flex flex-col space-y-4 mt-4">
+          <div className="lg:hidden fixed inset-x-0 top-[80px] bg-white/98 backdrop-blur-md shadow-xl border-t border-gray-200 max-h-[calc(100vh-80px)] overflow-y-auto z-40">
+            <nav className="flex flex-col py-4">
               {navigationItems.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="text-gray-800 hover:text-primary transition-colors duration-200 font-medium py-2 px-4"
+                  className="text-gray-800 hover:text-primary hover:bg-gray-50 transition-all duration-200 font-medium py-3 px-6 border-b border-gray-100"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {t(item.label)}
                 </Link>
               ))}
-              <div className="flex flex-col space-y-2 pt-4 border-t border-gray-200 px-4">
+              <div className="flex flex-col space-y-3 pt-4 px-6">
                 <Button
                   variant="outline"
                   size="sm"
                   onClick={toggleLanguage}
-                  className="flex items-center justify-center space-x-2 space-x-reverse bg-white border-gray-300 text-gray-800"
+                  className="flex items-center justify-center space-x-2 space-x-reverse bg-white border-gray-300 text-gray-800 hover:bg-primary hover:text-white hover:border-primary transition-all duration-200"
                 >
                   <Globe className="w-4 h-4" />
                   <span>{language === "ar" ? "English" : "العربية"}</span>
@@ -137,7 +137,7 @@ export default function Header() {
                 <Button
                   variant="outline"
                   size="sm"
-                  className="flex items-center justify-center space-x-2 space-x-reverse bg-white border-gray-300 text-gray-800"
+                  className="flex items-center justify-center space-x-2 space-x-reverse bg-white border-gray-300 text-gray-800 hover:bg-primary hover:text-white hover:border-primary transition-all duration-200"
                   asChild
                 >
                   <a href="tel:+966502394828">
@@ -150,7 +150,11 @@ export default function Header() {
                   className="bg-gradient-to-r from-primary to-accent hover:from-accent hover:to-primary transition-all duration-300"
                   asChild
                 >
-                  <a href="https://whatsform.com/rt2jpf" target="_blank" rel="noopener noreferrer">
+                  <a
+                    href="https://wa.me/966502394828?text=مرحبا، أريد عرض سعر مجاني لخدمات تنسيق الحدائق"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     {t("getFreeQuote")}
                   </a>
                 </Button>

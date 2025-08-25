@@ -8,6 +8,7 @@ import { useLanguage } from "@/components/language-provider"
 export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [typewriterText, setTypewriterText] = useState("")
+  const [typewriterIndex, setTypewriterIndex] = useState(0)
   const { t } = useLanguage()
 
   const heroText = t("heroTypewriter")
@@ -37,18 +38,22 @@ export default function HeroSection() {
   ]
 
   useEffect(() => {
-    let i = 0
-    const timer = setInterval(() => {
-      if (i < heroText.length) {
-        setTypewriterText(heroText.slice(0, i + 1))
-        i++
-      } else {
-        clearInterval(timer)
-      }
-    }, 100)
+    const slideTimer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length)
+    }, 5000) // Auto-slide every 5 seconds
 
-    return () => clearInterval(timer)
-  }, [heroText])
+    return () => clearInterval(slideTimer)
+  }, [slides.length])
+
+  useEffect(() => {
+    if (typewriterIndex < heroText.length) {
+      const timer = setTimeout(() => {
+        setTypewriterText(heroText.slice(0, typewriterIndex + 1))
+        setTypewriterIndex(typewriterIndex + 1)
+      }, 80)
+      return () => clearTimeout(timer)
+    }
+  }, [typewriterIndex, heroText])
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length)
@@ -75,22 +80,6 @@ export default function HeroSection() {
         ))}
       </div>
 
-      {/* Floating Particles */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(20)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-2 h-2 bg-primary/30 rounded-full animate-float"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 3}s`,
-              animationDuration: `${3 + Math.random() * 2}s`,
-            }}
-          />
-        ))}
-      </div>
-
       {/* Content */}
       <div className="relative z-10 h-full flex items-center">
         <div className="container mx-auto px-4">
@@ -104,7 +93,7 @@ export default function HeroSection() {
             {/* Typewriter Text */}
             <div className="h-16 flex items-center justify-center mb-4">
               <h2 className="font-heading text-xl md:text-2xl lg:text-3xl font-semibold">
-                <span className="typewriter border-r-2 border-accent pr-1">{typewriterText}</span>
+                <span className="border-r-2 border-accent pr-1 animate-pulse">{typewriterText}</span>
               </h2>
             </div>
 
@@ -120,10 +109,14 @@ export default function HeroSection() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-accent to-primary hover:from-primary hover:to-accent text-white font-bold px-8 py-4 text-lg rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300 animate-pulse"
+                className="bg-gradient-to-r from-accent to-primary hover:from-primary hover:to-accent text-white font-bold px-8 py-4 text-lg rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300"
                 asChild
               >
-                <a href="https://whatsform.com/rt2jpf" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://wa.me/966502394828?text=مرحبا، أريد عرض سعر مجاني لخدمات تنسيق الحدائق"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   {t("getQuote")}
                 </a>
               </Button>
@@ -173,15 +166,6 @@ export default function HeroSection() {
           >
             <ChevronLeft className="w-5 h-5 text-white" />
           </Button>
-        </div>
-      </div>
-
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-20">
-        <div className="animate-bounce">
-          <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-white/70 rounded-full mt-2 animate-pulse" />
-          </div>
         </div>
       </div>
     </section>
