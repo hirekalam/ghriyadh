@@ -28,8 +28,8 @@ export default function Header() {
     { href: "/services", label: "services" },
     { href: "/projects", label: "projects" },
     { href: "/about", label: "about" },
-    { href: "/blog", label: "blog" },
     { href: "/contact", label: "contact" },
+    { href: "/blog", label: "blog" },
   ]
 
   return (
@@ -45,8 +45,8 @@ export default function Header() {
               <span className="text-gray-500 text-xs">LOGO</span>
             </div>
             <div className="text-right">
-              <h1 className="font-heading font-bold text-xl text-primary">Green House</h1>
-              <p className="text-sm text-gray-600">البيت الأخضر</p>
+              <h1 className="font-heading font-bold text-xl text-primary">البيت الأخضر</h1>
+              <p className="text-sm text-gray-600">Green House</p>
             </div>
           </Link>
 

@@ -23,8 +23,8 @@ const translations = {
     contact: "اتصل بنا",
 
     // Hero Section
-    heroTitle: "Green House",
-    heroSubtitle: "البيت الأخضر",
+    heroTitle: "البيت الأخضر",
+    heroSubtitle: "Green House",
     heroTypewriter: "شركة تنسيق حدائق الرياض، المملكة العربية السعودية",
     heroSubtext: "أفضل مقاولي المناظر الطبيعية في الرياض، المملكة العربية السعودية",
     getQuote: "احصل على عرض مجاني الآن",

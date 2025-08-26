@@ -133,7 +133,7 @@ export default function ServicesOverview() {
                 className="bg-white text-primary hover:bg-gray-100 font-bold px-8 py-4 text-lg rounded-full"
                 asChild
               >
-                <a href="https://whatsform.com/rt2jpf" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/966502394828?text=مرحبا، أريد عرض سعر مجاني لخدمات تنسيق الحدائق" target="_blank" rel="noopener noreferrer">
                   احجز استشارة مجانية
                 </a>
               </Button>
