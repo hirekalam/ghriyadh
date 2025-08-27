@@ -1,9 +1,0 @@
-{
-  "redirects": [
-    {
-      "source": "https://ghriyadh.vercel.app/(.*)",
-      "destination": "https://greenhouseriyadh.com/$1",
-      "permanent": true
-    }
-  ]
-}
