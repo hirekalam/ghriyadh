@@ -69,14 +69,17 @@ export default function Footer() {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2 space-x-reverse">
-              <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-xl">GH</span>
-              </div>
+              <Link href="/">
+                <div className="w-12 h-12 relative">
+                  <img src="/green house riyadh logo.webp" alt="Green House Riyadh Logo" />
+                </div>
+              </Link>
               <div className="text-right">
                 <h3 className="font-heading font-bold text-xl text-primary">Green House</h3>
                 <p className="text-sm text-muted-foreground">البيت الأخضر</p>
               </div>
             </div>
+            
             <p className="text-muted-foreground leading-relaxed">
               شركة رائدة في تنسيق الحدائق وتصميم المساحات الخضراء في الرياض والدمام. نقدم خدمات متميزة في العشب الصناعي
               والطبيعي والمظلات والنوافير.

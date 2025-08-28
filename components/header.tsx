@@ -10,8 +10,10 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const { language, setLanguage, t } = useLanguage()
+  const [isClient, setIsClient] = useState(false)
 
   useEffect(() => {
+    setIsClient(true)
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50)
     }
@@ -41,12 +43,12 @@ export default function Header() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-2 space-x-reverse">
-            <div className="w-12 h-12 bg-gray-200 rounded-lg flex items-center justify-center border-2 border-dashed border-gray-400">
-              <span className="text-gray-500 text-xs">LOGO</span>
+            <div className="w-12 h-12 relative">
+              <img src="/green house riyadh logo.webp" alt="Green House Riyadh Logo" />
             </div>
             <div className="text-right">
-              <h1 className="font-heading font-bold text-xl text-primary">البيت الأخضر</h1>
-              <p className="text-sm text-gray-600">Green House</p>
+              <h1 className="font-heading font-bold text-xl text-primary">{isClient ? t("البيت الأخضر") : "البيت الأخضر"}</h1>
+              <p className="text-sm text-gray-600">{isClient ? t("Green House Riyadh") : "Green House"}</p>
             </div>
           </Link>
 

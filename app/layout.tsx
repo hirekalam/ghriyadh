@@ -1,10 +1,9 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Cairo, Space_Grotesk } from "next/font/google"
+import { Cairo, Poppins, Space_Grotesk } from "next/font/google"
 import "./globals.css"
-import FirstTimePopup from "@/components/first-time-popup"
-import WhatsAppFloat from "@/components/whatsapp-float"
 import { LanguageProvider } from "@/components/language-provider"
+import DynamicComponents from "@/components/dynamic-components"
 
 const cairo = Cairo({
   subsets: ["arabic", "latin"],
@@ -16,7 +15,14 @@ const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-space-grotesk",
-})
+});
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-poppins",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+});
 
 export const metadata: Metadata = {
   title: "Green House | البيت الأخضر - شركة تنسيق حدائق الرياض",
@@ -40,26 +46,18 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="ar" dir="rtl" className={`${cairo.variable} ${spaceGrotesk.variable}`}>
+    <html lang="ar" dir="rtl" className={`${cairo.variable} ${spaceGrotesk.variable} ${poppins.variable}`}>
       <head>
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#059669" />
         <link rel="alternate" hrefLang="ar-SA" href="/" />
         <link rel="alternate" hrefLang="en" href="/en" />
-        <style>{`
-          html {
-            font-family: ${cairo.style.fontFamily};
-            --font-sans: ${cairo.variable};
-            --font-heading: ${spaceGrotesk.variable};
-          }
-        `}</style>
       </head>
-      <body className="font-sans antialiased">
+      <body className="font-sans antialiased" suppressHydrationWarning>
         <LanguageProvider>
           {children}
-          <FirstTimePopup />
-          <WhatsAppFloat />
+          <DynamicComponents />
         </LanguageProvider>
       </body>
     </html>

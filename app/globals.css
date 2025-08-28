@@ -119,6 +119,15 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+  }
+
+  [dir="rtl"] body {
+    font-family: var(--font-cairo);
+  }
+
+  [dir="ltr"] body {
+    font-family: var(--font-poppins);
   }
 }
 

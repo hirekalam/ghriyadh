@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { MessageCircle } from "lucide-react"
 
+
 export default function WhatsAppFloat() {
   const [isVisible, setIsVisible] = useState(false)
 
