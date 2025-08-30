@@ -16,22 +16,22 @@ export default function HeroSection() {
 
   const slides = [
     {
-      image: "/beautiful-landscaped-garden-with-artificial-grass-.png",
+      image: "/beautiful-landscaped-garden-with-artificial-grass-.webp",
       title: "slide1Title",
       subtitle: "slide1Subtitle",
     },
     {
-      image: "/modern-artificial-grass-installation-with-elegant-.png",
+      image: "/modern-artificial-grass-installation-with-elegant-.webp",
       title: "slide2Title",
       subtitle: "slide2Subtitle",
     },
     {
-      image: "/elegant-water-fountain-and-waterfall-in-luxury-gar.png",
+      image: "/elegant-water-fountain-and-waterfall-in-luxury-garden.webp.webp",
       title: "slide3Title",
       subtitle: "slide3Subtitle",
     },
     {
-      image: "/modern-garden-shades-and-pergolas-with-green-lands.png",
+      image: "/modern-garden-shades-and-pergolas-with-green-lands.webp",
       title: "slide4Title",
       subtitle: "slide4Subtitle",
     },
