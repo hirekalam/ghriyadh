@@ -1,4 +1,4 @@
 {
-    "outputDirectory": ".next",
+    "outputDirectory": "dist",
     "buildCommand": "next build"
 }
