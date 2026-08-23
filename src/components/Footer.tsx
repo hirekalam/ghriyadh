@@ -1,167 +1,151 @@
-import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin } from 'lucide-react';
+import Link from 'next/link';
+import { Phone, Mail, MapPin, MessageCircle } from 'lucide-react';
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
+  const servicesLinks = [
+    { label: 'تنسيق حدائق منزلية', href: '/services/garden-landscaping-riyadh' },
+    { label: 'تنسيق أسطح الفلل بالنرجس', href: '/services/rooftop-landscaping' },
+    { label: 'تركيب ثيل صناعي فاخر', href: '/services/artificial-grass' },
+    { label: 'زراعة عشب طبيعي هولندي', href: '/services/natural-grass' },
+    { label: 'تركيب شلالات ونوافير', href: '/services/waterfalls-fountains' },
+    { label: 'شبكات ري أوتوماتيكية ذكية', href: '/services/automatic-irrigation' },
+    { label: 'جلسات خارجية وبرجولات', href: '/services/pergolas-shades' },
+  ];
+
   const quickLinks = [
-    { label: 'الرئيسية', href: '/' },
-    { label: 'الخدمات', href: '/services' },
-    { label: 'المشاريع', href: '/projects' },
     { label: 'من نحن', href: '/about' },
-    { label: 'المدونة', href: '/blog' },
-    { label: 'اتصل بنا', href: '/contact' },
-  ];
-
-  const services = [
-    { label: 'تنسيق الحدائق', href: '/services/garden-design' },
-    { label: 'العشب الصناعي', href: '/services/artificial-grass' },
-    { label: 'العشب الطبيعي', href: '/services/natural-grass' },
-    { label: 'المظلات والسواتر', href: '/services/shade-structures' },
-    { label: 'الري والنوافير', href: '/services/irrigation' },
-    { label: 'الصيانة الدورية', href: '/services/maintenance' },
-  ];
-
-  const legalLinks = [
-    { label: 'سياسة الخصوصية', href: '/privacy-policy' },
-    { label: 'شروط الاستخدام', href: '/terms-of-service' },
-    { label: 'سياسة الكوكيز', href: '/cookie-policy' },
-    { label: 'إخلاء المسؤولية', href: '/disclaimer' },
+    { label: 'لماذا البيت الأخضر', href: '/why-us' },
+    { label: 'آلية العمل والخطوات', href: '/process' },
+    { label: 'المعرض وأعمالنا', href: '/gallery' },
     { label: 'الأسئلة الشائعة', href: '/faq' },
+    { label: 'مدونة تنسيق الحدائق', href: '/blog' },
+    { label: 'تواصل معنا مباشرة', href: '/contact' },
+    { label: 'خريطة الموقع', href: '/sitemap' },
+  ];
+
+  const neighborhoods = [
+    'النرجس', 'الياسمين', 'الصحافة', 'العارض', 'الملقا', 'حطين', 'القيروان', 'النخيل',
+    'الغدير', 'الورود', 'الرحمانية', 'الرائد', 'المحمدية', 'العليا', 'السليمانية', 'المروج',
+    'التعاون', 'قرطبة', 'الندى', 'الروضة', 'الشهداء', 'غرناطة', 'الرمال', 'اشبيلية',
+    'المونسية', 'اليرموك', 'الخليج', 'النهضة', 'ظهرة لبن', 'عرقة', 'أم الحمام', 'لبن'
   ];
 
   return (
-    <footer className="relative bg-[#F4F7F5] py-16 lg:py-20 z-[200]">
-      <div className="w-full px-6 lg:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
-          {/* Brand Column */}
-          <div className="lg:col-span-1">
-            <Link to="/" className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 rounded-full bg-[#0B3A2E] flex items-center justify-center">
-                <span className="text-[#D4A03A] font-bold text-xl">G</span>
-              </div>
-              <span className="text-[#0B3A2E] font-bold text-2xl">Green House</span>
-            </Link>
-            <p className="text-[#0B3A2E]/70 mb-6 leading-relaxed">
-              حدائق تروي قصة… من الرياض.
-              <br />
-              نحول أحلامك إلى واقع أخضر.
-            </p>
-            {/* Social Links */}
-            <div className="flex items-center gap-4">
-              <a
-                href="https://www.facebook.com/greenhouseriyadh7/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-[#0B3A2E]/10 flex items-center justify-center text-[#0B3A2E] hover:bg-[#0B3A2E] hover:text-[#F4F7F5] transition-colors"
-              >
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a
-                href="https://www.instagram.com/greenhouse_riyadh/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-[#0B3A2E]/10 flex items-center justify-center text-[#0B3A2E] hover:bg-[#0B3A2E] hover:text-[#F4F7F5] transition-colors"
-              >
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a
-                href="https://www.linkedin.com/company/greenhouseriyadh/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-[#0B3A2E]/10 flex items-center justify-center text-[#0B3A2E] hover:bg-[#0B3A2E] hover:text-[#F4F7F5] transition-colors"
-              >
-                <Linkedin className="w-5 h-5" />
-              </a>
+    <footer className="bg-white border-t border-charcoal/5 pt-16 pb-24 lg:pb-12 text-sm text-muted-grey">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        
+        {/* Brand Information */}
+        <div className="flex flex-col gap-5">
+          <Link href="/" className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-xl bg-primary-deep flex items-center justify-center">
+              <span className="text-warm-white font-black text-lg">G</span>
             </div>
-          </div>
+            <div className="flex flex-col">
+              <span className="text-primary-deep font-black text-base leading-tight">
+                Green House
+              </span>
+              <span className="text-botanical font-bold text-xs leading-none">
+                البيت الأخضر
+              </span>
+            </div>
+          </Link>
+          
+          <p className="text-charcoal/80 leading-relaxed text-justify">
+            نقدم حلولاً هندسية مبتكرة لتصميم وتنسيق المساحات الخارجية في الرياض. نسعى لتطوير حدائق الفلل، الأسطح، والجلسات الخارجية بروح عصرية توافق البيئة السعودية وترشّد استهلاك المياه.
+          </p>
 
-          {/* Quick Links */}
-          <div>
-            <h4 className="text-[#0B3A2E] font-bold text-lg mb-6">روابط سريعة</h4>
-            <ul className="space-y-3">
-              {quickLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    to={link.href}
-                    className="text-[#0B3A2E]/70 hover:text-[#0B3A2E] transition-colors"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Services */}
-          <div>
-            <h4 className="text-[#0B3A2E] font-bold text-lg mb-6">خدماتنا</h4>
-            <ul className="space-y-3">
-              {services.map((service) => (
-                <li key={service.href}>
-                  <Link
-                    to={service.href}
-                    className="text-[#0B3A2E]/70 hover:text-[#0B3A2E] transition-colors"
-                  >
-                    {service.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Contact Info */}
-          <div>
-            <h4 className="text-[#0B3A2E] font-bold text-lg mb-6">تواصل معنا</h4>
-            <ul className="space-y-4">
-              <li>
-                <a
-                  href="tel:+966502394828"
-                  className="flex items-center gap-3 text-[#0B3A2E]/70 hover:text-[#0B3A2E] transition-colors"
-                >
-                  <Phone className="w-5 h-5 text-[#D4A03A]" />
-                  <span>+966 50 239 4828</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="mailto:riyadhgreenhouse@gmail.com"
-                  className="flex items-center gap-3 text-[#0B3A2E]/70 hover:text-[#0B3A2E] transition-colors"
-                >
-                  <Mail className="w-5 h-5 text-[#D4A03A]" />
-                  <span>riyadhgreenhouse@gmail.com</span>
-                </a>
-              </li>
-              <li>
-                <div className="flex items-start gap-3 text-[#0B3A2E]/70">
-                  <MapPin className="w-5 h-5 text-[#D4A03A] flex-shrink-0 mt-1" />
-                  <span>
-                    شارع الفريان، حي اليمامة
-                    <br />
-                    الرياض، المملكة العربية السعودية
-                  </span>
-                </div>
-              </li>
-            </ul>
+          <div className="flex flex-col gap-3 mt-2 text-charcoal/90">
+            <a href="tel:0557401773" className="flex items-center gap-3 hover:text-primary-deep transition-colors">
+              <Phone className="w-4 h-4 text-botanical" />
+              <span className="dir-ltr font-bold">0557401773</span>
+            </a>
+            <a href="https://wa.me/966557401773" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:text-primary-deep transition-colors">
+              <MessageCircle className="w-4 h-4 text-botanical" />
+              <span className="dir-ltr font-bold">+966557401773</span>
+            </a>
+            <a href="mailto:riyadhgreenhouse@gmail.com" className="flex items-center gap-3 hover:text-primary-deep transition-colors">
+              <Mail className="w-4 h-4 text-botanical" />
+              <span className="font-semibold">riyadhgreenhouse@gmail.com</span>
+            </a>
+            <div className="flex items-start gap-3">
+              <MapPin className="w-4 h-4 text-botanical mt-0.5" />
+              <span>الرياض، المملكة العربية السعودية</span>
+            </div>
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="mt-16 pt-8 border-t border-[#0B3A2E]/10">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-[#0B3A2E]/60 text-sm">
-              © 2026 Green House. جميع الحقوق محفوظة.
-            </p>
-            <div className="flex items-center gap-6">
-              {legalLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  to={link.href}
-                  className="text-[#0B3A2E]/60 text-sm hover:text-[#0B3A2E] transition-colors"
-                >
+        {/* Services List */}
+        <div className="flex flex-col gap-4">
+          <h3 className="text-primary-deep font-black text-base border-r-2 border-botanical pr-3">
+            خدماتنا الرئيسية
+          </h3>
+          <ul className="flex flex-col gap-2.5">
+            {servicesLinks.map((link) => (
+              <li key={link.href}>
+                <Link href={link.href} className="hover:text-primary-deep hover:translate-x-[-4px] transition-all inline-block font-semibold">
                   {link.label}
                 </Link>
-              ))}
-            </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Quick Links */}
+        <div className="flex flex-col gap-4">
+          <h3 className="text-primary-deep font-black text-base border-r-2 border-botanical pr-3">
+            روابط سريعة
+          </h3>
+          <ul className="flex flex-col gap-2.5">
+            {quickLinks.map((link) => (
+              <li key={link.href}>
+                <Link href={link.href} className="hover:text-primary-deep hover:translate-x-[-4px] transition-all inline-block font-semibold">
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Riyadh Local SEO Areas */}
+        <div className="flex flex-col gap-4">
+          <h3 className="text-primary-deep font-black text-base border-r-2 border-botanical pr-3">
+            مناطق الخدمة في الرياض
+          </h3>
+          <p className="text-xs text-muted-grey leading-relaxed text-justify mb-2">
+            نقدم خدماتنا الاحترافية في تصميم وتنسيق الحدائق وتركيب الثيل الطبيعي والصناعي في كافة أحياء شمال وشرق وغرب وجنوب الرياض، ونستقبل طلبات الفلل والقصور والمساحات الخارجية في المناطق التالية:
+          </p>
+          <div className="flex flex-wrap gap-1.5 max-h-48 overflow-y-auto pr-1">
+            {neighborhoods.map((area, idx) => (
+              <span key={idx} className="text-[11px] bg-warm-white text-charcoal/80 px-2 py-0.5 rounded border border-charcoal/5">
+                حي {area}
+              </span>
+            ))}
           </div>
+        </div>
+
+      </div>
+
+      {/* Local SEO Footer Paragraph */}
+      <div className="max-w-7xl mx-auto px-6 md:px-12 mt-12 pt-8 border-t border-charcoal/5">
+        <p className="text-xs text-muted-grey/80 leading-relaxed text-justify">
+          بصفتنا شركة تنسيق حدائق بالرياض (البيت الأخضر)، نلتزم بتقديم تصاميم مخصصة تراعي طبيعة التربة والطقس ودرجات الحرارة المرتفعة في المملكة العربية السعودية. تمتد مشاريعنا لتركيب العشب الصناعي عالي الجودة المقاوم للأشعة فوق البنفسجية، وزراعة المسطحات الخضراء، وتشييد الشلالات الجدارية الجذابة والنوافير المنزلية، بالإضافة لتصميم البرجولات الخشبية والمعدنية الأنيقة في أحياء شمال الرياض كالياسمين والنرجس والملقا وحطين والصحافة والعارض والرمال، لنجعل من مساحتك الخارجية واحة متكاملة تجمع الجمال والاستدامة.
+        </p>
+      </div>
+
+      {/* Copyrights and Privacy */}
+      <div className="max-w-7xl mx-auto px-6 md:px-12 mt-8 pt-6 border-t border-charcoal/5 flex flex-col md:flex-row items-center justify-between gap-4 text-xs">
+        <p className="font-semibold text-charcoal/70 text-center md:text-right">
+          &copy; {currentYear} البيت الأخضر (Green House). جميع الحقوق محفوظة.
+        </p>
+        <div className="flex items-center gap-5">
+          <Link href="/privacy" className="hover:text-primary-deep font-semibold">
+            سياسة الخصوصية
+          </Link>
+          <Link href="/terms" className="hover:text-primary-deep font-semibold">
+            الشروط والأحكام
+          </Link>
         </div>
       </div>
     </footer>

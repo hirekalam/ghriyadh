@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Tajawal:wght@300;400;500;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Premium Architecture Studio Theme - Light Palette */
+    --background: 80 25% 98%; /* Warm off-white #F7F8F5 */
+    --foreground: 160 17% 12%; /* Charcoal #1C2421 */
+    
+    --card: 0 0% 100%; /* Pure White */
+    --card-foreground: 160 17% 12%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 160 17% 12%;
+    
+    --primary: 162 46% 17%; /* Deep Green #173F32 */
+    --primary-foreground: 80 25% 98%;
+    
+    --secondary: 151 39% 30%; /* Botanical Green #2F6B4F */
+    --secondary-foreground: 0 0% 100%;
+    
+    --muted: 150 10% 95%; /* Muted Grey-green #F0F2F0 */
+    --muted-foreground: 153 4% 43%; /* Muted Grey #68716C */
+    
+    --accent: 197 59% 45%; /* Water Blue #2F91B7 */
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 150 10% 88%;
+    --input: 150 10% 88%;
+    --ring: 162 46% 17%;
+    
+    --radius: 1rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-warm-white text-charcoal;
+    font-family: 'Tajawal', 'Inter', sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom premium scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F7F8F5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2F6B4F;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #173F32;
+}
+
+/* Translucent Glass effects */
+.glass-header {
+  background: rgba(247, 248, 245, 0.8);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(28, 36, 33, 0.05);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(28, 36, 33, 0.05);
+}
+
+/* Text layouts */
+.text-stroke-title {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(23, 63, 50, 0.2);
+}
+
+/* Smooth zoom for images */
+.zoom-image-container {
+  overflow: hidden;
+}
+.zoom-image-container img {
+  transition: transform 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.zoom-image-container:hover img {
+  transform: scale(1.05);
+}

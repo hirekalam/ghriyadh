@@ -1,17 +1,29 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ["class"],
-  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  content: [
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
   theme: {
     extend: {
       fontFamily: {
-        cairo: ['Cairo', 'sans-serif'],
+        sans: ['Tajawal', 'sans-serif'],
+        tajawal: ['Tajawal', 'sans-serif'],
+        latin: ['Inter', 'sans-serif'],
       },
       colors: {
-        'deep-green': '#0B3A2E',
-        'off-white': '#F4F7F5',
-        'gold': '#D4A03A',
-        'parrot-green': '#2D5A3D',
+        // Redesigned premium palette
+        'primary-deep': '#173F32',
+        'botanical': '#2F6B4F',
+        'fresh-green': '#6FAF73',
+        'water-blue': '#2F91B7',
+        'soft-blue': '#7BC4D6',
+        'warm-white': '#F7F8F5',
+        'charcoal': '#1C2421',
+        'muted-grey': '#68716C',
+        
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -26,8 +38,8 @@ module.exports = {
           foreground: "hsl(var(--secondary-foreground))",
         },
         destructive: {
-          DEFAULT: "hsl(var(--destructive) / <alpha-value>)",
-          foreground: "hsl(var(--destructive-foreground) / <alpha-value>)",
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
         },
         muted: {
           DEFAULT: "hsl(var(--muted))",
@@ -57,9 +69,9 @@ module.exports = {
       },
       boxShadow: {
         xs: "0 1px 2px 0 rgb(0 0 0 / 0.05)",
-        'card': '0 18px 40px rgba(0,0,0,0.18)',
-        'card-hover': '0 24px 48px rgba(0,0,0,0.25)',
-        'gold': '0 8px 24px rgba(212, 160, 58, 0.35)',
+        'card': '0 10px 30px -10px rgba(23, 63, 50, 0.08)',
+        'card-hover': '0 20px 40px -15px rgba(23, 63, 50, 0.15)',
+        'premium-glow': '0 10px 30px rgba(47, 107, 79, 0.1)',
       },
       keyframes: {
         "accordion-down": {
@@ -70,25 +82,15 @@ module.exports = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
-        "caret-blink": {
-          "0%,70%,100%": { opacity: "1" },
-          "20%,50%": { opacity: "0" },
-        },
-        "float": {
-          "0%, 100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(-10px)" },
-        },
-        "pulse-glow": {
-          "0%, 100%": { boxShadow: "0 0 20px rgba(212, 160, 58, 0.4)" },
-          "50%": { boxShadow: "0 0 40px rgba(212, 160, 58, 0.7)" },
-        },
+        "fade-in-up": {
+          "0%": { opacity: 0, transform: "translateY(15px)" },
+          "100%": { opacity: 1, transform: "translateY(0)" }
+        }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "caret-blink": "caret-blink 1.25s ease-out infinite",
-        "float": "float 3s ease-in-out infinite",
-        "pulse-glow": "pulse-glow 2s ease-in-out infinite",
+        "fade-in-up": "fade-in-up 0.6s ease-out forwards",
       },
     },
   },
