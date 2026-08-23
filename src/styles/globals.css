@@ -1,6 +1,7 @@
 /* ============================================
-   GREEN HOUSE - Apple-Level Premium Design
-   Theme: Green & Water Blue
+   GREEN HOUSE - Premium Organic Warm Design
+   Palette: #468432 #9AD872 #FFEF91 #FFA02E
+   Inspired by: The Healthy Home
    ============================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Tajawal:wght@300;400;500;700;800;900&display=swap');
@@ -11,27 +12,26 @@
 
 @layer base {
   :root {
-    /* Premium Color System - Green & Water Blue */
-    --background: 80 25% 98%;
+    --background: 40 30% 98%;
     --foreground: 160 17% 12%;
     --card: 0 0% 100%;
     --card-foreground: 160 17% 12%;
     --popover: 0 0% 100%;
     --popover-foreground: 160 17% 12%;
-    --primary: 162 46% 17%;
-    --primary-foreground: 80 25% 98%;
-    --secondary: 151 39% 30%;
-    --secondary-foreground: 0 0% 100%;
-    --muted: 150 10% 95%;
+    --primary: 108 46% 32%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 92 52% 65%;
+    --secondary-foreground: 108 46% 16%;
+    --muted: 40 30% 96%;
     --muted-foreground: 153 4% 43%;
-    --accent: 197 59% 45%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 30 100% 65%;
+    --accent-foreground: 108 46% 16%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 150 10% 88%;
-    --input: 150 10% 88%;
-    --ring: 162 46% 17%;
-    --radius: 1rem;
+    --border: 40 20% 88%;
+    --input: 40 20% 88%;
+    --ring: 108 46% 32%;
+    --radius: 0.875rem;
   }
 }
 
@@ -52,45 +52,44 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
-  /* Apple-style selection */
   ::selection {
-    background: rgba(47, 145, 183, 0.2);
-    color: #173F32;
+    background: rgba(255, 239, 145, 0.35);
+    color: #2D5E1A;
   }
 }
 
 /* ============================================
-   PREMIUM SCROLLBAR - Apple-style minimal
+   WARM-ORGANIC SCROLLBAR
    ============================================ */
 ::-webkit-scrollbar {
   width: 5px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #F7F8F5;
+  background: #FDFBF7;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #2F6B4F, #2F91B7);
+  background: linear-gradient(180deg, #9AD872, #468432);
   border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #173F32, #1A6B8A);
+  background: linear-gradient(180deg, #468432, #2D5E1A);
 }
 
 /* ============================================
-   APPLE-LEVEL GLASSMORPHISM
+   GLASSMORPHISM - Warm Organic
    ============================================ */
 .glass-header {
-  background: rgba(247, 248, 245, 0.82);
+  background: rgba(253, 251, 247, 0.85);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(28, 36, 33, 0.06);
+  border-bottom: 1px solid rgba(28, 36, 33, 0.05);
 }
 
 .glass-header-dark {
-  background: rgba(23, 63, 50, 0.85);
+  background: rgba(70, 132, 50, 0.9);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -100,47 +99,42 @@
   background: rgba(255, 255, 255, 0.75);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(28, 36, 33, 0.06);
-}
-
-.glass-card-dark {
-  background: rgba(23, 63, 50, 0.6);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(28, 36, 33, 0.05);
 }
 
 /* ============================================
-   APPLE-STYLE TEXT EFFECTS
+   TEXT EFFECTS - Warm Organic
    ============================================ */
-.text-stroke-title {
-  color: transparent;
-  -webkit-text-stroke: 1.5px rgba(23, 63, 50, 0.15);
-}
-
-.text-gradient-green {
-  background: linear-gradient(135deg, #173F32, #2F6B4F);
+.text-gradient-forest {
+  background: linear-gradient(135deg, #468432, #2D5E1A);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-.text-gradient-water {
-  background: linear-gradient(135deg, #2F91B7, #7BC4D6);
+.text-gradient-leaf {
+  background: linear-gradient(135deg, #9AD872, #468432);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-warm {
+  background: linear-gradient(135deg, #FFA02E, #FFEF91);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .text-gradient-mixed {
-  background: linear-gradient(135deg, #173F32 0%, #2F6B4F 40%, #2F91B7 100%);
+  background: linear-gradient(135deg, #468432 0%, #9AD872 40%, #FFEF91 70%, #FFA02E 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 /* ============================================
-   APPLE-LEVEL IMAGE & VIDEO EFFECTS
+   IMAGE EFFECTS
    ============================================ */
 .img-premium {
   transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -164,7 +158,7 @@
 }
 
 /* ============================================
-   APPLE-STYLE ANIMATIONS
+   ANIMATIONS
    ============================================ */
 @keyframes fade-up {
   0% {
@@ -214,11 +208,11 @@
 
 @keyframes shimmer {
   0% {
-    background-position: -200% center;
+    backgroundPosition: "-200% center";
   }
 
   100% {
-    background-position: 200% center;
+    backgroundPosition: "200% center";
   }
 }
 
@@ -234,78 +228,78 @@
   }
 }
 
-@keyframes pulse-water {
+@keyframes pulse-leaf {
 
   0%,
   100% {
-    box-shadow: 0 0 0 0 rgba(47, 145, 183, 0.4);
+    box-shadow: 0 0 0 0 rgba(154, 216, 114, 0.4);
   }
 
   50% {
-    box-shadow: 0 0 0 12px rgba(47, 145, 183, 0);
+    box-shadow: 0 0 0 12px rgba(154, 216, 114, 0);
   }
 }
 
 @keyframes gradient-rotate {
   0% {
-    background-position: 0% 50%;
+    backgroundPosition: "0% 50%";
   }
 
   50% {
-    background-position: 100% 50%;
+    backgroundPosition: "100% 50%";
   }
 
   100% {
-    background-position: 0% 50%;
+    backgroundPosition: "0% 50%";
   }
 }
 
 /* ============================================
-   APPLE-STYLE BUTTON ANIMATIONS
+   BUTTON STYLES
    ============================================ */
-.btn-apple {
+.btn-premium {
   @apply inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full font-bold text-sm;
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   position: relative;
   overflow: hidden;
 }
 
-.btn-apple::after {
+.btn-premium::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.2), transparent);
   transform: translateX(-100%);
   transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.btn-apple:hover::after {
+.btn-premium:hover::after {
   transform: translateX(100%);
 }
 
-.btn-apple:active {
+.btn-premium:active {
   transform: scale(0.97);
 }
 
 /* ============================================
-   APPLE-STYLE GRID & SECTION DIVIDERS
+   SECTION DIVIDERS
    ============================================ */
 .section-divider {
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(28, 36, 33, 0.06), transparent);
+  background: linear-gradient(90deg, transparent, rgba(28, 36, 33, 0.05), transparent);
 }
 
 /* ============================================
-   APPLE-STYLE FOCUS RING
+   FOCUS RING
    ============================================ */
 *:focus-visible {
-  outline: 2px solid #2F91B7;
+  outline: 2px solid #FFA02E;
   outline-offset: 2px;
   border-radius: 8px;
 }
 
 /* ============================================
-   APPLE-STYLE NUMBER DISPLAY
+   NUMBER DISPLAY
    ============================================ */
 .number-display {
   font-feature-settings: "tnum";
@@ -313,41 +307,75 @@
 }
 
 /* ============================================
-   WATER BLUE ACCENT GLOW
+   GLOW EFFECTS
    ============================================ */
-.water-glow {
-  box-shadow: 0 0 30px rgba(47, 145, 183, 0.15);
+.leaf-glow {
+  box-shadow: 0 0 30px rgba(154, 216, 114, 0.15);
 }
 
-.green-glow {
-  box-shadow: 0 0 30px rgba(47, 107, 79, 0.15);
+.warm-glow {
+  box-shadow: 0 0 30px rgba(255, 160, 46, 0.15);
+}
+
+.forest-glow {
+  box-shadow: 0 0 30px rgba(70, 132, 50, 0.15);
 }
 
 /* ============================================
-   APPLE-STYLE GRADIENT BORDERS
+   GRADIENT BORDERS
    ============================================ */
 .gradient-border {
   border: 1.5px solid transparent;
   background-origin: border-box;
   background-clip: padding-box, border-box;
-  background-image: linear-gradient(135deg, #F7F8F5, #F7F8F5),
-    linear-gradient(135deg, #2F6B4F, #2F91B7);
+  background-image: linear-gradient(135deg, #FDFBF7, #FDFBF7),
+    linear-gradient(135deg, #9AD872, #FFA02E);
 }
 
 /* ============================================
-   RESPONSIVE TYPOGRAPHY HELPERS
+   TYPOGRAPHY HELPERS
    ============================================ */
-.apple-title {
+.premium-title {
   @apply text-4xl md:text-5xl lg:text-6xl font-black leading-tight;
   letter-spacing: -0.02em;
 }
 
-.apple-heading {
+.premium-heading {
   @apply text-3xl md:text-4xl font-black leading-tight;
   letter-spacing: -0.01em;
 }
 
-.apple-subtitle {
+.premium-subtitle {
   @apply text-lg md:text-xl leading-relaxed;
   letter-spacing: 0.01em;
+}
+
+/* ============================================
+   ORGANIC WAVE DIVIDER
+   ============================================ */
+.wave-divider {
+  position: relative;
+  height: 60px;
+}
+
+.wave-divider::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -1px;
+  height: 60px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 60'%3E%3Cpath fill='%23FDFBF7' d='M0,30 C240,60 480,0 720,30 C960,60 1200,0 1440,30 L1440,60 L0,60 Z'/%3E%3C/svg%3E") no-repeat;
+  background-size: cover;
+}
+
+/* ============================================
+   STATS COUNTER
+   ============================================ */
+.stat-number {
+  @apply text-4xl md:text-5xl font-black;
+  background: linear-gradient(135deg, #468432, #9AD872);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }

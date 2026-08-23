@@ -14,18 +14,19 @@ module.exports = {
         latin: ['Inter', 'sans-serif'],
       },
       colors: {
-        // Apple-level premium palette - Green & Water Blue
-        'primary-deep': '#173F32',
-        'botanical': '#2F6B4F',
-        'fresh-green': '#6FAF73',
-        'water-blue': '#2F91B7',
-        'soft-blue': '#7BC4D6',
-        'deep-blue': '#1A6B8A',
-        'warm-white': '#F7F8F5',
+        // Premium Warm-Organic Palette
+        'forest': '#468432',
+        'leaf': '#9AD872',
+        'cream': '#FFEF91',
+        'ember': '#FFA02E',
+        'deep-forest': '#2D5E1A',
+        'light-leaf': '#C8F0A8',
+        'pale-cream': '#FFF8DC',
+        'soft-ember': '#FFB85C',
+        'warm-white': '#FDFBF7',
         'charcoal': '#1C2421',
         'muted-grey': '#68716C',
-        'light-green': '#E8F5E9',
-        'light-blue': '#E1F5FE',
+        'warm-grey': '#8A8F8A',
 
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -62,8 +63,8 @@ module.exports = {
         },
       },
       borderRadius: {
-        '2xl': '1.5rem',
-        '3xl': '2rem',
+        '2xl': '1.25rem',
+        '3xl': '1.75rem',
         xl: "calc(var(--radius) + 4px)",
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
@@ -72,10 +73,10 @@ module.exports = {
       },
       boxShadow: {
         xs: "0 1px 2px 0 rgb(0 0 0 / 0.05)",
-        'card': '0 10px 30px -10px rgba(23, 63, 50, 0.08)',
-        'card-hover': '0 20px 40px -15px rgba(23, 63, 50, 0.15)',
-        'premium-glow': '0 10px 30px rgba(47, 107, 79, 0.1)',
-        'water-glow': '0 10px 30px rgba(47, 145, 183, 0.12)',
+        'card': '0 8px 25px -8px rgba(70, 132, 50, 0.08)',
+        'card-hover': '0 16px 35px -12px rgba(70, 132, 50, 0.15)',
+        'premium-glow': '0 8px 25px rgba(70, 132, 50, 0.12)',
+        'warm-glow': '0 8px 25px rgba(255, 160, 46, 0.15)',
         'apple': '0 4px 20px rgba(0, 0, 0, 0.04)',
         'apple-lg': '0 8px 40px rgba(0, 0, 0, 0.06)',
         'apple-xl': '0 20px 60px rgba(0, 0, 0, 0.08)',
@@ -109,9 +110,9 @@ module.exports = {
           "0%": { backgroundPosition: "-200% center" },
           "100%": { backgroundPosition: "200% center" }
         },
-        "pulse-water": {
-          "0%, 100%": { boxShadow: "0 0 0 0 rgba(47, 145, 183, 0.4)" },
-          "50%": { boxShadow: "0 0 0 12px rgba(47, 145, 183, 0)" }
+        "pulse-warm": {
+          "0%, 100%": { boxShadow: "0 0 0 0 rgba(255, 160, 46, 0.4)" },
+          "50%": { boxShadow: "0 0 0 12px rgba(255, 160, 46, 0)" }
         },
         "gradient-rotate": {
           "0%": { backgroundPosition: "0% 50%" },
@@ -127,7 +128,7 @@ module.exports = {
         "scale-in": "scale-in 0.4s ease-out forwards",
         "float": "float 3s ease-in-out infinite",
         "shimmer": "shimmer 2s linear infinite",
-        "pulse-water": "pulse-water 2s ease-in-out infinite",
+        "pulse-warm": "pulse-warm 2s ease-in-out infinite",
         "gradient-rotate": "gradient-rotate 4s ease infinite",
       },
       backgroundSize: {
