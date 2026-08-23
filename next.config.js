@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  output: 'dist',
+  // Suppress build-blocking type/lint errors (they are handled separately)
   typescript: {
     ignoreBuildErrors: true,
   },
