@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { ArrowLeft, Check, Phone, MessageCircle, ChevronDown, TreePalm, Droplet, Sun, Compass } from 'lucide-react';
+import { ArrowLeft, Check, Phone, MessageCircle, ChevronDown, TreePalm, Droplet, Sun, Compass, Leaf, Sparkles, ArrowUpRight, Star, Shield, Zap, MapPin } from 'lucide-react';
 import ContactForm from '@/components/ContactForm';
 
 export default function Home() {
@@ -14,42 +14,48 @@ export default function Home() {
       englishTitle: 'Garden Landscaping',
       desc: 'تصميم وتنسيق حدائق منزلية وفلل عصرية بأساليب تحاكي الفخامة المعمارية.',
       image: '/images/service-garden-design.jpg',
-      slug: 'garden-landscaping-riyadh'
+      slug: 'garden-landscaping-riyadh',
+      gradient: 'from-primary-deep to-botanical'
     },
     {
       title: 'تنسيق أسطح المنازل والروف بالنرجس',
       englishTitle: 'Rooftop Spaces',
       desc: 'تحويل الأسطح إلى حدائق معلقة وجلسات راقية مع مراعاة العزل الكامل للحرارة والرطوبة.',
       image: '/images/statement-design.jpg',
-      slug: 'rooftop-landscaping'
+      slug: 'rooftop-landscaping',
+      gradient: 'from-botanical to-fresh-green'
     },
     {
       title: 'توريد وتركيب الثيل الصناعي',
       englishTitle: 'Artificial Grass',
       desc: 'ثيل صناعي عالي الكثافة مقاوم للظروف المناخية مع خيوط ناعمة وتصريف مائي ممتاز.',
       image: '/images/service-artificial-grass.jpg',
-      slug: 'artificial-grass'
+      slug: 'artificial-grass',
+      gradient: 'from-water-blue to-soft-blue'
     },
     {
       title: 'تركيب الثيل الطبيعي بلدي وهولندي',
       englishTitle: 'Natural Grass',
       desc: 'زراعة العشب الطبيعي المقاوم للحرارة مع تجهيز مسبق ومثالي للتربة الزراعية.',
       image: '/images/service-natural-grass.jpg',
-      slug: 'natural-grass'
+      slug: 'natural-grass',
+      gradient: 'from-primary-deep to-botanical'
     },
     {
       title: 'تركيب شلالات ونوافير منزلية',
       englishTitle: 'Waterfalls & Fountains',
       desc: 'تصاميم شلالات جدارية ونوافير مائية عصرية مع إضاءات LED وتجارب صوتية هادئة.',
       image: '/images/project-3.jpg',
-      slug: 'waterfalls-fountains'
+      slug: 'waterfalls-fountains',
+      gradient: 'from-water-blue to-soft-blue'
     },
     {
       title: 'شبكات ري أوتوماتيكية ذكية',
       englishTitle: 'Automatic Irrigation',
       desc: 'أنظمة ري آلية تحت الأرض تساعد على تنظيم وحساب استهلاك المياه بكفاءة ممتازة.',
       image: '/images/service-irrigation.jpg',
-      slug: 'automatic-irrigation'
+      slug: 'automatic-irrigation',
+      gradient: 'from-botanical to-fresh-green'
     }
   ];
 
@@ -89,153 +95,221 @@ export default function Home() {
     'الغدير', 'الورود', 'الرحمانية', 'الرائد', 'المحمدية', 'العليا', 'السليمانية', 'المروج'
   ];
 
+  const stats = [
+    { number: '+150', label: 'مشروع مكتمل', icon: Star },
+    { number: '12+', label: 'سنوات خبرة', icon: Shield },
+    { number: '99%', label: 'عملاء راضون', icon: Sparkles },
+    { number: '+30', label: 'حي في الرياض', icon: MapPin },
+  ];
+
   return (
     <div className="flex flex-col w-full min-h-screen">
-      
-      {/* 1. HERO SECTION */}
-      <section className="relative min-h-[90vh] flex items-center bg-primary-deep text-warm-white overflow-hidden py-20">
+
+      {/* =============================================
+          1. HERO SECTION - Apple-style cinematic
+      ============================================= */}
+      <section className="relative min-h-screen flex items-center bg-primary-deep text-warm-white overflow-hidden">
+        {/* Background image with premium overlay */}
         <div className="absolute inset-0 z-0">
           <img
             src="/images/hero-garden-path.jpg"
             alt="تنسيق حدائق فاخرة في الرياض"
-            className="w-full h-full object-cover opacity-35 object-center scale-105"
+            className="w-full h-full object-cover opacity-30 object-center scale-105"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-primary-deep via-primary-deep/70 to-transparent" />
+          {/* Multi-layer gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-b from-primary-deep/40 via-primary-deep/60 to-primary-deep" />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary-deep/30 to-transparent" />
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-          
-          <div className="lg:col-span-8 space-y-6 text-right">
-            <div className="inline-flex items-center gap-2 bg-botanical/20 border border-botanical/30 px-4 py-1.5 rounded-full text-xs font-bold text-fresh-green">
-              <span>البيت الأخضر - مهندسو الفراغات الخارجية</span>
+        {/* Decorative floating elements */}
+        <div className="absolute top-1/4 right-10 w-64 h-64 rounded-full bg-gradient-to-br from-botanical/10 to-water-blue/10 blur-3xl animate-pulse pointer-events-none" />
+        <div className="absolute bottom-1/4 left-10 w-96 h-96 rounded-full bg-gradient-to-tr from-water-blue/5 to-botanical/5 blur-3xl animate-pulse pointer-events-none" style={{ animationDelay: '1s' }} />
+
+        <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full pt-32 pb-20">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+
+            <div className="lg:col-span-8 space-y-8 text-right">
+              {/* Premium badge */}
+              <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/15 px-5 py-2 rounded-full text-xs font-bold text-fresh-green animate-fade-in-up">
+                <Leaf className="w-3.5 h-3.5" />
+                <span>البيت الأخضر - مهندسو الفراغات الخارجية</span>
+              </div>
+
+              {/* Apple-style hero headline */}
+              <h1 className="text-5xl md:text-7xl font-black leading-tight text-white animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+                تصميم المساحات الخارجية<br />
+                <span className="text-gradient-mixed bg-gradient-to-r from-fresh-green via-water-blue to-soft-blue bg-clip-text text-transparent">
+                  التي تستحقها فيلتك
+                </span>
+              </h1>
+
+              <p className="text-lg md:text-xl text-warm-white/70 max-w-2xl leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+                حلول متكاملة لتنسيق الحدائق والمسطحات الخارجية في الرياض.
+                ندمج بين الهندسة المعمارية واللمسة الطبيعية بما يلائم طقس الرياض ويرشّد استهلاك المياه.
+              </p>
+
+              {/* Apple-style dual buttons */}
+              <div className="flex flex-wrap gap-4 pt-4 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+                <Link
+                  href="/contact"
+                  className="btn-apple bg-gradient-to-r from-botanical to-water-blue text-white shadow-lg hover:shadow-water-glow"
+                >
+                  <span>اطلب استشارتك المجانية</span>
+                  <ArrowLeft className="w-4 h-4" />
+                </Link>
+                <a
+                  href="https://wa.me/966557401773"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-apple bg-white/10 backdrop-blur-sm text-white border border-white/20 hover:bg-white/20"
+                >
+                  <MessageCircle className="w-4 h-4" />
+                  <span>تواصل معنا واتساب</span>
+                </a>
+              </div>
+
+              {/* Service tags */}
+              <div className="pt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-warm-white/50 font-semibold border-t border-white/10 max-w-xl animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+                <span>تنسيق حدائق</span>
+                <span className="w-1 h-1 rounded-full bg-white/20" />
+                <span>حدائق أسطح</span>
+                <span className="w-1 h-1 rounded-full bg-white/20" />
+                <span>شلالات ونوافير</span>
+                <span className="w-1 h-1 rounded-full bg-white/20" />
+                <span>شبكات ري ذكية</span>
+                <span className="w-1 h-1 rounded-full bg-white/20" />
+                <span>ثيل صناعي وطبيعي</span>
+              </div>
             </div>
 
-            <h1 className="text-4xl md:text-6xl font-black leading-tight text-white">
-              تصميم المساحات الخارجية <br />
-              <span className="text-fresh-green">التي تستحقها فيلتك</span>
-            </h1>
-
-            <p className="text-lg md:text-xl text-warm-white/80 max-w-2xl leading-relaxed">
-              حلول متكاملة لتنسيق الحدائق والمسطحات الخارجية في الرياض. ندمج بين الهندسة المعمارية واللمسة الطبيعية بما يلائم طقس الرياض ويرشّد استهلاك المياه.
-            </p>
-
-            <div className="flex flex-wrap gap-4 pt-4">
-              <Link
-                href="/contact"
-                className="bg-primary-deep hover:bg-botanical border border-botanical/20 text-warm-white font-bold px-8 py-4 rounded-full text-sm hover:scale-[1.02] transition-all duration-300"
-              >
-                اطلب استشارتك المجانية
-              </Link>
-              <a
-                href="https://wa.me/966557401773"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-bold px-8 py-4 rounded-full text-sm transition-colors border border-white/15"
-              >
-                <MessageCircle className="w-4 h-4 fill-white" />
-                <span>تواصل معنا واتساب</span>
-              </a>
-            </div>
-
-            <div className="pt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-warm-white/60 font-semibold border-t border-white/10 max-w-xl">
-              <span>تنسيق حدائق</span>
-              <span>•</span>
-              <span>حدائق أسطح</span>
-              <span>•</span>
-              <span>شلالات ونوافير</span>
-              <span>•</span>
-              <span>شبكات ري ذكية</span>
-              <span>•</span>
-              <span>ثيل صناعي وطبيعي</span>
+            {/* Stats sidebar */}
+            <div className="lg:col-span-4 hidden lg:grid grid-cols-2 gap-4 animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
+              {stats.map((stat, idx) => {
+                const Icon = stat.icon;
+                return (
+                  <div key={idx} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-5 text-center hover:bg-white/10 transition-all duration-300">
+                    <Icon className="w-5 h-5 text-water-blue mx-auto mb-2" />
+                    <div className="text-2xl font-black text-white number-display">{stat.number}</div>
+                    <div className="text-xs text-warm-white/60 font-medium mt-1">{stat.label}</div>
+                  </div>
+                );
+              })}
             </div>
           </div>
-          
         </div>
 
-        {/* Scroll cue */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-1.5 animate-bounce opacity-80 cursor-pointer">
-          <span className="text-xs text-warm-white/60 font-bold">اسحب للأسفل</span>
-          <ChevronDown className="w-4 h-4 text-warm-white/60" />
+        {/* Apple-style scroll indicator */}
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-float opacity-60">
+          <span className="text-[10px] text-warm-white/50 font-bold uppercase tracking-widest">اسحب للأسفل</span>
+          <div className="w-5 h-8 rounded-full border border-white/20 flex items-start justify-center pt-1.5">
+            <div className="w-1 h-2 rounded-full bg-white/60 animate-bounce" />
+          </div>
         </div>
       </section>
 
-      {/* 2. INTRODUCTION */}
-      <section className="bg-white py-20 md:py-28 border-b border-charcoal/5">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          
-          <div className="lg:col-span-7 space-y-6">
-            <span className="text-botanical font-bold text-xs uppercase tracking-widest block border-r-2 border-botanical pr-3">
-              رؤية خضراء مستدامة
-            </span>
-            
-            <h2 className="text-3xl md:text-4xl font-black text-primary-deep leading-tight">
-              حدائق البيت الأخضر تجمع بين الجمال التصميمي والوظيفة العملية
-            </h2>
+      {/* =============================================
+          2. INTRODUCTION - Apple-style editorial
+      ============================================= */}
+      <section className="bg-white py-28 md:py-36 relative">
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-charcoal/5 to-transparent" />
 
-            <p className="text-muted-grey text-base leading-relaxed text-justify">
-              تأسست شركة البيت الأخضر (Green House) في الرياض كاستوديو تصميم وتنفيذ فراغات خارجية يلبي تطلعات مالكي الفلل السكنية الباحثين عن التميز. نؤمن بأن الحديقة ليست مجرد مساحة ترابية فارغة، بل هي متنفس طبيعي يرفع من قيمة منزلك الجمالية والمالية.
-            </p>
+        <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
 
-            <p className="text-muted-grey text-base leading-relaxed text-justify">
-              نحن نعمل بتفانٍ تام لتقديم مخططات متزنة هندسياً، مع الاهتمام بالعزل المائي لأسطح الفلل، واختيار أنواع الشلالات الجدارية المناسبة، وتركيب ثيل ممتاز يتحمل درجات حرارة الصيف، وتثبيت شبكات ري أوتوماتيكية توفر الوقت والمياه.
-            </p>
+          <div className="lg:col-span-7 space-y-8">
+            <div className="space-y-4">
+              <div className="inline-flex items-center gap-2 text-water-blue font-bold text-xs uppercase tracking-[0.2em]">
+                <span className="w-8 h-px bg-water-blue/50" />
+                <span>رؤية خضراء مستدامة</span>
+              </div>
+
+              <h2 className="apple-heading text-primary-deep">
+                حدائق البيت الأخضر تجمع بين<br className="hidden md:block" />
+                <span className="text-gradient-mixed">الجمال التصميمي والوظيفة العملية</span>
+              </h2>
+
+              <p className="text-muted-grey text-base leading-relaxed text-justify max-w-xl">
+                تأسست شركة البيت الأخضر (Green House) في الرياض كاستوديو تصميم وتنفيذ فراغات خارجية يلبي تطلعات مالكي الفلل السكنية الباحثين عن التميز. نؤمن بأن الحديقة ليست مجرد مساحة ترابية فارغة، بل هي متنفس طبيعي يرفع من قيمة منزلك الجمالية والمالية.
+              </p>
+
+              <p className="text-muted-grey text-base leading-relaxed text-justify max-w-xl">
+                نحن نعمل بتفانٍ تام لتقديم مخططات متزنة هندسياً، مع الاهتمام بالعزل المائي لأسطح الفلل، واختيار أنواع الشلالات الجدارية المناسبة، وتركيب ثيل ممتاز يتحمل درجات حرارة الصيف، وتثبيت شبكات ري أوتوماتيكية توفر الوقت والمياه.
+              </p>
+            </div>
+
+            <Link
+              href="/about"
+              className="inline-flex items-center gap-2 text-sm font-bold text-primary-deep hover:text-botanical transition-all duration-300 group"
+            >
+              <span>تعرف علينا أكثر</span>
+              <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
+            </Link>
           </div>
 
           <div className="lg:col-span-5 relative">
-            <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-card border border-charcoal/5">
+            <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-apple-lg border border-charcoal/5 img-container">
               <img
                 src="/images/statement-design.jpg"
                 alt="تصميم حدائق فلل الرياض"
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                className="w-full h-full object-cover img-premium"
               />
             </div>
-            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-warm-white rounded-3xl border border-charcoal/5 -z-10" />
+            {/* Decorative element */}
+            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-botanical/10 to-water-blue/10 rounded-3xl border border-charcoal/5 -z-10" />
+            <div className="absolute -top-6 -left-6 w-24 h-24 bg-gradient-to-tr from-water-blue/10 to-botanical/10 rounded-full -z-10 blur-sm" />
           </div>
 
         </div>
       </section>
 
-      {/* 3. CORE SERVICES */}
-      <section className="bg-warm-white py-20 md:py-28">
+      {/* =============================================
+          3. CORE SERVICES - Apple-style grid
+      ============================================= */}
+      <section className="bg-warm-white py-28 md:py-36 relative">
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-charcoal/5 to-transparent" />
+
         <div className="max-w-7xl mx-auto px-6 md:px-12">
-          
+
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6 text-right">
-            <div className="space-y-3">
-              <span className="text-botanical font-bold text-xs uppercase tracking-widest block border-r-2 border-botanical pr-3">
-                الخدمات الأساسية
-              </span>
-              <h2 className="text-3xl md:text-4xl font-black text-primary-deep">
-                حلول مدروسة لتنسيق مساحتك الخارجية
+            <div className="space-y-4">
+              <div className="inline-flex items-center gap-2 text-botanical font-bold text-xs uppercase tracking-[0.2em]">
+                <span className="w-8 h-px bg-botanical/50" />
+                <span>الخدمات الأساسية</span>
+              </div>
+              <h2 className="apple-heading text-primary-deep">
+                حلول مدروسة لتنسيق<br className="hidden md:block" />
+                <span className="text-gradient-mixed">مساحتك الخارجية</span>
               </h2>
             </div>
             <Link
               href="/services"
-              className="inline-flex items-center gap-2 text-primary-deep hover:text-botanical font-bold text-sm transition-colors self-start md:self-end"
+              className="inline-flex items-center gap-2 text-primary-deep hover:text-botanical font-bold text-sm transition-all duration-300 self-start md:self-end group"
             >
               <span>استكشف جميع الخدمات (13 خدمة)</span>
-              <ArrowLeft className="w-4 h-4" />
+              <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {coreServices.map((service, idx) => (
               <div
                 key={idx}
-                className="group bg-white rounded-3xl border border-charcoal/5 overflow-hidden shadow-card hover:shadow-card-hover transition-all duration-300 flex flex-col h-full"
+                className="group bg-white rounded-3xl border border-charcoal/5 overflow-hidden shadow-apple hover:shadow-apple-xl transition-all duration-500 flex flex-col h-full hover:-translate-y-1"
               >
                 <div className="aspect-[16/10] overflow-hidden relative">
                   <img
                     src={service.image}
                     alt={service.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-charcoal/20 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-charcoal/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  {/* Gradient accent line */}
+                  <div className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${service.gradient} scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-right`} />
                 </div>
 
                 <div className="p-6 md:p-8 flex flex-col flex-1 justify-between gap-6">
-                  <div className="space-y-2">
-                    <span className="text-[11px] font-bold text-botanical tracking-widest block uppercase font-latin">
-                      {service.englishTitle}
+                  <div className="space-y-3">
+                    <span className="text-[11px] font-bold tracking-widest block uppercase font-latin">
+                      <span className="text-gradient-mixed">{service.englishTitle}</span>
                     </span>
                     <h3 className="text-primary-deep font-black text-lg leading-tight">
                       {service.title}
@@ -247,7 +321,7 @@ export default function Home() {
 
                   <Link
                     href={`/services/${service.slug}`}
-                    className="inline-flex items-center gap-2 text-xs font-bold text-primary-deep group-hover:text-botanical transition-colors"
+                    className="inline-flex items-center gap-2 text-xs font-bold text-primary-deep group-hover:text-botanical transition-all duration-300"
                   >
                     <span>تفاصيل الخدمة والمواصفات</span>
                     <ArrowLeft className="w-3.5 h-3.5 group-hover:-translate-x-1 transition-transform" />
@@ -260,131 +334,129 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 4. LANDSCAPE VISION */}
-      <section className="bg-white py-20 md:py-28 border-y border-charcoal/5">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          
+      {/* =============================================
+          4. LANDSCAPE VISION - Apple-style split layout
+      ============================================= */}
+      <section className="bg-white py-28 md:py-36 relative">
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-charcoal/5 to-transparent" />
+
+        <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+
           <div className="lg:col-span-5 relative order-last lg:order-first">
-            <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-card border border-charcoal/5">
+            <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-apple-lg border border-charcoal/5 img-container">
               <img
                 src="/images/statement-maintain.jpg"
                 alt="أعمال اللاندسكيب في الفلل"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover img-premium"
               />
             </div>
-            <div className="absolute -top-6 -left-6 w-32 h-32 bg-warm-white rounded-3xl border border-charcoal/5 -z-10" />
+            <div className="absolute -top-6 -left-6 w-32 h-32 bg-gradient-to-br from-water-blue/10 to-botanical/10 rounded-3xl border border-charcoal/5 -z-10" />
           </div>
 
-          <div className="lg:col-span-7 space-y-6">
-            <span className="text-botanical font-bold text-xs uppercase tracking-widest block border-r-2 border-botanical pr-3">
-              رؤيتنا الهندسية
-            </span>
+          <div className="lg:col-span-7 space-y-8">
+            <div className="space-y-4">
+              <div className="inline-flex items-center gap-2 text-botanical font-bold text-xs uppercase tracking-[0.2em]">
+                <span className="w-8 h-px bg-botanical/50" />
+                <span>رؤيتنا الهندسية</span>
+              </div>
 
-            <h2 className="text-3xl md:text-4xl font-black text-primary-deep">
-              كيف يساهم تنسيق المساحات الخارجية في تحسين جودة حياتك؟
-            </h2>
+              <h2 className="apple-heading text-primary-deep">
+                كيف يساهم تنسيق المساحات الخارجية<br className="hidden md:block" />
+                <span className="text-gradient-mixed">في تحسين جودة حياتك؟</span>
+              </h2>
 
-            <p className="text-muted-grey text-base leading-relaxed text-justify">
-              تنسيق الحدائق هو استثمار هندسي طويل الأجل يعيد تشكيل مساحة المعيشة اليومية لعائلتك. نركز في البيت الأخضر على تحقيق التوازن المثالي في 5 جوانب رئيسية:
-            </p>
+              <p className="text-muted-grey text-base leading-relaxed text-justify">
+                تنسيق الحدائق هو استثمار هندسي طويل الأجل يعيد تشكيل مساحة المعيشة اليومية لعائلتك. نركز في البيت الأخضر على تحقيق التوازن المثالي في 5 جوانب رئيسية:
+              </p>
+            </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
-              <div className="flex gap-3">
-                <div className="w-5 h-5 rounded-full bg-botanical/15 flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <Check className="w-3 h-3 text-botanical" />
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              {[
+                { title: 'جمال المنزل والقيمة المعمارية', desc: 'تناغم الخطوط النباتية مع واجهة الفيلا وتكميل تفاصيلها.' },
+                { title: 'الراحة والاسترخاء النفسي', desc: 'صوت خرير مياه الشلالات يخلق جواً من الهدوء ويبدد الضوضاء.' },
+                { title: 'الاستخدام اليومي الأمثل', desc: 'تقسيم ذكي للفراغات يشمل مناطق جلوس وشواء وممرات واسعة.' },
+                { title: 'الأجواء والترطيب الصيفي', desc: 'تساهم المسطحات الخضراء والري المنظم في خفض حرارة الهواء.' },
+              ].map((item, idx) => (
+                <div key={idx} className="flex gap-3 p-4 rounded-2xl bg-warm-white/50 hover:bg-warm-white transition-all duration-300">
+                  <div className="w-6 h-6 rounded-full bg-gradient-to-br from-botanical to-water-blue/50 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Check className="w-3 h-3 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="text-sm font-black text-primary-deep mb-1">{item.title}</h4>
+                    <p className="text-xs text-muted-grey">{item.desc}</p>
+                  </div>
                 </div>
-                <div>
-                  <h4 className="text-sm font-black text-primary-deep mb-1">جمال المنزل والقيمة المعمارية</h4>
-                  <p className="text-xs text-muted-grey">تناغم الخطوط النباتية مع واجهة الفيلا وتكميل تفاصيلها.</p>
-                </div>
-              </div>
-              <div className="flex gap-3">
-                <div className="w-5 h-5 rounded-full bg-botanical/15 flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <Check className="w-3 h-3 text-botanical" />
-                </div>
-                <div>
-                  <h4 className="text-sm font-black text-primary-deep mb-1">الراحة والاسترخاء النفسي</h4>
-                  <p className="text-xs text-muted-grey">صوت خرير مياه الشلالات يخلق جواً من الهدوء ويبدد الضوضاء.</p>
-                </div>
-              </div>
-              <div className="flex gap-3">
-                <div className="w-5 h-5 rounded-full bg-botanical/15 flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <Check className="w-3 h-3 text-botanical" />
-                </div>
-                <div>
-                  <h4 className="text-sm font-black text-primary-deep mb-1">الاستخدام اليومي الأمثل</h4>
-                  <p className="text-xs text-muted-grey">تقسيم ذكي للفراغات يشمل مناطق جلوس وشواء وممرات واسعة.</p>
-                </div>
-              </div>
-              <div className="flex gap-3">
-                <div className="w-5 h-5 rounded-full bg-botanical/15 flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <Check className="w-3 h-3 text-botanical" />
-                </div>
-                <div>
-                  <h4 className="text-sm font-black text-primary-deep mb-1">الأجواء والترطيب الصيفي</h4>
-                  <p className="text-xs text-muted-grey">تساهم المسطحات الخضراء والري المنظم في خفض حرارة الهواء.</p>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
 
         </div>
       </section>
 
-      {/* 5. RIYADH CLIMATE EXPERTISE */}
-      <section className="bg-primary-deep text-warm-white py-20 md:py-28">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 text-center space-y-16">
-          
+      {/* =============================================
+          5. RIYADH CLIMATE EXPERTISE - Apple-style dark section
+      ============================================= */}
+      <section className="bg-primary-deep text-warm-white py-28 md:py-36 relative overflow-hidden">
+        {/* Decorative background elements */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-botanical/10 to-transparent rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-water-blue/10 to-transparent rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
+
+        <div className="max-w-7xl mx-auto px-6 md:px-12 text-center space-y-16 relative z-10">
+
           <div className="max-w-3xl mx-auto space-y-4">
-            <span className="text-fresh-green font-bold text-xs uppercase tracking-widest block">
-              خبير المناخ في الرياض
-            </span>
-            <h2 className="text-3xl md:text-5xl font-black text-white leading-tight">
-              تنفيذ هندسي يراعي مناخ الرياض الحار
+            <div className="inline-flex items-center gap-2 text-fresh-green font-bold text-xs uppercase tracking-[0.2em]">
+              <span className="w-8 h-px bg-fresh-green/50" />
+              <span>خبير المناخ في الرياض</span>
+            </div>
+            <h2 className="apple-title text-white">
+              تنفيذ هندسي يراعي<br />
+              <span className="text-gradient-mixed bg-gradient-to-r from-fresh-green via-water-blue to-soft-blue bg-clip-text text-transparent">
+                مناخ الرياض الحار
+              </span>
             </h2>
-            <p className="text-sm md:text-base text-warm-white/70 leading-relaxed">
+            <p className="text-base text-warm-white/60 leading-relaxed max-w-2xl mx-auto">
               المناخ الصحراوي الجاف للرياض يحتاج إلى ممارسات زراعية وهندسية دقيقة لضمان استدامة حدائق الفلل، وهذا هو محور تميزنا الحقيقي.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-right">
-            
-            <div className="bg-white/5 border border-white/10 p-6 md:p-8 rounded-3xl space-y-4">
-              <div className="w-10 h-10 rounded-xl bg-botanical/30 flex items-center justify-center text-fresh-green">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-right">
+
+            <div className="glass-card-dark p-8 rounded-3xl space-y-4 hover:bg-white/10 transition-all duration-300 group">
+              <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-botanical/40 to-water-blue/20 flex items-center justify-center text-fresh-green group-hover:scale-110 transition-transform duration-300">
                 <Sun className="w-6 h-6" />
               </div>
               <h3 className="text-base font-black text-white">تحمل شمس الصيف الحارة</h3>
-              <p className="text-xs text-warm-white/75 leading-relaxed">
+              <p className="text-xs text-warm-white/60 leading-relaxed">
                 ننتقي بعناية أصناف النباتات والزهور التي تعشق الشمس وتتحمل جفاف الهواء ودرجات الحرارة التي تتجاوز 45 مئوية.
               </p>
             </div>
 
-            <div className="bg-white/5 border border-white/10 p-6 md:p-8 rounded-3xl space-y-4">
-              <div className="w-10 h-10 rounded-xl bg-botanical/30 flex items-center justify-center text-fresh-green">
+            <div className="glass-card-dark p-8 rounded-3xl space-y-4 hover:bg-white/10 transition-all duration-300 group">
+              <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-water-blue/40 to-botanical/20 flex items-center justify-center text-water-blue group-hover:scale-110 transition-transform duration-300">
                 <Droplet className="w-6 h-6" />
               </div>
               <h3 className="text-base font-black text-white">ترشيد وري ذكي</h3>
-              <p className="text-xs text-warm-white/75 leading-relaxed">
+              <p className="text-xs text-warm-white/60 leading-relaxed">
                 تصميم دوائر الري بالتنقيط والرذاذ والرشاشات المدفونة لتوزيع المياه بكفاءة دون تبخر زائد أو إهدار.
               </p>
             </div>
 
-            <div className="bg-white/5 border border-white/10 p-6 md:p-8 rounded-3xl space-y-4">
-              <div className="w-10 h-10 rounded-xl bg-botanical/30 flex items-center justify-center text-fresh-green">
+            <div className="glass-card-dark p-8 rounded-3xl space-y-4 hover:bg-white/10 transition-all duration-300 group">
+              <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-botanical/40 to-water-blue/20 flex items-center justify-center text-fresh-green group-hover:scale-110 transition-transform duration-300">
                 <TreePalm className="w-6 h-6" />
               </div>
               <h3 className="text-base font-black text-white">خيارات التربة المثالية</h3>
-              <p className="text-xs text-warm-white/75 leading-relaxed">
+              <p className="text-xs text-warm-white/60 leading-relaxed">
                 تعديل خواص التربة الرملية بالرياض بخلط البيتموس والأسمدة العضوية المعقمة لضمان تغذية عميقة للجذور.
               </p>
             </div>
 
-            <div className="bg-white/5 border border-white/10 p-6 md:p-8 rounded-3xl space-y-4">
-              <div className="w-10 h-10 rounded-xl bg-botanical/30 flex items-center justify-center text-fresh-green">
+            <div className="glass-card-dark p-8 rounded-3xl space-y-4 hover:bg-white/10 transition-all duration-300 group">
+              <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-water-blue/40 to-botanical/20 flex items-center justify-center text-water-blue group-hover:scale-110 transition-transform duration-300">
                 <Compass className="w-6 h-6" />
               </div>
               <h3 className="text-base font-black text-white">متانة المواد المستخدمة</h3>
-              <p className="text-xs text-warm-white/75 leading-relaxed">
+              <p className="text-xs text-warm-white/60 leading-relaxed">
                 مظلات وبرجولات مصنوعة من أخشاب معالجة ومعادن مطلية حرارياً ومقاومة للصدأ والتشقق والتآكل بفعل الشمس.
               </p>
             </div>
@@ -394,33 +466,49 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 6. PROCESS */}
-      <section className="bg-white py-20 md:py-28 border-b border-charcoal/5">
+      {/* =============================================
+          6. PROCESS - Apple-style timeline
+      ============================================= */}
+      <section className="bg-white py-28 md:py-36 relative">
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-charcoal/5 to-transparent" />
+
         <div className="max-w-7xl mx-auto px-6 md:px-12 text-center space-y-16">
-          
-          <div className="max-w-3xl mx-auto space-y-3">
-            <span className="text-botanical font-bold text-xs uppercase tracking-widest block">
-              آلية العمل والخطوات
-            </span>
-            <h2 className="text-3xl md:text-4xl font-black text-primary-deep">
-              خطوات تنفيذ واضحة واحترافية
+
+          <div className="max-w-3xl mx-auto space-y-4">
+            <div className="inline-flex items-center gap-2 text-botanical font-bold text-xs uppercase tracking-[0.2em]">
+              <span className="w-8 h-px bg-botanical/50" />
+              <span>آلية العمل والخطوات</span>
+            </div>
+            <h2 className="apple-heading text-primary-deep">
+              خطوات تنفيذ واضحة<br className="hidden md:block" />
+              <span className="text-gradient-mixed">واحترافية</span>
             </h2>
-            <p className="text-sm text-muted-grey">
+            <p className="text-sm text-muted-grey max-w-xl mx-auto">
               نلتزم بمنهجية عمل منظمة تضمن دقة التفاصيل وجودة المخرجات من اللقاء الأول وحتى تسليم المساحة.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-right">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-right">
             {processSteps.map((step, idx) => (
               <div
                 key={idx}
-                className="bg-warm-white border border-charcoal/5 p-8 rounded-3xl flex flex-col gap-4 relative overflow-hidden group hover:bg-white hover:shadow-card transition-all duration-300"
+                className="bg-warm-white border border-charcoal/5 p-8 rounded-3xl flex flex-col gap-4 relative overflow-hidden group hover:bg-white hover:shadow-apple-lg transition-all duration-500 hover:-translate-y-1"
               >
-                <span className="text-5xl font-black text-charcoal/10 group-hover:text-botanical/20 transition-colors absolute left-6 top-6">
+                {/* Number watermark */}
+                <span className="text-6xl font-black absolute left-4 top-4 text-charcoal/[0.04] group-hover:text-botanical/10 transition-colors duration-500 number-display">
                   {step.num}
                 </span>
-                <h3 className="text-lg font-black text-primary-deep mt-4">{step.title}</h3>
+
+                {/* Step indicator */}
+                <div className="w-10 h-10 rounded-2xl bg-gradient-to-br from-botanical/20 to-water-blue/10 flex items-center justify-center text-botanical font-black text-sm">
+                  {step.num}
+                </div>
+
+                <h3 className="text-lg font-black text-primary-deep">{step.title}</h3>
                 <p className="text-xs text-muted-grey leading-relaxed">{step.desc}</p>
+
+                {/* Hover accent line */}
+                <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-botanical to-water-blue scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-right" />
               </div>
             ))}
           </div>
@@ -428,32 +516,37 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 7. PROJECT GALLERY */}
-      <section className="bg-warm-white py-20 md:py-28">
+      {/* =============================================
+          7. PROJECT GALLERY - Apple-style showcase
+      ============================================= */}
+      <section className="bg-warm-white py-28 md:py-36 relative">
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-charcoal/5 to-transparent" />
+
         <div className="max-w-7xl mx-auto px-6 md:px-12">
-          
-          <div className="text-center space-y-4 mb-12">
-            <span className="text-botanical font-bold text-xs uppercase tracking-widest block">
-              معرض الأعمال والملهمات
-            </span>
-            <h2 className="text-3xl md:text-4xl font-black text-primary-deep">
-              تصاميم ملهمة للفراغات الخارجية والحدائق
+
+          <div className="text-center space-y-4 mb-16">
+            <div className="inline-flex items-center gap-2 text-botanical font-bold text-xs uppercase tracking-[0.2em]">
+              <span className="w-8 h-px bg-botanical/50" />
+              <span>معرض الأعمال والملهمات</span>
+            </div>
+            <h2 className="apple-heading text-primary-deep">
+              تصاميم ملهمة للفراغات<br className="hidden md:block" />
+              <span className="text-gradient-mixed">الخارجية والحدائق</span>
             </h2>
             <p className="text-sm text-muted-grey">
               استكشف جمال وتناسق الأفكار التي نطبقها في حدائق الفلل والأسطح بالرياض.
             </p>
 
-            {/* Filters */}
+            {/* Apple-style pill filters */}
             <div className="flex flex-wrap items-center justify-center gap-2 pt-6">
               {galleryFilters.map((filter) => (
                 <button
                   key={filter}
                   onClick={() => setActiveGalleryFilter(filter)}
-                  className={`px-5 py-2 rounded-full text-xs font-bold transition-all duration-200 ${
-                    activeGalleryFilter === filter
-                      ? 'bg-primary-deep text-warm-white shadow-sm'
-                      : 'bg-white text-muted-grey border border-charcoal/5 hover:bg-charcoal/5'
-                  }`}
+                  className={`px-6 py-2.5 rounded-full text-xs font-bold transition-all duration-300 ${activeGalleryFilter === filter
+                    ? 'bg-gradient-to-r from-primary-deep to-botanical text-white shadow-premium-glow scale-105'
+                    : 'bg-white text-muted-grey border border-charcoal/5 hover:bg-charcoal/5 hover:border-charcoal/10'
+                    }`}
                 >
                   {filter}
                 </button>
@@ -465,121 +558,117 @@ export default function Home() {
             {filteredGallery.map((item, idx) => (
               <div
                 key={idx}
-                className="group relative aspect-[4/3] rounded-3xl overflow-hidden border border-charcoal/5 shadow-sm bg-white"
+                className="group relative aspect-[4/3] rounded-3xl overflow-hidden border border-charcoal/5 shadow-apple bg-white"
               >
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary-deep/90 via-primary-deep/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 text-right" style={{ direction: 'rtl' }}>
-                  <span className="text-xs text-fresh-green font-bold mb-1 uppercase tracking-widest">{item.category}</span>
+                <div className="absolute inset-0 bg-gradient-to-t from-primary-deep/95 via-primary-deep/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6 text-right" style={{ direction: 'rtl' }}>
+                  <span className="text-[10px] text-water-blue font-bold mb-1 uppercase tracking-widest">{item.category}</span>
                   <h4 className="text-sm font-black text-white leading-tight">{item.title}</h4>
                 </div>
               </div>
             ))}
           </div>
 
-          <div className="text-center mt-10">
+          <div className="text-center mt-12">
             <Link
               href="/gallery"
-              className="inline-flex items-center justify-center bg-white text-primary-deep font-bold px-8 py-4 rounded-full border border-charcoal/5 text-sm hover:bg-charcoal/[0.02] shadow-sm transition-all"
+              className="btn-apple bg-white text-primary-deep border border-charcoal/10 shadow-apple hover:shadow-apple-lg hover:bg-warm-white"
             >
-              عرض معرض الصور الكامل
+              <span>عرض معرض الصور الكامل</span>
+              <ArrowLeft className="w-4 h-4" />
             </Link>
           </div>
 
         </div>
       </section>
 
-      {/* 8. WHY GREEN HOUSE */}
-      <section className="bg-white py-20 md:py-28 border-b border-charcoal/5">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          
-          <div className="lg:col-span-7 space-y-6">
-            <span className="text-botanical font-bold text-xs uppercase tracking-widest block border-r-2 border-botanical pr-3">
-              لماذا البيت الأخضر؟
-            </span>
+      {/* =============================================
+          8. WHY GREEN HOUSE - Apple-style features
+      ============================================= */}
+      <section className="bg-white py-28 md:py-36 relative">
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-charcoal/5 to-transparent" />
 
-            <h2 className="text-3xl md:text-4xl font-black text-primary-deep">
-              مواصفات تضمن لك الراحة والجمال المستدام
-            </h2>
+        <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
 
-            <p className="text-muted-grey text-base leading-relaxed text-justify">
-              تختلف شركة البيت الأخضر عن غيرها من مشاتل الحدائق العادية؛ فنحن ندمج التفكير الهندسي المعماري مع الخبرة الزراعية لنمنح الفلل تصاميم تعيش لسنوات دون مشاكل.
-            </p>
+          <div className="lg:col-span-7 space-y-8">
+            <div className="space-y-4">
+              <div className="inline-flex items-center gap-2 text-botanical font-bold text-xs uppercase tracking-[0.2em]">
+                <span className="w-8 h-px bg-botanical/50" />
+                <span>لماذا البيت الأخضر؟</span>
+              </div>
 
-            <div className="space-y-4 pt-2">
-              <div className="flex items-start gap-3">
-                <div className="w-5 h-5 rounded-full bg-botanical/15 flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <Check className="w-3 h-3 text-botanical" />
+              <h2 className="apple-heading text-primary-deep">
+                مواصفات تضمن لك<br className="hidden md:block" />
+                <span className="text-gradient-mixed">الراحة والجمال المستدام</span>
+              </h2>
+
+              <p className="text-muted-grey text-base leading-relaxed text-justify">
+                تختلف شركة البيت الأخضر عن غيرها من مشاتل الحدائق العادية؛ فنحن ندمج التفكير الهندسي المعماري مع الخبرة الزراعية لنمنح الفلل تصاميم تعيش لسنوات دون مشاكل.
+              </p>
+            </div>
+
+            <div className="space-y-4">
+              {[
+                'تصميم وتوزيع هندسي متزن يستغل كل زاوية وارتداد بالفيلا.',
+                'استخدام عشب صناعي حاصل على شهادات الجودة ومقاوم لأشعة الشمس فوق البنفسجية.',
+                'تجهيز مسبق ودقيق لأسطح الفلل لمنع أي تسرب للمياه بعد الزراعة.',
+                'متابعة مستمرة وصيانة دورية لضمان نمو النباتات واستدامة شبكة الري والشلالات.',
+              ].map((text, idx) => (
+                <div key={idx} className="flex items-start gap-3 p-4 rounded-2xl bg-warm-white/50 hover:bg-warm-white transition-all duration-300">
+                  <div className="w-6 h-6 rounded-full bg-gradient-to-br from-botanical to-water-blue/50 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Check className="w-3 h-3 text-white" />
+                  </div>
+                  <p className="text-sm text-charcoal font-semibold">{text}</p>
                 </div>
-                <p className="text-sm text-charcoal font-semibold">
-                  تصميم وتوزيع هندسي متزن يستغل كل زاوية وارتداد بالفيلا.
-                </p>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="w-5 h-5 rounded-full bg-botanical/15 flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <Check className="w-3 h-3 text-botanical" />
-                </div>
-                <p className="text-sm text-charcoal font-semibold">
-                  استخدام عشب صناعي حاصل على شهادات الجودة ومقاوم لأشعة الشمس فوق البنفسجية.
-                </p>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="w-5 h-5 rounded-full bg-botanical/15 flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <Check className="w-3 h-3 text-botanical" />
-                </div>
-                <p className="text-sm text-charcoal font-semibold">
-                  تجهيز مسبق ودقيق لأسطح الفلل لمنع أي تسرب للمياه بعد الزراعة.
-                </p>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="w-5 h-5 rounded-full bg-botanical/15 flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <Check className="w-3 h-3 text-botanical" />
-                </div>
-                <p className="text-sm text-charcoal font-semibold">
-                  متابعة مستمرة وصيانة دورية لضمان نمو النباتات واستدامة شبكة الري والشلالات.
-                </p>
-              </div>
+              ))}
             </div>
           </div>
 
           <div className="lg:col-span-5 relative">
-            <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-card border border-charcoal/5">
+            <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-apple-lg border border-charcoal/5 img-container">
               <img
                 src="/images/statement-choose.jpg"
                 alt="لماذا تختار البيت الأخضر"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover img-premium"
               />
             </div>
-            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-warm-white rounded-3xl border border-charcoal/5 -z-10" />
+            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-water-blue/10 to-botanical/10 rounded-3xl border border-charcoal/5 -z-10" />
           </div>
 
         </div>
       </section>
 
-      {/* 9. SERVICE AREAS */}
-      <section className="bg-warm-white py-20 md:py-28 border-b border-charcoal/5">
+      {/* =============================================
+          9. SERVICE AREAS - Apple-style grid
+      ============================================= */}
+      <section className="bg-warm-white py-28 md:py-36 relative">
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-charcoal/5 to-transparent" />
+
         <div className="max-w-7xl mx-auto px-6 md:px-12 text-center space-y-12">
-          
-          <div className="max-w-3xl mx-auto space-y-3">
-            <span className="text-botanical font-bold text-xs uppercase tracking-widest block">
-              أحياء الرياض المغطاة
-            </span>
-            <h2 className="text-3xl md:text-4xl font-black text-primary-deep">
-              نغطي مختلف أحياء ومناطق الرياض
+
+          <div className="max-w-3xl mx-auto space-y-4">
+            <div className="inline-flex items-center gap-2 text-botanical font-bold text-xs uppercase tracking-[0.2em]">
+              <span className="w-8 h-px bg-botanical/50" />
+              <span>أحياء الرياض المغطاة</span>
+            </div>
+            <h2 className="apple-heading text-primary-deep">
+              نغطي مختلف أحياء<br className="hidden md:block" />
+              <span className="text-gradient-mixed">ومناطق الرياض</span>
             </h2>
             <p className="text-sm text-muted-grey leading-relaxed">
               نصل إليكم في أي حي بمدينة الرياض لمعاينة المساحة وتقديم الاستشارة الهندسية والتصميم المناسب.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3">
             {neighborhoods.map((hood, idx) => (
               <div
                 key={idx}
-                className="bg-white border border-charcoal/5 py-4 px-3 rounded-2xl text-center shadow-sm text-xs font-bold text-charcoal/80 hover:border-botanical hover:text-primary-deep transition-all cursor-default"
+                className="bg-white border border-charcoal/5 py-5 px-3 rounded-2xl text-center shadow-apple text-xs font-bold text-charcoal/80 hover:border-water-blue hover:text-water-blue hover:shadow-water-glow transition-all duration-300 cursor-default"
               >
                 حي {hood}
               </div>
@@ -589,30 +678,36 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 10. FAQ SECTION */}
-      <section className="bg-white py-20 md:py-28 border-b border-charcoal/5">
+      {/* =============================================
+          10. FAQ SECTION - Apple-style accordion
+      ============================================= */}
+      <section className="bg-white py-28 md:py-36 relative">
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-charcoal/5 to-transparent" />
+
         <div className="max-w-4xl mx-auto px-6 space-y-12">
-          
-          <div className="text-center space-y-3">
-            <span className="text-botanical font-bold text-xs uppercase tracking-widest block">
-              الأسئلة الشائعة
-            </span>
-            <h2 className="text-3xl md:text-4xl font-black text-primary-deep">
-              إجابات على استفساراتكم حول تنسيق الحدائق بالرياض
+
+          <div className="text-center space-y-4">
+            <div className="inline-flex items-center gap-2 text-botanical font-bold text-xs uppercase tracking-[0.2em]">
+              <span className="w-8 h-px bg-botanical/50" />
+              <span>الأسئلة الشائعة</span>
+            </div>
+            <h2 className="apple-heading text-primary-deep">
+              إجابات على استفساراتكم<br className="hidden md:block" />
+              <span className="text-gradient-mixed">حول تنسيق الحدائق بالرياض</span>
             </h2>
           </div>
 
-          <div className="space-y-6">
+          <div className="space-y-4">
             {faqs.map((faq, idx) => (
               <div
                 key={idx}
-                className="bg-warm-white p-6 md:p-8 rounded-3xl border border-charcoal/5 text-right space-y-3"
+                className="bg-warm-white p-6 md:p-8 rounded-3xl border border-charcoal/5 text-right space-y-3 hover:bg-white hover:shadow-apple-lg transition-all duration-300"
               >
                 <h3 className="text-sm md:text-base font-black text-primary-deep flex items-start gap-3">
-                  <span className="w-2 h-2 rounded-full bg-botanical mt-2 flex-shrink-0" />
+                  <span className="w-2 h-2 rounded-full bg-gradient-to-r from-botanical to-water-blue mt-2 flex-shrink-0" />
                   <span>{faq.q}</span>
                 </h3>
-                <p className="text-xs md:text-sm text-muted-grey leading-relaxed pl-5 pr-5">
+                <p className="text-xs md:text-sm text-muted-grey leading-relaxed pr-5">
                   {faq.a}
                 </p>
               </div>
@@ -622,35 +717,51 @@ export default function Home() {
           <div className="text-center pt-4">
             <Link
               href="/faq"
-              className="text-sm font-bold text-primary-deep hover:text-botanical transition-colors"
+              className="inline-flex items-center gap-2 text-sm font-bold text-primary-deep hover:text-botanical transition-all duration-300 group"
             >
-              شاهد جميع الأسئلة الشائعة
+              <span>شاهد جميع الأسئلة الشائعة</span>
+              <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
             </Link>
           </div>
 
         </div>
       </section>
 
-      {/* 11. FINAL CTA & CONTACT FORM */}
-      <section className="bg-warm-white py-20 md:py-28 relative">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          
-          <div className="lg:col-span-6 space-y-6">
-            <h2 className="text-3xl md:text-5xl font-black text-primary-deep leading-tight">
-              حوّل مساحتك الخارجية <br />
-              <span className="text-botanical">إلى مكان تحب أن تعيش فيه</span>
-            </h2>
-            <p className="text-base text-muted-grey leading-relaxed text-justify">
-              ابدأ اليوم بمشاركة رؤيتك معنا. مهندسو البيت الأخضر مستعدون للتجاوب وتطوير مخطط متوازن يجمع الرقي والجمال والاستدامة لفيلتك بالرياض.
-            </p>
-            
-            <div className="flex flex-col gap-4 text-charcoal/80">
-              <a href="tel:0557401773" className="flex items-center gap-3 hover:text-primary-deep transition-colors w-fit">
-                <Phone className="w-5 h-5 text-botanical" />
+      {/* =============================================
+          11. FINAL CTA - Apple-style premium
+      ============================================= */}
+      <section className="bg-primary-deep py-28 md:py-36 relative overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+        <div className="absolute -top-40 -right-40 w-80 h-80 rounded-full bg-gradient-to-br from-botanical/20 to-water-blue/10 blur-3xl pointer-events-none" />
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 rounded-full bg-gradient-to-tr from-water-blue/10 to-botanical/20 blur-3xl pointer-events-none" />
+
+        <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center relative z-10">
+
+          <div className="lg:col-span-6 space-y-8">
+            <div className="space-y-4">
+              <h2 className="apple-title text-white">
+                حوّل مساحتك الخارجية<br />
+                <span className="text-gradient-mixed bg-gradient-to-r from-fresh-green via-water-blue to-soft-blue bg-clip-text text-transparent">
+                  إلى مكان تحب أن تعيش فيه
+                </span>
+              </h2>
+              <p className="text-base text-warm-white/60 leading-relaxed text-justify max-w-xl">
+                ابدأ اليوم بمشاركة رؤيتك معنا. مهندسو البيت الأخضر مستعدون للتجاوب وتطوير مخطط متوازن يجمع الرقي والجمال والاستدامة لفيلتك بالرياض.
+              </p>
+            </div>
+
+            <div className="flex flex-col gap-4">
+              <a href="tel:0557401773" className="inline-flex items-center gap-3 text-warm-white/80 hover:text-white transition-all duration-300 group w-fit">
+                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-botanical/40 to-transparent flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <Phone className="w-5 h-5 text-water-blue" />
+                </div>
                 <span className="dir-ltr text-lg font-black">0557401773</span>
               </a>
-              <a href="https://wa.me/966557401773" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:text-primary-deep transition-colors w-fit">
-                <MessageCircle className="w-5 h-5 text-botanical" />
+              <a href="https://wa.me/966557401773" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 text-warm-white/80 hover:text-white transition-all duration-300 group w-fit">
+                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-water-blue/40 to-transparent flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <MessageCircle className="w-5 h-5 text-water-blue" />
+                </div>
                 <span className="dir-ltr text-lg font-black">+966557401773</span>
               </a>
             </div>
@@ -666,3 +777,4 @@ export default function Home() {
     </div>
   );
 }
+

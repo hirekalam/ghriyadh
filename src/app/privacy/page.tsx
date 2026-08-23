@@ -1,86 +1,89 @@
 import Link from 'next/link';
+import { Shield } from 'lucide-react';
 
 export default function PrivacyPolicy() {
   return (
     <div className="flex flex-col w-full min-h-screen bg-warm-white">
-      
-      {/* Header Banner */}
-      <section className="relative bg-primary-deep text-warm-white py-16 overflow-hidden">
-        <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full text-right space-y-4">
-          <nav className="text-xs text-warm-white/60 flex items-center gap-2 font-bold mb-2">
-            <Link href="/" className="hover:text-white">الرئيسية</Link>
-            <span>/</span>
-            <span className="text-white">سياسة الخصوصية</span>
+
+      {/* Header Banner - Apple-style */}
+      <section className="relative bg-primary-deep text-warm-white pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
+        <div className="absolute inset-0 z-0 bg-gradient-to-t from-primary-deep/80 to-primary-deep" />
+        <div className="absolute -top-40 -right-40 w-80 h-80 rounded-full bg-gradient-to-br from-botanical/10 to-water-blue/10 blur-3xl pointer-events-none" />
+
+        <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full text-right space-y-6">
+          <nav className="text-xs text-warm-white/50 flex items-center gap-2 font-semibold mb-2">
+            <Link href="/" className="hover:text-white transition-colors">الرئيسية</Link>
+            <span className="w-1 h-1 rounded-full bg-warm-white/20" />
+            <span className="text-warm-white/80">سياسة الخصوصية</span>
           </nav>
-          <h1 className="text-3xl font-black text-white">سياسة الخصوصية</h1>
-          <p className="text-xs text-warm-white/70">
+          <h1 className="apple-title text-white">سياسة الخصوصية</h1>
+          <p className="text-sm text-warm-white/50">
             تاريخ التحديث: أغسطس 2026
           </p>
         </div>
       </section>
 
-      {/* Main Content */}
-      <section className="bg-white py-16 md:py-20 text-right text-sm leading-relaxed text-muted-grey">
-        <div className="max-w-4xl mx-auto px-6 space-y-8 text-justify">
-          
-          <div className="space-y-3">
+      {/* Main Content - Apple-style */}
+      <section className="bg-white py-24 md:py-32 text-right text-sm leading-relaxed text-muted-grey">
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-charcoal/5 to-transparent" />
+
+        <div className="max-w-4xl mx-auto px-6 space-y-10 text-justify">
+
+          <div className="space-y-3 p-6 bg-warm-white rounded-3xl border border-charcoal/5 hover:shadow-apple transition-all duration-300">
             <h2 className="text-lg font-black text-primary-deep">مقدمة</h2>
-            <p>
+            <p className="text-xs md:text-sm text-muted-grey leading-relaxed">
               نهتم في شركة البيت الأخضر (البيت الأخضر لتنسيق الحدائق بالرياض) بخصوصية زائري موقعنا الإلكتروني. توضح هذه السياسة كيف نقوم بتجميع واستخدام وحماية البيانات التي تزودنا بها عند تعبئة نموذج الاستشارة أو الاتصال بنا.
             </p>
           </div>
 
-          <div className="space-y-3">
-            <h2 className="text-lg font-black text-primary-deep">1. البيانات التي نقوم بتجميعها</h2>
-            <p>
-              عند استخدامك لنماذج التواصل في الموقع، قد نقوم بجمع البيانات التالية:
-            </p>
-            <ul className="list-disc pr-6 space-y-1">
-              <li>الاسم الكريم لتمكين مهندسينا من توجيه الخطاب إليك بشكل صحيح.</li>
-              <li>رقم جوالك للتمكن من الاتصال بك ومناقشة تفاصيل المعاينة والتصميم.</li>
-              <li>اسم الحي السكني في الرياض لتنظيم مهام المعاينة الميدانية.</li>
-              <li>نوع الخدمة المطلوبة ووصف تفاصيل مساحتك الخارجية.</li>
-              <li>ملفات تعريف الارتباط (Cookies) لتحسين أداء وتجربة تصفح الموقع الإلكتروني.</li>
-            </ul>
-          </div>
+          {[
+            {
+              title: '1. البيانات التي نقوم بتجميعها',
+              items: [
+                'الاسم الكريم لتمكين مهندسينا من توجيه الخطاب إليك بشكل صحيح.',
+                'رقم جوالك للتمكن من الاتصال بك ومناقشة تفاصيل المعاينة والتصميم.',
+                'اسم الحي السكني في الرياض لتنظيم مهام المعاينة الميدانية.',
+                'نوع الخدمة المطلوبة ووصف تفاصيل مساحتك الخارجية.',
+                'ملفات تعريف الارتباط (Cookies) لتحسين أداء وتجربة تصفح الموقع الإلكتروني.',
+              ]
+            },
+            {
+              title: '2. كيف نستخدم بياناتك',
+              items: [
+                'التواصل معك للإجابة على استفساراتك وتحديد مواعيد المعاينة المجانية.',
+                'تخصيص تصاميم الحدائق والبرجولات والشلالات وفقاً لاحتياج فيلتك الخاص.',
+                'تحسين جودة الخدمات وتسهيل عملية التصفح لزائري موقعنا بالرياض.',
+              ]
+            }
+          ].map((section, idx) => (
+            <div key={idx} className="space-y-3 p-6 bg-warm-white rounded-3xl border border-charcoal/5 hover:shadow-apple transition-all duration-300">
+              <h2 className="text-lg font-black text-primary-deep">{section.title}</h2>
+              <ul className="space-y-2 pr-4">
+                {section.items.map((item, i) => (
+                  <li key={i} className="flex items-start gap-2 text-xs md:text-sm text-muted-grey leading-relaxed">
+                    <span className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-botanical to-water-blue mt-2 flex-shrink-0" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
 
-          <div className="space-y-3">
-            <h2 className="text-lg font-black text-primary-deep">2. كيف نستخدم بياناتك</h2>
-            <p>
-              نستخدم البيانات التي تزودنا بها للأغراض التالية فقط:
-            </p>
-            <ul className="list-disc pr-6 space-y-1">
-              <li>التواصل معك للإجابة على استفساراتك وتحديد مواعيد المعاينة المجانية.</li>
-              <li>تخصيص تصاميم الحدائق والبرجولات والشلالات وفقاً لاحتياج فيلتك الخاص.</li>
-              <li>تحسين جودة الخدمات وتسهيل عملية التصفح لزائري موقعنا بالرياض.</li>
-            </ul>
-          </div>
+          {[
+            { title: '3. حماية ومشاركة البيانات', content: 'نحن نلتزم بحماية بياناتك الشخصية ولا نقوم ببيعها أو مشاركتها أو تأجيرها لأي طرف ثالث، باستثناء ما تفرضه القوانين المعمول بها في المملكة العربية السعودية. يتم حفظ البيانات في خوادم آمنة للبيت الأخضر لضمان منع الوصول غير المصرح به.' },
+            { title: '4. ملفات تعريف الارتباط (Cookies)', content: 'يستخدم هذا الموقع ملفات تعريف الارتباط الصغيرة لحفظ التفضيلات وتحليل حركة التصفح عبر تحليلات جوجل (Google Analytics) لتحسين الأداء. يمكنك تعديل إعدادات متصفحك لرفض الكوكيز إذا كنت تفضل ذلك، إلا أن ذلك قد يؤثر على تصفحك لبعض صفحات الموقع.' },
+            { title: '5. التعديل على سياسة الخصوصية', content: 'يمتلك البيت الأخضر الحق في تحديث أو تعديل سياسة الخصوصية هذه في أي وقت لمواكبة التغيرات التقنية أو التنظيمية. وننصحك بمراجعة هذه الصفحة دورياً للاطلاع على أي تحديثات جديدة.' },
+          ].map((section, idx) => (
+            <div key={idx} className="space-y-3 p-6 bg-warm-white rounded-3xl border border-charcoal/5 hover:shadow-apple transition-all duration-300">
+              <h2 className="text-lg font-black text-primary-deep">{section.title}</h2>
+              <p className="text-xs md:text-sm text-muted-grey leading-relaxed">{section.content}</p>
+            </div>
+          ))}
 
-          <div className="space-y-3">
-            <h2 className="text-lg font-black text-primary-deep">3. حماية ومشاركة البيانات</h2>
-            <p>
-              نحن نلتزم بحماية بياناتك الشخصية ولا نقوم ببيعها أو مشاركتها أو تأجيرها لأي طرف ثالث، باستثناء ما تفرضه القوانين المعمول بها في المملكة العربية السعودية. يتم حفظ البيانات في خوادم آمنة للبيت الأخضر لضمان منع الوصول غير المصرح به.
-            </p>
-          </div>
-
-          <div className="space-y-3">
-            <h2 className="text-lg font-black text-primary-deep">4. ملفات تعريف الارتباط (Cookies)</h2>
-            <p>
-              يستخدم هذا الموقع ملفات تعريف الارتباط الصغيرة لحفظ التفضيلات وتحليل حركة التصفح عبر تحليلات جوجل (Google Analytics) لتحسين الأداء. يمكنك تعديل إعدادات متصفحك لرفض الكوكيز إذا كنت تفضل ذلك، إلا أن ذلك قد يؤثر على تصفحك لبعض صفحات الموقع.
-            </p>
-          </div>
-
-          <div className="space-y-3">
-            <h2 className="text-lg font-black text-primary-deep">5. التعديل على سياسة الخصوصية</h2>
-            <p>
-              يمتلك البيت الأخضر الحق في تحديث أو تعديل سياسة الخصوصية هذه في أي وقت لمواكبة التغيرات التقنية أو التنظيمية. وننصحك بمراجعة هذه الصفحة دورياً للاطلاع على أي تحديثات جديدة.
-            </p>
-          </div>
-
-          <div className="space-y-3">
+          <div className="space-y-3 p-6 bg-warm-white rounded-3xl border border-charcoal/5 hover:shadow-apple transition-all duration-300">
             <h2 className="text-lg font-black text-primary-deep">اتصل بنا</h2>
-            <p>
-              إذا كان لديك أي استفسار حول سياسة الخصوصية الخاصة بنا، يمكنك التواصل معنا مباشرة على البريد الإلكتروني: <a href="mailto:riyadhgreenhouse@gmail.com" className="text-primary-deep hover:underline font-bold">riyadhgreenhouse@gmail.com</a>.
+            <p className="text-xs md:text-sm text-muted-grey leading-relaxed">
+              إذا كان لديك أي استفسار حول سياسة الخصوصية الخاصة بنا، يمكنك التواصل معنا مباشرة على البريد الإلكتروني: <a href="mailto:riyadhgreenhouse@gmail.com" className="text-water-blue hover:underline font-bold">riyadhgreenhouse@gmail.com</a>.
             </p>
           </div>
 

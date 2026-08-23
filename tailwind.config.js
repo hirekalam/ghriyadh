@@ -14,16 +14,19 @@ module.exports = {
         latin: ['Inter', 'sans-serif'],
       },
       colors: {
-        // Redesigned premium palette
+        // Apple-level premium palette - Green & Water Blue
         'primary-deep': '#173F32',
         'botanical': '#2F6B4F',
         'fresh-green': '#6FAF73',
         'water-blue': '#2F91B7',
         'soft-blue': '#7BC4D6',
+        'deep-blue': '#1A6B8A',
         'warm-white': '#F7F8F5',
         'charcoal': '#1C2421',
         'muted-grey': '#68716C',
-        
+        'light-green': '#E8F5E9',
+        'light-blue': '#E1F5FE',
+
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -72,6 +75,10 @@ module.exports = {
         'card': '0 10px 30px -10px rgba(23, 63, 50, 0.08)',
         'card-hover': '0 20px 40px -15px rgba(23, 63, 50, 0.15)',
         'premium-glow': '0 10px 30px rgba(47, 107, 79, 0.1)',
+        'water-glow': '0 10px 30px rgba(47, 145, 183, 0.12)',
+        'apple': '0 4px 20px rgba(0, 0, 0, 0.04)',
+        'apple-lg': '0 8px 40px rgba(0, 0, 0, 0.06)',
+        'apple-xl': '0 20px 60px rgba(0, 0, 0, 0.08)',
       },
       keyframes: {
         "accordion-down": {
@@ -85,12 +92,49 @@ module.exports = {
         "fade-in-up": {
           "0%": { opacity: 0, transform: "translateY(15px)" },
           "100%": { opacity: 1, transform: "translateY(0)" }
+        },
+        "fade-in": {
+          "0%": { opacity: 0 },
+          "100%": { opacity: 1 }
+        },
+        "scale-in": {
+          "0%": { opacity: 0, transform: "scale(0.95)" },
+          "100%": { opacity: 1, transform: "scale(1)" }
+        },
+        "float": {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-8px)" }
+        },
+        "shimmer": {
+          "0%": { backgroundPosition: "-200% center" },
+          "100%": { backgroundPosition: "200% center" }
+        },
+        "pulse-water": {
+          "0%, 100%": { boxShadow: "0 0 0 0 rgba(47, 145, 183, 0.4)" },
+          "50%": { boxShadow: "0 0 0 12px rgba(47, 145, 183, 0)" }
+        },
+        "gradient-rotate": {
+          "0%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+          "100%": { backgroundPosition: "0% 50%" }
         }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in-up": "fade-in-up 0.6s ease-out forwards",
+        "fade-in": "fade-in 0.5s ease-out forwards",
+        "scale-in": "scale-in 0.4s ease-out forwards",
+        "float": "float 3s ease-in-out infinite",
+        "shimmer": "shimmer 2s linear infinite",
+        "pulse-water": "pulse-water 2s ease-in-out infinite",
+        "gradient-rotate": "gradient-rotate 4s ease infinite",
+      },
+      backgroundSize: {
+        '200%': '200%',
+      },
+      transitionTimingFunction: {
+        'apple': 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
       },
     },
   },

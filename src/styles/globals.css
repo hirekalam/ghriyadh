@@ -1,4 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Tajawal:wght@300;400;500;700;800;900&display=swap');
+/* ============================================
+   GREEN HOUSE - Apple-Level Premium Design
+   Theme: Green & Water Blue
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Tajawal:wght@300;400;500;700;800;900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,35 +11,26 @@
 
 @layer base {
   :root {
-    /* Premium Architecture Studio Theme - Light Palette */
-    --background: 80 25% 98%; /* Warm off-white #F7F8F5 */
-    --foreground: 160 17% 12%; /* Charcoal #1C2421 */
-    
-    --card: 0 0% 100%; /* Pure White */
+    /* Premium Color System - Green & Water Blue */
+    --background: 80 25% 98%;
+    --foreground: 160 17% 12%;
+    --card: 0 0% 100%;
     --card-foreground: 160 17% 12%;
-    
     --popover: 0 0% 100%;
     --popover-foreground: 160 17% 12%;
-    
-    --primary: 162 46% 17%; /* Deep Green #173F32 */
+    --primary: 162 46% 17%;
     --primary-foreground: 80 25% 98%;
-    
-    --secondary: 151 39% 30%; /* Botanical Green #2F6B4F */
+    --secondary: 151 39% 30%;
     --secondary-foreground: 0 0% 100%;
-    
-    --muted: 150 10% 95%; /* Muted Grey-green #F0F2F0 */
-    --muted-foreground: 153 4% 43%; /* Muted Grey #68716C */
-    
-    --accent: 197 59% 45%; /* Water Blue #2F91B7 */
+    --muted: 150 10% 95%;
+    --muted-foreground: 153 4% 43%;
+    --accent: 197 59% 45%;
     --accent-foreground: 0 0% 100%;
-    
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    
     --border: 150 10% 88%;
     --input: 150 10% 88%;
     --ring: 162 46% 17%;
-    
     --radius: 1rem;
   }
 }
@@ -43,21 +39,31 @@
   * {
     @apply border-border;
   }
-  
+
   html {
     scroll-behavior: smooth;
   }
-  
+
   body {
     @apply bg-warm-white text-charcoal;
     font-family: 'Tajawal', 'Inter', sans-serif;
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Apple-style selection */
+  ::selection {
+    background: rgba(47, 145, 183, 0.2);
+    color: #173F32;
   }
 }
 
-/* Custom premium scrollbar */
+/* ============================================
+   PREMIUM SCROLLBAR - Apple-style minimal
+   ============================================ */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 5px;
 }
 
 ::-webkit-scrollbar-track {
@@ -65,40 +71,283 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #2F6B4F;
+  background: linear-gradient(180deg, #2F6B4F, #2F91B7);
   border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #173F32;
+  background: linear-gradient(180deg, #173F32, #1A6B8A);
 }
 
-/* Translucent Glass effects */
+/* ============================================
+   APPLE-LEVEL GLASSMORPHISM
+   ============================================ */
 .glass-header {
-  background: rgba(247, 248, 245, 0.8);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(28, 36, 33, 0.05);
+  background: rgba(247, 248, 245, 0.82);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(28, 36, 33, 0.06);
+}
+
+.glass-header-dark {
+  background: rgba(23, 63, 50, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(28, 36, 33, 0.05);
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(28, 36, 33, 0.06);
 }
 
-/* Text layouts */
+.glass-card-dark {
+  background: rgba(23, 63, 50, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ============================================
+   APPLE-STYLE TEXT EFFECTS
+   ============================================ */
 .text-stroke-title {
   color: transparent;
-  -webkit-text-stroke: 1px rgba(23, 63, 50, 0.2);
+  -webkit-text-stroke: 1.5px rgba(23, 63, 50, 0.15);
 }
 
-/* Smooth zoom for images */
-.zoom-image-container {
+.text-gradient-green {
+  background: linear-gradient(135deg, #173F32, #2F6B4F);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-water {
+  background: linear-gradient(135deg, #2F91B7, #7BC4D6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-mixed {
+  background: linear-gradient(135deg, #173F32 0%, #2F6B4F 40%, #2F91B7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ============================================
+   APPLE-LEVEL IMAGE & VIDEO EFFECTS
+   ============================================ */
+.img-premium {
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.img-premium:hover {
+  transform: scale(1.03);
+}
+
+.img-container {
+  overflow: hidden;
+  border-radius: 1.5rem;
+}
+
+.img-container img {
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.img-container:hover img {
+  transform: scale(1.04);
+}
+
+/* ============================================
+   APPLE-STYLE ANIMATIONS
+   ============================================ */
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+
+  100% {
+    background-position: 200% center;
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes pulse-water {
+
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(47, 145, 183, 0.4);
+  }
+
+  50% {
+    box-shadow: 0 0 0 12px rgba(47, 145, 183, 0);
+  }
+}
+
+@keyframes gradient-rotate {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* ============================================
+   APPLE-STYLE BUTTON ANIMATIONS
+   ============================================ */
+.btn-apple {
+  @apply inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full font-bold text-sm;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
   overflow: hidden;
 }
-.zoom-image-container img {
-  transition: transform 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+
+.btn-apple::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
-.zoom-image-container:hover img {
-  transform: scale(1.05);
+
+.btn-apple:hover::after {
+  transform: translateX(100%);
+}
+
+.btn-apple:active {
+  transform: scale(0.97);
+}
+
+/* ============================================
+   APPLE-STYLE GRID & SECTION DIVIDERS
+   ============================================ */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(28, 36, 33, 0.06), transparent);
+}
+
+/* ============================================
+   APPLE-STYLE FOCUS RING
+   ============================================ */
+*:focus-visible {
+  outline: 2px solid #2F91B7;
+  outline-offset: 2px;
+  border-radius: 8px;
+}
+
+/* ============================================
+   APPLE-STYLE NUMBER DISPLAY
+   ============================================ */
+.number-display {
+  font-feature-settings: "tnum";
+  font-variant-numeric: tabular-nums;
+}
+
+/* ============================================
+   WATER BLUE ACCENT GLOW
+   ============================================ */
+.water-glow {
+  box-shadow: 0 0 30px rgba(47, 145, 183, 0.15);
+}
+
+.green-glow {
+  box-shadow: 0 0 30px rgba(47, 107, 79, 0.15);
+}
+
+/* ============================================
+   APPLE-STYLE GRADIENT BORDERS
+   ============================================ */
+.gradient-border {
+  border: 1.5px solid transparent;
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  background-image: linear-gradient(135deg, #F7F8F5, #F7F8F5),
+    linear-gradient(135deg, #2F6B4F, #2F91B7);
+}
+
+/* ============================================
+   RESPONSIVE TYPOGRAPHY HELPERS
+   ============================================ */
+.apple-title {
+  @apply text-4xl md:text-5xl lg:text-6xl font-black leading-tight;
+  letter-spacing: -0.02em;
+}
+
+.apple-heading {
+  @apply text-3xl md:text-4xl font-black leading-tight;
+  letter-spacing: -0.01em;
+}
+
+.apple-subtitle {
+  @apply text-lg md:text-xl leading-relaxed;
+  letter-spacing: 0.01em;
 }

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Phone, MessageCircle } from 'lucide-react';
+import { Phone, MessageCircle, ArrowLeft, HelpCircle } from 'lucide-react';
 
 export default function FAQ() {
   const faqs = [
@@ -47,53 +47,64 @@ export default function FAQ() {
 
   return (
     <div className="flex flex-col w-full min-h-screen bg-warm-white">
-      
-      {/* Page Header */}
-      <section className="relative bg-primary-deep text-warm-white py-20 md:py-24 overflow-hidden">
+
+      {/* Page Header - Apple-style */}
+      <section className="relative bg-primary-deep text-warm-white pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
             src="/images/hero-garden-path.jpg"
             alt="الأسئلة الشائعة - البيت الأخضر"
-            className="w-full h-full object-cover opacity-20 object-center"
+            className="w-full h-full object-cover opacity-20 object-center scale-105"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-primary-deep via-primary-deep/90 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-primary-deep via-primary-deep/90 to-primary-deep/60" />
+          <div className="absolute -top-40 -right-40 w-80 h-80 rounded-full bg-gradient-to-br from-botanical/10 to-water-blue/10 blur-3xl pointer-events-none" />
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full text-right space-y-4">
-          <nav className="text-xs text-warm-white/60 flex items-center gap-2 font-bold mb-4">
-            <Link href="/" className="hover:text-white">الرئيسية</Link>
-            <span>/</span>
-            <span className="text-white">الأسئلة الشائعة</span>
+        <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full text-right space-y-6">
+          <nav className="text-xs text-warm-white/50 flex items-center gap-2 font-semibold mb-2">
+            <Link href="/" className="hover:text-white transition-colors">الرئيسية</Link>
+            <span className="w-1 h-1 rounded-full bg-warm-white/20" />
+            <span className="text-warm-white/80">الأسئلة الشائعة</span>
           </nav>
-          <span className="text-xs font-bold text-fresh-green tracking-widest uppercase block border-r-2 border-botanical pr-3">
-            مركز المعلومات
-          </span>
-          <h1 className="text-3xl md:text-5xl font-black text-white">الأسئلة الشائعة</h1>
-          <p className="text-sm md:text-base text-warm-white/70 max-w-2xl leading-relaxed">
+          <div className="inline-flex items-center gap-2 text-fresh-green font-bold text-xs uppercase tracking-[0.2em]">
+            <span className="w-8 h-px bg-fresh-green/50" />
+            <span>مركز المعلومات</span>
+          </div>
+          <h1 className="apple-title text-white">الأسئلة الشائعة</h1>
+          <p className="text-base md:text-lg text-warm-white/60 max-w-2xl leading-relaxed">
             إجابات شافية ومفصلة حول تكاليف وخطوات ومواصفات تنسيق وتصميم حدائق الفلل والأسطح بالرياض.
           </p>
         </div>
       </section>
 
-      {/* FAQs Accordion layout */}
-      <section className="bg-white py-20">
+      {/* FAQs Accordion layout - Apple-style */}
+      <section className="bg-white py-24 md:py-32 relative">
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-charcoal/5 to-transparent" />
+
         <div className="max-w-4xl mx-auto px-6 space-y-8">
-          
-          <div className="text-center max-w-xl mx-auto space-y-3 mb-10">
-            <h2 className="text-2xl md:text-3xl font-black text-primary-deep">أهم الاستفسارات حول خدماتنا</h2>
+
+          <div className="text-center max-w-xl mx-auto space-y-4 mb-10">
+            <div className="inline-flex items-center gap-2 text-botanical font-bold text-xs uppercase tracking-[0.2em]">
+              <span className="w-8 h-px bg-botanical/50" />
+              <span>الاستفسارات</span>
+            </div>
+            <h2 className="apple-heading text-primary-deep">
+              أهم الاستفسارات<br className="hidden md:block" />
+              <span className="text-gradient-mixed">حول خدماتنا</span>
+            </h2>
             <p className="text-xs text-muted-grey">
               إذا كان لديك سؤال آخر لا تتردد في الاتصال المباشر بنا أو مراسلتنا عبر الواتساب.
             </p>
           </div>
 
-          <div className="space-y-6">
+          <div className="space-y-4">
             {faqs.map((faq, idx) => (
               <div
                 key={idx}
-                className="bg-warm-white p-6 md:p-8 rounded-3xl border border-charcoal/5 text-right space-y-3 hover:shadow-card hover:bg-white transition-all duration-300"
+                className="bg-warm-white p-6 md:p-8 rounded-3xl border border-charcoal/5 shadow-apple text-right space-y-3 hover:bg-white hover:shadow-apple-lg transition-all duration-300"
               >
                 <h3 className="text-base font-black text-primary-deep flex items-start gap-3">
-                  <span className="w-2.5 h-2.5 rounded-full bg-botanical mt-2 flex-shrink-0" />
+                  <span className="w-2.5 h-2.5 rounded-full bg-gradient-to-r from-botanical to-water-blue mt-2 flex-shrink-0" />
                   <span>{faq.q}</span>
                 </h3>
                 <p className="text-xs md:text-sm text-muted-grey leading-relaxed pr-6 text-justify">
@@ -106,28 +117,39 @@ export default function FAQ() {
         </div>
       </section>
 
-      {/* FAQ CTA Trigger */}
-      <section className="bg-primary-deep text-warm-white py-16 text-center">
-        <div className="max-w-3xl mx-auto px-6 space-y-6">
-          <h2 className="text-2xl md:text-3xl font-black text-white">لديك مشروع خاص تود مناقشته؟</h2>
-          <p className="text-sm text-warm-white/70 max-w-xl mx-auto">
-            تواصل معنا مباشرة عبر القنوات الرسمية وسيسعد مهندسونا بالرد الفوري على كل تفاصيل التكلفة والتنسيق.
-          </p>
+      {/* FAQ CTA Trigger - Apple-style */}
+      <section className="bg-primary-deep text-warm-white py-24 md:py-32 relative overflow-hidden">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+        <div className="absolute -top-40 -right-40 w-80 h-80 rounded-full bg-gradient-to-br from-botanical/20 to-water-blue/10 blur-3xl pointer-events-none" />
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 rounded-full bg-gradient-to-tr from-water-blue/10 to-botanical/20 blur-3xl pointer-events-none" />
+
+        <div className="max-w-4xl mx-auto px-6 text-center space-y-8 relative z-10">
+          <div className="space-y-4">
+            <h2 className="apple-title text-white">
+              لديك مشروع خاص<br />
+              <span className="text-gradient-mixed bg-gradient-to-r from-fresh-green via-water-blue to-soft-blue bg-clip-text text-transparent">
+                تود مناقشته؟
+              </span>
+            </h2>
+            <p className="text-base text-warm-white/60 max-w-xl mx-auto leading-relaxed">
+              تواصل معنا مباشرة عبر القنوات الرسمية وسيسعد مهندسونا بالرد الفوري على كل تفاصيل التكلفة والتنسيق.
+            </p>
+          </div>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
             <a
               href="tel:0557401773"
-              className="bg-white text-primary-deep font-bold px-8 py-4 rounded-full text-sm inline-flex items-center gap-2 hover:scale-[1.02] transition-transform"
+              className="btn-apple bg-gradient-to-r from-botanical to-water-blue text-white shadow-lg hover:shadow-water-glow"
             >
-              <Phone className="w-4 h-4 fill-primary-deep" />
+              <Phone className="w-4 h-4" />
               <span>اتصال مباشر</span>
             </a>
             <a
               href="https://wa.me/966557401773"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-botanical text-warm-white font-bold px-8 py-4 rounded-full text-sm inline-flex items-center gap-2 hover:scale-[1.02] transition-transform"
+              className="btn-apple bg-white/10 backdrop-blur-sm text-white border border-white/20 hover:bg-white/20"
             >
-              <MessageCircle className="w-4 h-4 fill-warm-white" />
+              <MessageCircle className="w-4 h-4" />
               <span>واتساب المهندس</span>
             </a>
           </div>

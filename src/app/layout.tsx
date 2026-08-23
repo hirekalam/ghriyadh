@@ -91,15 +91,12 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased min-h-screen flex flex-col">
-        {/* Grain overlay for luxury editorial paper textures */}
-        <div className="grain-overlay" />
-        
         <Header />
-        
-        <main className="flex-1 pt-20">
+
+        <main className="flex-1">
           {children}
         </main>
-        
+
         <Footer />
         <MobileStickyBar />
       </body>

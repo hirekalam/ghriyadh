@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from 'react';
-import { CheckCircle2, AlertTriangle, Loader2 } from 'lucide-react';
+import { CheckCircle2, AlertTriangle, Loader2, Leaf, Send } from 'lucide-react';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -54,7 +54,7 @@ const ContactForm = () => {
     }
     if (!formData.serviceType) newErrors.serviceType = 'الرجاء اختيار نوع الخدمة';
     if (!formData.neighborhood) newErrors.neighborhood = 'الرجاء اختيار الحي في الرياض';
-    
+
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -95,31 +95,34 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="bg-white p-8 md:p-10 rounded-3xl border border-charcoal/5 shadow-card hover:shadow-card-hover transition-all duration-300">
-      
+    <div className="bg-white/10 backdrop-blur-sm p-8 md:p-10 rounded-3xl border border-white/10 shadow-apple-lg hover:shadow-apple-xl transition-all duration-300">
+
       {status === 'success' ? (
         <div className="text-center py-10 flex flex-col items-center justify-center animate-fade-in-up">
-          <CheckCircle2 className="w-16 h-16 text-botanical mb-4" />
-          <h3 className="text-primary-deep font-black text-2xl mb-2">تم استلام طلبك بنجاح!</h3>
-          <p className="text-muted-grey text-base max-w-sm mb-6">
+          <div className="w-20 h-20 rounded-full bg-gradient-to-br from-botanical/40 to-water-blue/20 flex items-center justify-center mb-6">
+            <CheckCircle2 className="w-10 h-10 text-water-blue" />
+          </div>
+          <h3 className="text-white font-black text-2xl mb-2">تم استلام طلبك بنجاح!</h3>
+          <p className="text-warm-white/60 text-base max-w-sm mb-8">
             شكراً لتواصلك مع البيت الأخضر. سيقوم مهندسو التصميم لدينا بالتواصل معك خلال أفضل وقت اخترته لمناقشة تفاصيل مشروعك.
           </p>
           <button
             onClick={() => setStatus('idle')}
-            className="bg-primary-deep text-warm-white font-bold px-6 py-2.5 rounded-full hover:bg-botanical transition-colors"
+            className="btn-apple bg-gradient-to-r from-botanical to-water-blue text-white shadow-lg hover:shadow-water-glow"
           >
-            إرسال طلب آخر
+            <Leaf className="w-4 h-4" />
+            <span>إرسال طلب آخر</span>
           </button>
         </div>
       ) : (
-        <form onSubmit={handleSubmit} className="space-y-6">
-          <div className="text-right border-b border-charcoal/5 pb-4 mb-6">
-            <h3 className="text-primary-deep font-black text-xl mb-1">ابدأ بتصميم مساحتك الخارجية</h3>
-            <p className="text-xs text-muted-grey">امِلأ النموذج وسيتصل بك أحد مهندسينا لمعاينة الموقع مجاناً.</p>
+        <form onSubmit={handleSubmit} className="space-y-5">
+          <div className="text-right border-b border-white/10 pb-5 mb-6">
+            <h3 className="text-white font-black text-xl mb-1">ابدأ بتصميم مساحتك الخارجية</h3>
+            <p className="text-xs text-warm-white/50">امِلأ النموذج وسيتصل بك أحد مهندسينا لمعاينة الموقع مجاناً.</p>
           </div>
 
           {status === 'error' && (
-            <div className="bg-red-50 text-red-700 p-4 rounded-xl flex items-center gap-3 text-xs">
+            <div className="bg-red-500/10 text-red-300 p-4 rounded-xl flex items-center gap-3 text-xs border border-red-500/20">
               <AlertTriangle className="w-5 h-5 flex-shrink-0" />
               <span>حدث خطأ أثناء إرسال طلبك. الرجاء المحاولة مرة أخرى أو الاتصال بنا مباشرة.</span>
             </div>
@@ -127,7 +130,7 @@ const ContactForm = () => {
 
           {/* Name Field */}
           <div className="flex flex-col gap-2">
-            <label htmlFor="name" className="text-xs font-bold text-primary-deep">الاسم الكريم *</label>
+            <label htmlFor="name" className="text-xs font-bold text-warm-white/80">الاسم الكريم *</label>
             <input
               type="text"
               id="name"
@@ -135,16 +138,15 @@ const ContactForm = () => {
               value={formData.name}
               onChange={handleChange}
               placeholder="مثال: محمد بن عبد العزيز"
-              className={`w-full px-5 py-3 rounded-2xl bg-warm-white border ${
-                errors.name ? 'border-red-500 focus:ring-red-500' : 'border-charcoal/5 focus:border-botanical'
-              } text-charcoal focus:outline-none focus:ring-1 focus:ring-botanical text-sm`}
+              className={`w-full px-5 py-3.5 rounded-2xl bg-white/5 backdrop-blur-sm border text-white placeholder:text-white/30 focus:outline-none focus:ring-1 text-sm transition-all duration-300 ${errors.name ? 'border-red-500/50 focus:ring-red-500/50' : 'border-white/10 focus:border-water-blue/50 focus:ring-water-blue/30'
+                }`}
             />
-            {errors.name && <span className="text-xs text-red-500 font-medium">{errors.name}</span>}
+            {errors.name && <span className="text-xs text-red-300 font-medium">{errors.name}</span>}
           </div>
 
           {/* Phone Field */}
           <div className="flex flex-col gap-2">
-            <label htmlFor="phone" className="text-xs font-bold text-primary-deep">رقم الجوال *</label>
+            <label htmlFor="phone" className="text-xs font-bold text-warm-white/80">رقم الجوال *</label>
             <input
               type="tel"
               id="phone"
@@ -152,78 +154,78 @@ const ContactForm = () => {
               value={formData.phone}
               onChange={handleChange}
               placeholder="مثال: 0557401773"
-              className={`w-full px-5 py-3 rounded-2xl bg-warm-white border ${
-                errors.phone ? 'border-red-500 focus:ring-red-500' : 'border-charcoal/5 focus:border-botanical'
-              } text-charcoal focus:outline-none focus:ring-1 focus:ring-botanical text-sm dir-ltr text-right`}
+              className={`w-full px-5 py-3.5 rounded-2xl bg-white/5 backdrop-blur-sm border text-white placeholder:text-white/30 focus:outline-none focus:ring-1 text-sm dir-ltr text-right transition-all duration-300 ${errors.phone ? 'border-red-500/50 focus:ring-red-500/50' : 'border-white/10 focus:border-water-blue/50 focus:ring-water-blue/30'
+                }`}
             />
-            {errors.phone && <span className="text-xs text-red-500 font-medium">{errors.phone}</span>}
+            {errors.phone && <span className="text-xs text-red-300 font-medium">{errors.phone}</span>}
           </div>
 
           {/* Service & Neighborhood Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+
             {/* Service Type */}
             <div className="flex flex-col gap-2">
-              <label htmlFor="serviceType" className="text-xs font-bold text-primary-deep">نوع الخدمة المطلوبة *</label>
+              <label htmlFor="serviceType" className="text-xs font-bold text-warm-white/80">نوع الخدمة المطلوبة *</label>
               <select
                 id="serviceType"
                 name="serviceType"
                 value={formData.serviceType}
                 onChange={handleChange}
-                className={`w-full px-5 py-3 rounded-2xl bg-warm-white border ${
-                  errors.serviceType ? 'border-red-500' : 'border-charcoal/5'
-                } text-charcoal focus:outline-none focus:ring-1 focus:ring-botanical text-sm`}
+                className={`w-full px-5 py-3.5 rounded-2xl bg-white/5 backdrop-blur-sm border text-white/80 focus:outline-none focus:ring-1 text-sm transition-all duration-300 appearance-none ${errors.serviceType ? 'border-red-500/50' : 'border-white/10 focus:border-water-blue/50 focus:ring-water-blue/30'
+                  }`}
+                style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2712%27 height=%2712%27 viewBox=%270 0 12 12%27%3E%3Cpath fill=%27%23ffffff%27 opacity=%270.5%27 d=%27M6 8L1 3h10z%27/%3E%3C/svg%3E")', backgroundRepeat: 'no-repeat', backgroundPosition: 'left 12px center', paddingLeft: '2.5rem' }}
               >
-                <option value="">-- اختر الخدمة --</option>
+                <option value="" className="bg-charcoal text-white/50">-- اختر الخدمة --</option>
                 {services.map((service) => (
-                  <option key={service.value} value={service.value}>
+                  <option key={service.value} value={service.value} className="bg-charcoal text-white">
                     {service.label}
                   </option>
                 ))}
               </select>
-              {errors.serviceType && <span className="text-xs text-red-500 font-medium">{errors.serviceType}</span>}
+              {errors.serviceType && <span className="text-xs text-red-300 font-medium">{errors.serviceType}</span>}
             </div>
 
             {/* Riyadh Neighborhood */}
             <div className="flex flex-col gap-2">
-              <label htmlFor="neighborhood" className="text-xs font-bold text-primary-deep">الحي بالرياض *</label>
+              <label htmlFor="neighborhood" className="text-xs font-bold text-warm-white/80">الحي بالرياض *</label>
               <select
                 id="neighborhood"
                 name="neighborhood"
                 value={formData.neighborhood}
                 onChange={handleChange}
-                className={`w-full px-5 py-3 rounded-2xl bg-warm-white border ${
-                  errors.neighborhood ? 'border-red-500' : 'border-charcoal/5'
-                } text-charcoal focus:outline-none focus:ring-1 focus:ring-botanical text-sm`}
+                className={`w-full px-5 py-3.5 rounded-2xl bg-white/5 backdrop-blur-sm border text-white/80 focus:outline-none focus:ring-1 text-sm transition-all duration-300 appearance-none ${errors.neighborhood ? 'border-red-500/50' : 'border-white/10 focus:border-water-blue/50 focus:ring-water-blue/30'
+                  }`}
+                style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2712%27 height=%2712%27 viewBox=%270 0 12 12%27%3E%3Cpath fill=%27%23ffffff%27 opacity=%270.5%27 d=%27M6 8L1 3h10z%27/%3E%3C/svg%3E")', backgroundRepeat: 'no-repeat', backgroundPosition: 'left 12px center', paddingLeft: '2.5rem' }}
               >
-                <option value="">-- اختر الحي --</option>
+                <option value="" className="bg-charcoal text-white/50">-- اختر الحي --</option>
                 {neighborhoods.map((hood) => (
-                  <option key={hood} value={hood}>
+                  <option key={hood} value={hood} className="bg-charcoal text-white">
                     {hood}
                   </option>
                 ))}
               </select>
-              {errors.neighborhood && <span className="text-xs text-red-500 font-medium">{errors.neighborhood}</span>}
+              {errors.neighborhood && <span className="text-xs text-red-300 font-medium">{errors.neighborhood}</span>}
             </div>
 
           </div>
 
           {/* Best Contact Time & Optional Images */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+
             {/* Preferred Time */}
             <div className="flex flex-col gap-2">
-              <label htmlFor="preferredTime" className="text-xs font-bold text-primary-deep">أفضل وقت للتواصل</label>
+              <label htmlFor="preferredTime" className="text-xs font-bold text-warm-white/80">أفضل وقت للتواصل</label>
               <select
                 id="preferredTime"
                 name="preferredTime"
                 value={formData.preferredTime}
                 onChange={handleChange}
-                className="w-full px-5 py-3 rounded-2xl bg-warm-white border border-charcoal/5 text-charcoal focus:outline-none focus:ring-1 focus:ring-botanical text-sm"
+                className="w-full px-5 py-3.5 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 text-white/80 focus:outline-none focus:ring-1 focus:border-water-blue/50 focus:ring-water-blue/30 text-sm appearance-none transition-all duration-300"
+                style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2712%27 height=%2712%27 viewBox=%270 0 12 12%27%3E%3Cpath fill=%27%23ffffff%27 opacity=%270.5%27 d=%27M6 8L1 3h10z%27/%3E%3C/svg%3E")', backgroundRepeat: 'no-repeat', backgroundPosition: 'left 12px center', paddingLeft: '2.5rem' }}
               >
-                <option value="">أي وقت مناسب</option>
+                <option value="" className="bg-charcoal text-white/50">أي وقت مناسب</option>
                 {times.map((t) => (
-                  <option key={t.value} value={t.value}>
+                  <option key={t.value} value={t.value} className="bg-charcoal text-white">
                     {t.label}
                   </option>
                 ))}
@@ -232,8 +234,8 @@ const ContactForm = () => {
 
             {/* Photo upload mock */}
             <div className="flex flex-col gap-2">
-              <label className="text-xs font-bold text-primary-deep">رفع صور للمساحة (اختياري)</label>
-              <div className="relative w-full px-5 py-3 rounded-2xl bg-warm-white border border-dashed border-charcoal/20 flex items-center justify-center cursor-pointer text-muted-grey hover:bg-charcoal/[0.02]">
+              <label className="text-xs font-bold text-warm-white/80">رفع صور للمساحة (اختياري)</label>
+              <div className="relative w-full px-5 py-3.5 rounded-2xl bg-white/5 backdrop-blur-sm border border-dashed border-white/10 flex items-center justify-center cursor-pointer text-white/40 hover:bg-white/10 hover:border-white/20 transition-all duration-300">
                 <span className="text-xs font-semibold">اضغط لرفع صور المخطط أو الحديقة</span>
               </div>
             </div>
@@ -242,7 +244,7 @@ const ContactForm = () => {
 
           {/* Project Description */}
           <div className="flex flex-col gap-2">
-            <label htmlFor="description" className="text-xs font-bold text-primary-deep">وصف مختصر للمشروع</label>
+            <label htmlFor="description" className="text-xs font-bold text-warm-white/80">وصف مختصر للمشروع</label>
             <textarea
               id="description"
               name="description"
@@ -250,7 +252,7 @@ const ContactForm = () => {
               onChange={handleChange}
               rows={3}
               placeholder="مثال: أريد تنسيق حديقة فيلا صغيرة مع عشب صناعي وشلال جداري بطول 2 متر في الارتداد الخلفي."
-              className="w-full px-5 py-3 rounded-2xl bg-warm-white border border-charcoal/5 text-charcoal focus:outline-none focus:ring-1 focus:ring-botanical text-sm"
+              className="w-full px-5 py-3.5 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 text-white placeholder:text-white/30 focus:outline-none focus:ring-1 focus:border-water-blue/50 focus:ring-water-blue/30 text-sm transition-all duration-300"
             />
           </div>
 
@@ -258,7 +260,7 @@ const ContactForm = () => {
           <button
             type="submit"
             disabled={status === 'loading'}
-            className="w-full flex items-center justify-center gap-2 bg-primary-deep text-warm-white py-4 rounded-2xl font-bold text-sm shadow-md hover:bg-botanical active:scale-[0.99] transition-all duration-300"
+            className="w-full btn-apple bg-gradient-to-r from-botanical to-water-blue text-white shadow-lg hover:shadow-water-glow"
           >
             {status === 'loading' ? (
               <>
@@ -266,7 +268,10 @@ const ContactForm = () => {
                 <span>جاري إرسال طلبك...</span>
               </>
             ) : (
-              <span>اطلب استشارتك المجانية الآن</span>
+              <>
+                <Send className="w-4 h-4" />
+                <span>اطلب استشارتك المجانية الآن</span>
+              </>
             )}
           </button>
 
