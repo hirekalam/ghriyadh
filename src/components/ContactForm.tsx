@@ -118,7 +118,7 @@ const ContactForm = () => {
         <form onSubmit={handleSubmit} className="space-y-5">
           <div className="text-right border-b border-white/10 pb-5 mb-6">
             <h3 className="text-white font-black text-xl mb-1">ابدأ بتصميم مساحتك الخارجية</h3>
-            <p className="text-xs text-warm-white/75">امِلأ النموذج وسيتصل بك أحد مهندسينا لمعاينة الموقع مجاناً.</p>
+             <p className="text-xs text-warm-white/90">امِلأ النموذج وسيتصل بك أحد مهندسينا لمعاينة الموقع مجاناً.</p>
           </div>
 
           {status === 'error' && (
@@ -138,7 +138,7 @@ const ContactForm = () => {
               value={formData.name}
               onChange={handleChange}
               placeholder="مثال: محمد بن عبد العزيز"
-              className={`w-full px-5 py-3.5 rounded-2xl bg-white/5 backdrop-blur-sm border text-white placeholder:text-white/30 focus:outline-none focus:ring-1 text-sm transition-all duration-300 ${errors.name ? 'border-red-500/50 focus:ring-red-500/50' : 'border-white/10 focus:border-water-blue/50 focus:ring-water-blue/30'
+              className={`w-full px-5 py-3.5 rounded-2xl bg-white/5 backdrop-blur-sm border text-white placeholder:text-white/50 focus:outline-none focus:ring-1 text-sm transition-all duration-300 ${errors.name ? 'border-red-500/50 focus:ring-red-500/50' : 'border-white/10 focus:border-water-blue/50 focus:ring-water-blue/30'
                 }`}
             />
             {errors.name && <span className="text-xs text-red-300 font-medium">{errors.name}</span>}
@@ -154,7 +154,7 @@ const ContactForm = () => {
               value={formData.phone}
               onChange={handleChange}
               placeholder="مثال: 0557401773"
-              className={`w-full px-5 py-3.5 rounded-2xl bg-white/5 backdrop-blur-sm border text-white placeholder:text-white/30 focus:outline-none focus:ring-1 text-sm dir-ltr text-right transition-all duration-300 ${errors.phone ? 'border-red-500/50 focus:ring-red-500/50' : 'border-white/10 focus:border-water-blue/50 focus:ring-water-blue/30'
+              className={`w-full px-5 py-3.5 rounded-2xl bg-white/5 backdrop-blur-sm border text-white placeholder:text-white/50 focus:outline-none focus:ring-1 text-sm dir-ltr text-right transition-all duration-300 ${errors.phone ? 'border-red-500/50 focus:ring-red-500/50' : 'border-white/10 focus:border-water-blue/50 focus:ring-water-blue/30'
                 }`}
             />
             {errors.phone && <span className="text-xs text-red-300 font-medium">{errors.phone}</span>}
@@ -235,7 +235,7 @@ const ContactForm = () => {
             {/* Photo upload mock */}
             <div className="flex flex-col gap-2">
               <label className="text-xs font-bold text-warm-white/80">رفع صور للمساحة (اختياري)</label>
-              <div className="relative w-full px-5 py-3.5 rounded-2xl bg-white/5 backdrop-blur-sm border border-dashed border-white/10 flex items-center justify-center cursor-pointer text-white/40 hover:bg-white/10 hover:border-white/20 transition-all duration-300">
+              <div className="relative w-full px-5 py-3.5 rounded-2xl bg-white/5 backdrop-blur-sm border border-dashed border-white/10 flex items-center justify-center cursor-pointer text-white/70 hover:bg-white/10 hover:border-white/20 transition-all duration-300">
                 <span className="text-xs font-semibold">اضغط لرفع صور المخطط أو الحديقة</span>
               </div>
             </div>
@@ -252,7 +252,7 @@ const ContactForm = () => {
               onChange={handleChange}
               rows={3}
               placeholder="مثال: أريد تنسيق حديقة فيلا صغيرة مع عشب صناعي وشلال جداري بطول 2 متر في الارتداد الخلفي."
-              className="w-full px-5 py-3.5 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 text-white placeholder:text-white/30 focus:outline-none focus:ring-1 focus:border-water-blue/50 focus:ring-water-blue/30 text-sm transition-all duration-300"
+              className="w-full px-5 py-3.5 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 text-white placeholder:text-white/50 focus:outline-none focus:ring-1 focus:border-water-blue/50 focus:ring-water-blue/30 text-sm transition-all duration-300"
             />
           </div>
 

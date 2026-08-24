@@ -117,7 +117,7 @@ export default function Contact() {
                       ) : (
                         <span className="text-sm font-black text-primary-deep">{method.value}</span>
                       )}
-                      <span className="text-[10px] text-muted-grey/70">{method.subtitle}</span>
+                       <span className="text-[10px] text-muted-grey">{method.subtitle}</span>
                     </div>
                   </>
                 );
