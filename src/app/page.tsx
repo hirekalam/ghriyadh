@@ -187,11 +187,11 @@ export default function Home() {
 
         </div>
 
-        {/* Subtle scroll indicator */}
-        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 opacity-40">
-          <span className="text-[10px] text-white/50 font-bold uppercase tracking-widest">اسحب للأسفل</span>
-          <div className="w-4 h-6 rounded-full border border-white/20 flex items-start justify-center pt-1">
-            <div className="w-1 h-2 rounded-full bg-white/50" />
+{/* Subtle scroll indicator */}
+        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1">
+          <span className="text-[10px] font-bold uppercase tracking-widest" style="color: rgba(255,255,255,0.6);">اسحب للأسفل</span>
+          <div className="w-4 h-6 rounded-full border flex items-start justify-center pt-1">
+            <div className="w-1 h-2 rounded-full bg-leaf" />
           </div>
         </div>
       </section>
@@ -218,11 +218,11 @@ export default function Home() {
                 </span>
               </h2>
 
-              <p className="text-charcoal/70 text-base leading-relaxed text-justify max-w-xl">
+              <p className="text-charcoal text-base leading-relaxed text-justify max-w-xl">
                 تأسست شركة البيت الأخضر (Green House) في الرياض كاستوديو تصميم وتنفيذ فراغات خارجية يلبي تطلعات مالكي الفلل السكنية الباحثين عن التميز. نؤمن بأن الحديقة ليست مجرد مساحة ترابية فارغة، بل هي متنفس طبيعي يرفع من قيمة منزلك الجمالية والمالية.
               </p>
 
-              <p className="text-charcoal/70 text-base leading-relaxed text-justify max-w-xl">
+              <p className="text-charcoal text-base leading-relaxed text-justify max-w-xl">
                 نحن نعمل بتفانٍ تام لتقديم مخططات متزنة هندسياً، مع الاهتمام بالعزل المائي لأسطح الفلل، واختيار أنواع الشلالات الجدارية المناسبة، وتركيب ثيل ممتاز يتحمل درجات حرارة الصيف، وتثبيت شبكات ري أوتوماتيكية توفر الوقت والمياه.
               </p>
             </div>
