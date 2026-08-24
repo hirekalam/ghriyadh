@@ -57,7 +57,7 @@ export default function WhyUs() {
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full text-right space-y-6">
-          <nav className="text-xs text-warm-white/50 flex items-center gap-2 font-semibold mb-2">
+          <nav className="text-xs text-warm-white/80 flex items-center gap-2 font-semibold mb-2">
             <Link href="/" className="hover:text-white transition-colors">الرئيسية</Link>
             <span className="w-1 h-1 rounded-full bg-warm-white/20" />
             <span className="text-warm-white/80">لماذا البيت الأخضر</span>
@@ -67,7 +67,7 @@ export default function WhyUs() {
             <span>تميزنا الحقيقي</span>
           </div>
           <h1 className="apple-title text-white">لماذا البيت الأخضر؟</h1>
-          <p className="text-base md:text-lg text-warm-white/60 max-w-2xl leading-relaxed">
+          <p className="text-base md:text-lg text-warm-white/80 max-w-2xl leading-relaxed">
             لأننا نطبق المعايير الهندسية والحلول الذكية لتوفير حديقة فيلا فاخرة ومستدامة تلائم طبيعة الرياض.
           </p>
         </div>
@@ -160,7 +160,7 @@ export default function WhyUs() {
                 ومستدامة لحديقتك؟
               </span>
             </h2>
-            <p className="text-base text-warm-white/60 max-w-xl mx-auto leading-relaxed">
+            <p className="text-base text-warm-white/80 max-w-xl mx-auto leading-relaxed">
               مهندسونا مستعدون لتزويدك بالخيارات والتفاصيل الدقيقة لفيليتك ومقاساتها.
             </p>
           </div>

@@ -103,7 +103,7 @@ const ContactForm = () => {
             <CheckCircle2 className="w-10 h-10 text-water-blue" />
           </div>
           <h3 className="text-white font-black text-2xl mb-2">تم استلام طلبك بنجاح!</h3>
-          <p className="text-warm-white/60 text-base max-w-sm mb-8">
+          <p className="text-warm-white/80 text-base max-w-sm mb-8">
             شكراً لتواصلك مع البيت الأخضر. سيقوم مهندسو التصميم لدينا بالتواصل معك خلال أفضل وقت اخترته لمناقشة تفاصيل مشروعك.
           </p>
           <button
@@ -118,7 +118,7 @@ const ContactForm = () => {
         <form onSubmit={handleSubmit} className="space-y-5">
           <div className="text-right border-b border-white/10 pb-5 mb-6">
             <h3 className="text-white font-black text-xl mb-1">ابدأ بتصميم مساحتك الخارجية</h3>
-            <p className="text-xs text-warm-white/50">امِلأ النموذج وسيتصل بك أحد مهندسينا لمعاينة الموقع مجاناً.</p>
+            <p className="text-xs text-warm-white/75">امِلأ النموذج وسيتصل بك أحد مهندسينا لمعاينة الموقع مجاناً.</p>
           </div>
 
           {status === 'error' && (

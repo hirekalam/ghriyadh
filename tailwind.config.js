@@ -25,8 +25,8 @@ module.exports = {
         'soft-ember': '#FFB85C',
         'warm-white': '#FDFBF7',
         'charcoal': '#1C2421',
-        'muted-grey': '#68716C',
-        'warm-grey': '#8A8F8A',
+        'muted-grey': '#4A534E',
+        'warm-grey': '#6B726B',
 
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

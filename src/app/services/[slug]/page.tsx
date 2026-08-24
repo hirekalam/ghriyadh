@@ -482,7 +482,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full text-right space-y-4">
-          <nav className="text-xs text-warm-white/60 flex items-center gap-2 font-bold mb-4">
+          <nav className="text-xs text-warm-white/80 flex items-center gap-2 font-bold mb-4">
             <Link href="/" className="hover:text-white">الرئيسية</Link>
             <span>/</span>
             <Link href="/services" className="hover:text-white">الخدمات</Link>

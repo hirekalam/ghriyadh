@@ -157,7 +157,7 @@ export default async function BlogPostPage({ params }: ArticlePageProps) {
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto px-6 w-full text-right space-y-4">
-          <nav className="text-xs text-warm-white/60 flex items-center gap-2 font-bold mb-2">
+          <nav className="text-xs text-warm-white/80 flex items-center gap-2 font-bold mb-2">
             <Link href="/" className="hover:text-white">الرئيسية</Link>
             <span>/</span>
             <Link href="/blog" className="hover:text-white">المدونة</Link>
@@ -169,7 +169,7 @@ export default async function BlogPostPage({ params }: ArticlePageProps) {
           </span>
           <h1 className="text-2xl md:text-4xl font-black text-white leading-tight">{article.title}</h1>
           
-          <div className="flex items-center gap-4 text-xs text-warm-white/60 font-semibold">
+          <div className="flex items-center gap-4 text-xs text-warm-white/80 font-semibold">
             <div className="flex items-center gap-1">
               <Calendar className="w-3.5 h-3.5" />
               <span>{new Date(article.date).toLocaleDateString('ar-SA')}</span>

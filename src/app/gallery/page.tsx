@@ -48,7 +48,7 @@ export default function Gallery() {
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full text-right space-y-6">
-          <nav className="text-xs text-warm-white/50 flex items-center gap-2 font-semibold mb-2">
+          <nav className="text-xs text-warm-white/80 flex items-center gap-2 font-semibold mb-2">
             <Link href="/" className="hover:text-white transition-colors">الرئيسية</Link>
             <span className="w-1 h-1 rounded-full bg-warm-white/20" />
             <span className="text-warm-white/80">أعمالنا</span>
@@ -58,7 +58,7 @@ export default function Gallery() {
             <span>المعرض البصري</span>
           </div>
           <h1 className="apple-title text-white">معرض أعمالنا وملهمات اللاندسكيب</h1>
-          <p className="text-base md:text-lg text-warm-white/60 max-w-2xl leading-relaxed">
+          <p className="text-base md:text-lg text-warm-white/80 max-w-2xl leading-relaxed">
             تصاميم عصرية وأفكار ملهمة لفراغات خارجية ومساحات حدائق تناسب طراز الفلل والقصور بالرياض.
           </p>
         </div>
@@ -143,7 +143,7 @@ export default function Gallery() {
                 أو العناصر السابقة؟
               </span>
             </h2>
-            <p className="text-base text-warm-white/60 max-w-xl mx-auto leading-relaxed">
+            <p className="text-base text-warm-white/80 max-w-xl mx-auto leading-relaxed">
               تواصل معنا اليوم ودعنا ندمج تلك الأفكار في مخطط ثلاثي الأبعاد مخصص لمساحة منزلك بالكامل.
             </p>
           </div>

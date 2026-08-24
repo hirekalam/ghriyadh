@@ -157,7 +157,7 @@ export default function Home() {
               </div>
 
               {/* Natural service tags */}
-              <div className="pt-6 flex flex-wrap items-center gap-3 gap-y-2 text-xs font-medium text-charcoal/70 border-t border-white/15 max-w-xl animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+              <div className="pt-6 flex flex-wrap items-center gap-3 gap-y-2 text-xs font-medium text-warm-white/80 border-t border-white/15 max-w-xl animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
                 <span>تنسيق حدائق</span>
                 <span className="w-1 h-1 rounded-full bg-cream" />
                 <span>أسطح خضراء</span>
@@ -405,7 +405,7 @@ export default function Home() {
                 مناخ الرياض الحار
               </span>
             </h2>
-            <p className="text-base text-warm-white/60 leading-relaxed max-w-2xl mx-auto">
+            <p className="text-base text-warm-white/80 leading-relaxed max-w-2xl mx-auto">
               المناخ الصحراوي الجاف للرياض يحتاج إلى ممارسات زراعية وهندسية دقيقة لضمان استدامة حدائق الفلل، وهذا هو محور تميزنا الحقيقي.
             </p>
           </div>
@@ -417,7 +417,7 @@ export default function Home() {
                 <Sun className="w-6 h-6" />
               </div>
               <h3 className="text-base font-black text-white">تحمل شمس الصيف الحارة</h3>
-              <p className="text-xs text-warm-white/60 leading-relaxed">
+              <p className="text-xs text-warm-white/80 leading-relaxed">
                 ننتقي بعناية أصناف النباتات والزهور التي تعشق الشمس وتتحمل جفاف الهواء ودرجات الحرارة التي تتجاوز 45 مئوية.
               </p>
             </div>
@@ -427,7 +427,7 @@ export default function Home() {
                 <Droplet className="w-6 h-6" />
               </div>
               <h3 className="text-base font-black text-white">ترشيد وري ذكي</h3>
-              <p className="text-xs text-warm-white/60 leading-relaxed">
+              <p className="text-xs text-warm-white/80 leading-relaxed">
                 تصميم دوائر الري بالتنقيط والرذاذ والرشاشات المدفونة لتوزيع المياه بكفاءة دون تبخر زائد أو إهدار.
               </p>
             </div>
@@ -437,7 +437,7 @@ export default function Home() {
                 <TreePalm className="w-6 h-6" />
               </div>
               <h3 className="text-base font-black text-white">خيارات التربة المثالية</h3>
-              <p className="text-xs text-warm-white/60 leading-relaxed">
+              <p className="text-xs text-warm-white/80 leading-relaxed">
                 تعديل خواص التربة الرملية بالرياض بخلط البيتموس والأسمدة العضوية المعقمة لضمان تغذية عميقة للجذور.
               </p>
             </div>
@@ -447,7 +447,7 @@ export default function Home() {
                 <Compass className="w-6 h-6" />
               </div>
               <h3 className="text-base font-black text-white">متانة المواد المستخدمة</h3>
-              <p className="text-xs text-warm-white/60 leading-relaxed">
+              <p className="text-xs text-warm-white/80 leading-relaxed">
                 مظلات وبرجولات مصنوعة من أخشاب معالجة ومعادن مطلية حرارياً ومقاومة للصدأ والتشقق والتآكل بفعل الشمس.
               </p>
             </div>
@@ -737,7 +737,7 @@ export default function Home() {
                   إلى مكان تحب أن تعيش فيه
                 </span>
               </h2>
-              <p className="text-base text-warm-white/60 leading-relaxed text-justify max-w-xl">
+              <p className="text-base text-warm-white/80 leading-relaxed text-justify max-w-xl">
                 ابدأ اليوم بمشاركة رؤيتك معنا. مهندسو البيت الأخضر مستعدون للتجاوب وتطوير مخطط متوازن يجمع الرقي والجمال والاستدامة لفيلتك بالرياض.
               </p>
             </div>

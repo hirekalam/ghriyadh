@@ -58,7 +58,7 @@ const Footer = () => {
               </div>
             </Link>
 
-            <p className="text-charcoal/70 leading-relaxed text-justify text-xs">
+            <p className="text-xs text-muted-grey leading-relaxed text-justify">
               نقدم حلولاً هندسية مبتكرة لتصميم وتنسيق المساحات الخارجية في الرياض. نسعى لتطوير حدائق الفلل، الأسطح، والجلسات الخارجية بروح عصرية توافق البيئة السعودية وترشّد استهلاك المياه.
             </p>
 
@@ -101,7 +101,7 @@ const Footer = () => {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-charcoal/70 hover:text-primary-deep transition-all duration-300 group"
+                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-muted-grey hover:text-primary-deep transition-all duration-300 group"
                   >
                     <span>{link.label}</span>
                     <ArrowUpRight className="w-3 h-3 opacity-0 -translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300" />
@@ -121,7 +121,7 @@ const Footer = () => {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-charcoal/70 hover:text-primary-deep transition-all duration-300 group"
+                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-muted-grey hover:text-primary-deep transition-all duration-300 group"
                   >
                     <span>{link.label}</span>
                     <ArrowUpRight className="w-3 h-3 opacity-0 -translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300" />
@@ -136,12 +136,12 @@ const Footer = () => {
             <h3 className="text-primary-deep font-black text-sm relative pr-4 before:absolute before:right-0 before:top-0 before:bottom-0 before:w-0.5 before:bg-gradient-to-b before:from-botanical before:to-water-blue before:rounded-full">
               مناطق الخدمة في الرياض
             </h3>
-            <p className="text-xs text-charcoal/60 leading-relaxed text-justify">
+            <p className="text-xs text-muted-grey leading-relaxed text-justify">
               نقدم خدماتنا الاحترافية في تصميم وتنسيق الحدائق وتركيب الثيل الطبيعي والصناعي في كافة أحياء شمال وشرق وغرب وجنوب الرياض.
             </p>
             <div className="flex flex-wrap gap-1.5 max-h-40 overflow-y-auto pr-1 scrollbar-thin">
               {neighborhoods.map((area, idx) => (
-                <span key={idx} className="text-[10px] bg-warm-white text-charcoal/60 px-2.5 py-1 rounded-lg border border-charcoal/5 hover:border-water-blue/30 hover:text-water-blue transition-all duration-300">
+                <span key={idx} className="text-[10px] bg-warm-white text-muted-grey px-2.5 py-1 rounded-lg border border-charcoal/5 hover:border-water-blue/30 hover:text-water-blue transition-all duration-300">
                   حي {area}
                 </span>
               ))}
@@ -152,21 +152,21 @@ const Footer = () => {
 
         {/* Local SEO Footer Paragraph */}
         <div className="mt-12 pt-8 border-t border-charcoal/5">
-          <p className="text-[11px] text-charcoal/50 leading-relaxed text-justify">
+          <p className="text-[11px] text-muted-grey leading-relaxed text-justify">
             بصفتنا شركة تنسيق حدائق بالرياض (البيت الأخضر)، نلتزم بتقديم تصاميم مخصصة تراعي طبيعة التربة والطقس ودرجات الحرارة المرتفعة في المملكة العربية السعودية. تمتد مشاريعنا لتركيب العشب الصناعي عالي الجودة المقاوم للأشعة فوق البنفسجية، وزراعة المسطحات الخضراء، وتشييد الشلالات الجدارية الجذابة والنوافير المنزلية، بالإضافة لتصميم البرجولات الخشبية والمعدنية الأنيقة في أحياء شمال الرياض كالياسمين والنرجس والملقا وحطين والصحافة والعارض والرمال، لنجعل من مساحتك الخارجية واحة متكاملة تجمع الجمال والاستدامة.
           </p>
         </div>
 
         {/* Copyrights and Privacy */}
         <div className="mt-8 pt-6 border-t border-charcoal/5 flex flex-col md:flex-row items-center justify-between gap-4 text-xs">
-          <p className="font-semibold text-charcoal/50 text-center md:text-right">
+          <p className="font-semibold text-muted-grey text-center md:text-right">
             &copy; {currentYear} البيت الأخضر (Green House). جميع الحقوق محفوظة.
           </p>
           <div className="flex items-center gap-5">
-            <Link href="/privacy" className="text-charcoal/50 hover:text-primary-deep font-semibold transition-colors">
+            <Link href="/privacy" className="text-muted-grey hover:text-primary-deep font-semibold transition-colors">
               سياسة الخصوصية
             </Link>
-            <Link href="/terms" className="text-charcoal/50 hover:text-primary-deep font-semibold transition-colors">
+            <Link href="/terms" className="text-muted-grey hover:text-primary-deep font-semibold transition-colors">
               الشروط والأحكام
             </Link>
           </div>

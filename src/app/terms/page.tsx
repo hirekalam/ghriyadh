@@ -11,13 +11,13 @@ export default function TermsAndConditions() {
         <div className="absolute -top-40 -right-40 w-80 h-80 rounded-full bg-gradient-to-br from-botanical/10 to-water-blue/10 blur-3xl pointer-events-none" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full text-right space-y-6">
-          <nav className="text-xs text-warm-white/50 flex items-center gap-2 font-semibold mb-2">
+          <nav className="text-xs text-warm-white/80 flex items-center gap-2 font-semibold mb-2">
             <Link href="/" className="hover:text-white transition-colors">الرئيسية</Link>
             <span className="w-1 h-1 rounded-full bg-warm-white/20" />
             <span className="text-warm-white/80">الشروط والأحكام</span>
           </nav>
           <h1 className="apple-title text-white">الشروط والأحكام</h1>
-          <p className="text-sm text-warm-white/50">
+          <p className="text-sm text-warm-white/75">
             تاريخ التحديث: أغسطس 2026
           </p>
         </div>

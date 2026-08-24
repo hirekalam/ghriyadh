@@ -43,13 +43,13 @@ export default function SitemapPage() {
       {/* Header Banner */}
       <section className="relative bg-primary-deep text-warm-white py-16 overflow-hidden">
         <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full text-right space-y-4">
-          <nav className="text-xs text-warm-white/60 flex items-center gap-2 font-bold mb-2">
+          <nav className="text-xs text-warm-white/80 flex items-center gap-2 font-bold mb-2">
             <Link href="/" className="hover:text-white">الرئيسية</Link>
             <span>/</span>
             <span className="text-white">خريطة الموقع</span>
           </nav>
           <h1 className="text-3xl font-black text-white">خريطة الموقع البصرية</h1>
-          <p className="text-xs text-warm-white/70 max-w-xl">
+          <p className="text-xs text-warm-white/80 max-w-xl">
             دليل كامل لجميع الصفحات والمقالات والخدمات المتوفرة في موقع شركة البيت الأخضر.
           </p>
         </div>

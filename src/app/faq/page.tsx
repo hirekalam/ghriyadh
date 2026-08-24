@@ -61,7 +61,7 @@ export default function FAQ() {
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full text-right space-y-6">
-          <nav className="text-xs text-warm-white/50 flex items-center gap-2 font-semibold mb-2">
+          <nav className="text-xs text-warm-white/80 flex items-center gap-2 font-semibold mb-2">
             <Link href="/" className="hover:text-white transition-colors">الرئيسية</Link>
             <span className="w-1 h-1 rounded-full bg-warm-white/20" />
             <span className="text-warm-white/80">الأسئلة الشائعة</span>
@@ -71,7 +71,7 @@ export default function FAQ() {
             <span>مركز المعلومات</span>
           </div>
           <h1 className="apple-title text-white">الأسئلة الشائعة</h1>
-          <p className="text-base md:text-lg text-warm-white/60 max-w-2xl leading-relaxed">
+          <p className="text-base md:text-lg text-warm-white/80 max-w-2xl leading-relaxed">
             إجابات شافية ومفصلة حول تكاليف وخطوات ومواصفات تنسيق وتصميم حدائق الفلل والأسطح بالرياض.
           </p>
         </div>
@@ -131,7 +131,7 @@ export default function FAQ() {
                 تود مناقشته؟
               </span>
             </h2>
-            <p className="text-base text-warm-white/60 max-w-xl mx-auto leading-relaxed">
+            <p className="text-base text-warm-white/80 max-w-xl mx-auto leading-relaxed">
               تواصل معنا مباشرة عبر القنوات الرسمية وسيسعد مهندسونا بالرد الفوري على كل تفاصيل التكلفة والتنسيق.
             </p>
           </div>
