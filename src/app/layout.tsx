@@ -44,14 +44,21 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "ProfessionalService",
-        "@id": "https://riyadhgreenhouse.com/#service",
-        "name": "البيت الأخضر لتنسيق الحدائق بالرياض",
+        "@type": "Organization",
+        "@id": "https://riyadhgreenhouse.com/#organization",
+        "name": "البيت الأخضر (Green House)",
         "alternateName": "Green House Landscaping",
-        "image": "https://riyadhgreenhouse.com/images/hero-garden-path.jpg",
         "url": "https://riyadhgreenhouse.com",
         "telephone": "+966557401773",
         "email": "riyadhgreenhouse@gmail.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://riyadhgreenhouse.com/images/logo.svg",
+          "width": 600,
+          "height": 600
+        },
+        "description": "استوديو تصميم وتنفيذ فراغات خارجية في الرياض، متخصص في تنسيق الحدائق، تركيب الثيل الطبيعي والصناعي، والشلالات والنوافير المنزلية بتصاميم مستدامة.",
+        " foundingDate": "2024",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Riyadh",
@@ -59,11 +66,21 @@ export default function RootLayout({
           "addressRegion": "Riyadh Province",
           "addressCountry": "SA"
         },
-        "priceRange": "$$",
-        "areaServed": {
-          "@type": "AdministrativeArea",
-          "name": "Riyadh"
-        }
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "24.7136",
+          "longitude": "46.6753"
+        },
+        "sameAs": [
+          "https://www.instagram.com/riyadhgreenhouse",
+          "https://www.facebook.com/riyadhgreenhouse"
+        ],
+        "department": [
+          "تنسيق الحدائق",
+          "تركيب الثيل",
+          "شلالات ونوافير",
+          "شبكات الري"
+        ]
       },
       {
         "@type": "LocalBusiness",
@@ -72,12 +89,38 @@ export default function RootLayout({
         "image": "https://riyadhgreenhouse.com/images/hero-garden-path.jpg",
         "telephone": "+966557401773",
         "email": "riyadhgreenhouse@gmail.com",
+        "url": "https://riyadhgreenhouse.com",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Riyadh",
           "addressLocality": "Riyadh",
+          "addressRegion": "Riyadh Province",
           "addressCountry": "SA"
-        }
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "24.7136",
+          "longitude": "46.6753"
+        },
+        "areaServed": {
+          "@type": "AdministrativeArea",
+          "name": "Riyadh"
+        },
+        "priceRange": "$$",
+        "openingHours": "Mo-Su 08:00-18:00"
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://riyadhgreenhouse.com/#service",
+        "name": "البيت الأخضر لتنسيق الحدائق بالرياض",
+        "alternateName": "Green House Landscaping",
+        "image": "https://riyadhgreenhouse.com/images/hero-garden-path.jpg",
+        "url": "https://riyadhgreenhouse.com",
+        "serviceArea": {
+          "@type": "AdministrativeArea",
+          "name": "Riyadh"
+        },
+        "provider": "البيت الأخضر"
       }
     ]
   };

@@ -1,0 +1,26 @@
+Failed to compile.
+
+./src/app/page.tsx
+Error:   x Expected '</', got 'jsx text (
+  |
+  |       )'
+     ,-[E:\CLIENTS WEB\G H RIYADH NEW\ghriyadh\src\app\page.tsx:390:1]
+ 387 |                 </div>
+ 388 |               </div>
+ 389 |     
+ 390 | ,->       </section>
+ 391 | |   
+ 392 | `->       {/* =============================================
+ 393 |                5. RIYADH CLIMATE EXPERTISE - Wellness dark section
+ 394 |            ============================================= */}
+ 395 |           <section className="bg-charcoal text-warm-white py-28 md:py-36 relative overflow-hidden">
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/page.tsx
+
+
+> Build failed because of webpack errors

@@ -108,130 +108,121 @@ export default function Home() {
       {/* =============================================
           1. HERO SECTION - Apple-style cinematic
       ============================================= */}
-      <section className="relative min-h-screen flex items-center bg-primary-deep text-warm-white overflow-hidden">
-        {/* Background image with premium overlay */}
-        <div className="absolute inset-0 z-0">
-          <img
-            src="/images/hero-garden-path.jpg"
-            alt="تنسيق حدائق فاخرة في الرياض"
-            className="w-full h-full object-cover opacity-30 object-center scale-105"
-          />
-          {/* Multi-layer gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-b from-primary-deep/40 via-primary-deep/60 to-primary-deep" />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary-deep/30 to-transparent" />
-        </div>
+<section className="relative min-h-screen flex items-center bg-charcoal text-warm-white overflow-hidden">
+        {/* Subtle gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-charcoal/20 via-charcoal/10 to-charcoal/5" />
 
-        {/* Decorative floating elements */}
-        <div className="absolute top-1/4 right-10 w-64 h-64 rounded-full bg-gradient-to-br from-botanical/10 to-water-blue/10 blur-3xl animate-pulse pointer-events-none" />
-        <div className="absolute bottom-1/4 left-10 w-96 h-96 rounded-full bg-gradient-to-tr from-water-blue/5 to-botanical/5 blur-3xl animate-pulse pointer-events-none" style={{ animationDelay: '1s' }} />
+        <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full pt-24 pb-16">
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full pt-32 pb-20">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
 
-            <div className="lg:col-span-8 space-y-8 text-right">
-              {/* Premium badge */}
-              <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/15 px-5 py-2 rounded-full text-xs font-bold text-fresh-green animate-fade-in-up">
+            <div className="lg:col-span-8 space-y-6 text-right">
+
+              {/* Wellness badge */}
+              <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm border border-white/25 px-5 py-2 rounded-full text-xs font-bold text-leaf animate-fade-in-up">
                 <Leaf className="w-3.5 h-3.5" />
-                <span>البيت الأخضر - مهندسو الفراغات الخارجية</span>
+                <span>البيت الأخضر - تصاميم خضراء مستدامة</span>
               </div>
 
-              {/* Apple-style hero headline */}
-              <h1 className="text-5xl md:text-7xl font-black leading-tight text-white animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-                تصميم المساحات الخارجية<br />
-                <span className="text-gradient-mixed bg-gradient-to-r from-fresh-green via-water-blue to-soft-blue bg-clip-text text-transparent">
-                  التي تستحقها فيلتك
+              {/* Wellness headline */}
+              <h1 className="text-4xl md:text-5xl font-black leading-tight text-white animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+                مساحة خارجية<br />
+                <span className="bg-gradient-to-r from-leaf via-cream to-ember bg-clip-text text-transparent">
+                  تستحق فيلتك
                 </span>
               </h1>
 
-              <p className="text-lg md:text-xl text-warm-white/70 max-w-2xl leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-                حلول متكاملة لتنسيق الحدائق والمسطحات الخارجية في الرياض.
-                ندمج بين الهندسة المعمارية واللمسة الطبيعية بما يلائم طقس الرياض ويرشّد استهلاك المياه.
+              <p className="text-base md:text-lg text-white/80 max-w-2xl leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+                حلول طبيعية وتصاميم مستدامة للحدائق في الرياض. ندمج بين الجمال المعماري والمسؤولية البيئية لترشيد استهلاك المياه ونיצור بيئة صحية لفرحك.
               </p>
 
-              {/* Apple-style dual buttons */}
+              {/* Wellness dual buttons */}
               <div className="flex flex-wrap gap-4 pt-4 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
                 <Link
                   href="/contact"
-                  className="btn-apple bg-gradient-to-r from-botanical to-water-blue text-white shadow-lg hover:shadow-water-glow"
+                  className="bg-gradient-to-r from-leaf to-cream text-charcoal shadow-sm hover:shadow-leaf-glow"
                 >
-                  <span>اطلب استشارتك المجانية</span>
+                  <span>طلب استشارة مجانية</span>
                   <ArrowLeft className="w-4 h-4" />
                 </Link>
                 <a
                   href="https://wa.me/966557401773"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-apple bg-white/10 backdrop-blur-sm text-white border border-white/20 hover:bg-white/20"
+                  className="bg-white/20 backdrop-blur-sm text-charcoal border border-white/30 hover:bg-white/30"
                 >
                   <MessageCircle className="w-4 h-4" />
-                  <span>تواصل معنا واتساب</span>
+                  <span>تواصل واتساب</span>
                 </a>
               </div>
 
-              {/* Service tags */}
-              <div className="pt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-warm-white/50 font-semibold border-t border-white/10 max-w-xl animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+              {/* Natural service tags */}
+              <div className="pt-6 flex flex-wrap items-center gap-3 gap-y-2 text-xs font-medium text-charcoal/70 border-t border-white/15 max-w-xl animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
                 <span>تنسيق حدائق</span>
-                <span className="w-1 h-1 rounded-full bg-white/20" />
-                <span>حدائق أسطح</span>
-                <span className="w-1 h-1 rounded-full bg-white/20" />
-                <span>شلالات ونوافير</span>
-                <span className="w-1 h-1 rounded-full bg-white/20" />
-                <span>شبكات ري ذكية</span>
-                <span className="w-1 h-1 rounded-full bg-white/20" />
-                <span>ثيل صناعي وطبيعي</span>
+                <span className="w-1 h-1 rounded-full bg-cream" />
+                <span>أسطح خضراء</span>
+                <span className="w-1 h-1 rounded-full bg-cream" />
+                <span>شلالات مياه</span>
+                <span className="w-1 h-1 rounded-full bg-cream" />
+                <span>ري ذكي</span>
+                <span className="w-1 h-1 rounded-full bg-cream" />
+                <span>ثيل طبيعي وصناعي</span>
               </div>
             </div>
 
-            {/* Stats sidebar */}
-            <div className="lg:col-span-4 hidden lg:grid grid-cols-2 gap-4 animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
+            {/* Wellness stats */}
+            <div className="lg:col-span-4 lg:grid grid-cols-2 gap-4 lg:gap-6 animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
               {stats.map((stat, idx) => {
                 const Icon = stat.icon;
                 return (
-                  <div key={idx} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-5 text-center hover:bg-white/10 transition-all duration-300">
-                    <Icon className="w-5 h-5 text-water-blue mx-auto mb-2" />
+                  <div key={idx} className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-5 text-center transition-all duration-300 hover:bg-white/15">
+                    <Icon className="w-5 h-5 text-leaf mx-auto mb-2" />
                     <div className="text-2xl font-black text-white number-display">{stat.number}</div>
-                    <div className="text-xs text-warm-white/60 font-medium mt-1">{stat.label}</div>
+                    <div className="text-xs text-white/60 font-medium mt-1">{stat.label}</div>
                   </div>
                 );
               })}
             </div>
           </div>
+
         </div>
 
-        {/* Apple-style scroll indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-float opacity-60">
-          <span className="text-[10px] text-warm-white/50 font-bold uppercase tracking-widest">اسحب للأسفل</span>
-          <div className="w-5 h-8 rounded-full border border-white/20 flex items-start justify-center pt-1.5">
-            <div className="w-1 h-2 rounded-full bg-white/60 animate-bounce" />
+        {/* Subtle scroll indicator */}
+        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 opacity-40">
+          <span className="text-[10px] text-white/50 font-bold uppercase tracking-widest">اسحب للأسفل</span>
+          <div className="w-4 h-6 rounded-full border border-white/20 flex items-start justify-center pt-1">
+            <div className="w-1 h-2 rounded-full bg-white/50" />
           </div>
         </div>
       </section>
 
       {/* =============================================
-          2. INTRODUCTION - Apple-style editorial
-      ============================================= */}
-      <section className="bg-white py-28 md:py-36 relative">
+           2. INTRODUCTION - Wellness editorial
+       ============================================= */}
+      <section className="py-24 md:py-32 bg-white relative">
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-charcoal/5 to-transparent" />
 
         <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
 
           <div className="lg:col-span-7 space-y-8">
-            <div className="space-y-4">
-              <div className="inline-flex items-center gap-2 text-water-blue font-bold text-xs uppercase tracking-[0.2em]">
-                <span className="w-8 h-px bg-water-blue/50" />
+<div className="space-y-4">
+              <div className="inline-flex items-center gap-2 text-leaf font-bold text-xs uppercase tracking-[0.2em]">
+                <span className="w-8 h-px bg-leaf/50" />
                 <span>رؤية خضراء مستدامة</span>
               </div>
 
-              <h2 className="apple-heading text-primary-deep">
+              <h2 className="text-primary-deep">
                 حدائق البيت الأخضر تجمع بين<br className="hidden md:block" />
-                <span className="text-gradient-mixed">الجمال التصميمي والوظيفة العملية</span>
+                <span className="bg-gradient-to-r from-leaf via-cream to-ember bg-clip-text text-transparent">
+                  الجمال التصميمي والوظيفة العملية
+                </span>
               </h2>
 
-              <p className="text-muted-grey text-base leading-relaxed text-justify max-w-xl">
+              <p className="text-charcoal/70 text-base leading-relaxed text-justify max-w-xl">
                 تأسست شركة البيت الأخضر (Green House) في الرياض كاستوديو تصميم وتنفيذ فراغات خارجية يلبي تطلعات مالكي الفلل السكنية الباحثين عن التميز. نؤمن بأن الحديقة ليست مجرد مساحة ترابية فارغة، بل هي متنفس طبيعي يرفع من قيمة منزلك الجمالية والمالية.
               </p>
 
-              <p className="text-muted-grey text-base leading-relaxed text-justify max-w-xl">
+              <p className="text-charcoal/70 text-base leading-relaxed text-justify max-w-xl">
                 نحن نعمل بتفانٍ تام لتقديم مخططات متزنة هندسياً، مع الاهتمام بالعزل المائي لأسطح الفلل، واختيار أنواع الشلالات الجدارية المناسبة، وتركيب ثيل ممتاز يتحمل درجات حرارة الصيف، وتثبيت شبكات ري أوتوماتيكية توفر الوقت والمياه.
               </p>
             </div>
