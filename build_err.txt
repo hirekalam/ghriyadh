@@ -1,0 +1,57 @@
+
+> my-app@0.0.0 build
+> next build
+
+   Γû▓ Next.js 15.5.23
+
+   Creating an optimized production build ...
+Browserslist: browsers data (caniuse-lite) is 8 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+ Γ£ô Compiled successfully in 28.4s
+   Skipping validation of types
+   Skipping linting
+   Collecting page data ...
+   Generating static pages (0/34) ...
+   Generating static pages (8/34) 
+   Generating static pages (16/34) 
+   Generating static pages (25/34) 
+ Γ£ô Generating static pages (34/34)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                                   Size  First Load JS
+Γöî Γùï /                                      9.86 kB         120 kB
+Γö£ Γùï /_not-found                              993 B         104 kB
+Γö£ Γùï /about                                   187 B         106 kB
+Γö£ Γùï /blog                                    187 B         106 kB
+Γö£ ΓùÅ /blog/[slug]                             187 B         106 kB
+Γö£   Γö£ /blog/garden-design-riyadh
+Γö£   Γö£ /blog/artificial-grass-guide
+Γö£   Γö£ /blog/home-garden-design
+Γö£   Γöö /blog/irrigation-systems
+Γö£ Γùï /contact                                 178 B         111 kB
+Γö£ Γùï /faq                                     187 B         106 kB
+Γö£ Γùï /gallery                               3.64 kB         110 kB
+Γö£ Γùï /privacy                                 187 B         106 kB
+Γö£ Γùï /process                                 187 B         106 kB
+Γö£ Γùï /robots.txt                              127 B         103 kB
+Γö£ Γùï /services                                187 B         106 kB
+Γö£ ΓùÅ /services/[slug]                         178 B         111 kB
+Γö£   Γö£ /services/garden-landscaping-riyadh
+Γö£   Γö£ /services/rooftop-landscaping
+Γö£   Γö£ /services/artificial-grass
+Γö£   Γöö [+10 more paths]
+Γö£ Γùï /sitemap                                 187 B         106 kB
+Γö£ Γùï /sitemap.xml                             127 B         103 kB
+Γö£ Γùï /terms                                   187 B         106 kB
+Γöö Γùï /why-us                                  187 B         106 kB
++ First Load JS shared by all               103 kB
+  Γö£ chunks/255-87552e6e05b8e3aa.js         46.4 kB
+  Γö£ chunks/4bd1b696-c023c6e3521b1417.js    54.2 kB
+  Γöö other shared chunks (total)            1.99 kB
+
+
+Γùï  (Static)  prerendered as static content
+ΓùÅ  (SSG)     prerendered as static HTML (uses generateStaticParams)
+
