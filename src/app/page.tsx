@@ -189,7 +189,7 @@ export default function Home() {
 
 {/* Subtle scroll indicator */}
         <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1">
-          <span className="text-[10px] font-bold uppercase tracking-widest" style="color: rgba(255,255,255,0.6);">اسحب للأسفل</span>
+          <span className="text-[10px] font-bold uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.75)' }}>اسحب للأسفل</span>
           <div className="w-4 h-6 rounded-full border flex items-start justify-center pt-1">
             <div className="w-1 h-2 rounded-full bg-leaf" />
           </div>
