@@ -1,0 +1,162 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f8faf7;
+  --foreground: #111812;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background-color: rgba(19, 98, 23, 0.22);
+}
+
+.bg-brand-gradient {
+  background-image: linear-gradient(120deg, #084a16, #136217 45%, #367617);
+}
+
+.text-brand-gradient {
+  background-image: linear-gradient(120deg, #0e4a11, #136217 50%, #367617);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.bg-gold-gradient {
+  background-image: linear-gradient(120deg, #9a7518, #c9a227 50%, #d6b65a);
+}
+
+.text-gold-gradient {
+  background-image: linear-gradient(120deg, #9a7518, #c9a227 50%, #d6b65a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.text-premium-gradient {
+  background-image: linear-gradient(120deg, #367617, #6aab1a 45%, #c9a227);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.bg-gold-glow {
+  background-image: radial-gradient(
+    ellipse at 85% 12%,
+    rgba(214, 182, 90, 0.22),
+    transparent 55%
+  );
+}
+
+.bg-gold-glow-alt {
+  background-image: radial-gradient(
+    ellipse at 15% 85%,
+    rgba(201, 162, 39, 0.14),
+    transparent 55%
+  );
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+}
+
+@layer components {
+  .container-site {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-pad {
+    @apply py-16 sm:py-20 lg:py-24;
+  }
+
+  .eyebrow {
+    @apply font-latin text-xs font-semibold uppercase tracking-[0.2em] text-gold-deep;
+  }
+
+  .eyebrow-ar {
+    @apply mb-3 flex items-center gap-3 text-sm font-semibold text-gold-deep;
+  }
+
+  .h-display {
+    @apply text-3xl font-bold leading-tight text-ink sm:text-4xl lg:text-5xl;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-2xl bg-brand-gradient px-6 py-3.5 text-base font-semibold text-white shadow-card transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lift focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-2xl border border-forest/15 bg-white px-6 py-3.5 text-base font-semibold text-forest transition-all duration-300 hover:border-forest/30 hover:bg-tint focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2;
+  }
+
+  .btn-whatsapp {
+    @apply inline-flex items-center justify-center gap-2 rounded-2xl bg-[#25D366] px-6 py-3.5 text-base font-semibold text-white shadow-card transition-all duration-300 hover:-translate-y-0.5 hover:brightness-105 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2;
+  }
+
+  .btn-light {
+    @apply inline-flex items-center justify-center gap-2 rounded-2xl bg-white px-6 py-3.5 text-base font-semibold text-forest shadow-card transition-all duration-300 hover:-translate-y-0.5 hover:bg-tint focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-forest;
+  }
+
+  .card-surface {
+    @apply rounded-3xl border border-forest/10 bg-white shadow-card;
+  }
+
+  .shape-media {
+    border-radius: 2.25rem 2.25rem 2.25rem 0.625rem;
+  }
+
+  .link-underline {
+    @apply relative underline decoration-brand/30 underline-offset-4 transition-colors hover:decoration-brand;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .mask-fade-b {
+    -webkit-mask-image: linear-gradient(to bottom, black 55%, transparent);
+    mask-image: linear-gradient(to bottom, black 55%, transparent);
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}

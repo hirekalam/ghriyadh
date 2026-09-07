@@ -1,0 +1,1228 @@
+﻿Green House Riyadh — Premium Saudi Landscaping Company Website
+You are an elite multidisciplinary product team consisting of:
+* World-class Prompt Engineer
+* Senior UI/UX Designer specializing in modern luxury minimalism
+* Premium Saudi Brand & Conversion Copywriter
+* Technical SEO & AEO Strategist
+* Visual Design & Photography Art Director
+* Saudi Local SEO Specialist specializing in Riyadh
+* Senior Next.js Architect
+Build a premium, production-quality, multi-page Arabic RTL website for a new Saudi landscaping company named:
+Green House
+البيت الأخضر
+The company operates in Riyadh, Saudi Arabia.
+This is a new company.
+CRITICAL BRAND TRUST RULE
+Do NOT invent or imply any unsupported company history, statistics, achievements, certifications, awards, clients, years of experience, project counts, team size, guarantees, reviews, ratings, government approvals, or media mentions.
+Never write things such as:
+* "10+ years of experience"
+* "5000+ completed projects"
+* "1000+ happy customers"
+* "Award-winning company"
+* "No.1 landscaping company"
+* "Trusted by thousands"
+* Fake client logos
+* Fake testimonials
+* Fake Google reviews
+* Fake ratings
+* Fake certifications
+Instead, communicate professionalism through:
+* High-quality presentation
+* Detailed service methodology
+* Professional process
+* Quality-focused messaging
+* Material and installation standards
+* Attention to detail
+* Saudi climate suitability
+* Water-efficient landscaping
+* Contemporary design
+* Responsive service
+* Clear consultation CTA
+* Project-focused visual presentation
+Where proof-dependent content would normally appear, create honest alternatives, for example:
+"حلول مدروسة للمساحات الخارجية في الرياض"
+"تصاميم تجمع بين الجمال والوظيفة"
+"تنفيذ يراعي طبيعة المناخ السعودي"
+"ابدأ بتصميم مساحتك الخارجية"
+Do not make the company appear small or inexperienced. Make it appear professionally established through design quality and communication, without fabricating evidence.
+________________
+
+
+1. CORE OBJECTIVE
+Create a website that feels like a premium Saudi landscape architecture and outdoor living studio, not a generic local gardening website.
+The visual quality should be comparable to a high-end international landscaping company while remaining culturally appropriate for the Saudi market.
+The design direction should combine:
+* Luxury Saudi villa aesthetics
+* Contemporary landscape architecture
+* Natural greenery
+* Water elements
+* Premium outdoor living
+* Clean architectural geometry
+* High-end editorial photography
+* Modern minimalism
+* Strong conversion UX
+The website must immediately communicate:
+ثقة + فخامة + احتراف + طبيعة + تصميم + تنفيذ
+Avoid cheap-looking gardening-company design patterns.
+________________
+
+
+2. TECHNOLOGY
+Build using:
+* Next.js
+* App Router
+* TypeScript
+* Tailwind CSS
+* shadcn/ui where useful
+* Reusable components
+* Semantic HTML
+* Responsive architecture
+* Optimized image handling
+* Modern accessibility practices
+The website must be structured as a real multi-page Next.js website, not a one-page landing page pretending to be multi-page.
+Use reusable components for:
+* Header
+* Navigation
+* Mobile navigation
+* Hero sections
+* Service cards
+* Service grids
+* CTA sections
+* Gallery
+* FAQ
+* Testimonials area without fabricated testimonials
+* Contact forms
+* Footer
+* Breadcrumbs
+* WhatsApp buttons
+* Call buttons
+* Section headings
+* Image galleries
+* Related services
+* Blog cards
+________________
+
+
+3. LANGUAGE & RTL REQUIREMENTS
+The primary website language is:
+Arabic
+Use:
+* Full Arabic RTL layout
+* Professional Saudi Arabic tone
+* Natural Saudi-market copy
+* Clear Modern Standard Arabic suitable for Saudi business
+* No awkward machine-translated Arabic
+* No excessive classical wording
+* No Egyptian/Levantine phrasing
+Every page must be Arabic-first.
+Under important Arabic service headings, display the English service name in a subtle professional style.
+Example:
+تنسيق حدائق بالرياض
+Garden Landscaping
+Do not make English text compete with Arabic.
+________________
+
+
+4. BRAND NAME
+Primary display:
+Green House
+Arabic:
+البيت الأخضر
+Use both naturally throughout branding.
+The logo area should visually prioritize the brand identity rather than making the company name excessively large.
+________________
+
+
+5. VISUAL IDENTITY
+Create a sophisticated palette inspired by:
+* Natural greenery
+* Riyadh landscapes
+* Clear water
+* Premium architectural materials
+* White architectural surfaces
+* Charcoal typography
+Do NOT use overly saturated neon green or cheap "eco website" colors.
+Recommended Palette
+Primary Deep Green
+#173F32
+Botanical Green
+#2F6B4F
+Fresh Green Accent
+#6FAF73
+Water Blue
+#2F91B7
+Soft Water Blue
+#7BC4D6
+Pure White
+#FFFFFF
+Warm Off-White
+#F7F8F5
+Charcoal
+#1C2421
+Muted Grey
+#68716C
+Use the palette intelligently rather than forcing every color onto every component.
+Recommended visual balance:
+White / off-white: dominant
+Deep green: primary brand anchor
+Botanical green: secondary accent
+Water blue: selective accent for water-related sections and subtle highlights
+Charcoal: typography
+Light grey: separators/background surfaces
+The website must remain elegant and predominantly light.
+________________
+
+
+6. TYPOGRAPHY
+Use a premium Arabic-friendly typography system.
+Prefer:
+* Tajawal
+* IBM Plex Sans Arabic
+* Noto Sans Arabic
+Use one primary Arabic family consistently.
+Typography should feel:
+* Premium
+* Modern
+* Architectural
+* Highly readable
+* Spacious
+Use strong typography hierarchy rather than excessive decorative elements.
+English service names can use a refined Latin font pairing such as:
+* Inter
+* Manrope
+* DM Sans
+Do not overuse multiple fonts.
+________________
+
+
+7. DESIGN LANGUAGE
+Design should feel:
+Luxury Saudi Villa × International Landscape Architecture Studio
+Use:
+* Large editorial imagery
+* Clean grids
+* Architectural spacing
+* Subtle borders
+* Soft shadows
+* Elegant transitions
+* Large typography
+* Controlled rounded corners
+* Premium image cropping
+* Large whitespace
+* Subtle glass effects only where appropriate
+Avoid:
+* Generic SaaS UI
+* Excessive glassmorphism
+* Huge gradients
+* Cartoon illustrations
+* Cheap icons everywhere
+* Overly rounded cards
+* Excessive floating elements
+* Cluttered layouts
+* Stock-photo-looking compositions
+* Template-like sections
+The site should look custom-designed.
+________________
+
+
+8. HERO SECTION
+Homepage hero must be visually powerful.
+Use a high-end Riyadh residential landscaping photograph or appropriately directed landscape image featuring:
+* Premium Saudi villa
+* Beautiful landscaped garden
+* Palm trees
+* Contemporary outdoor seating
+* Green lawn
+* Architectural lighting
+* Water feature where appropriate
+* Warm evening or golden-hour lighting
+Hero copy should NOT use fake achievements.
+Example messaging direction:
+تصميم المساحات الخارجية التي تستحقها
+حلول متكاملة لتنسيق الحدائق والمسطحات الخارجية في الرياض، تجمع بين الجمال والوظيفة وتراعي طبيعة المناخ السعودي.
+CTA:
+اطلب تصميمك الآن
+Secondary CTA:
+تواصل معنا عبر واتساب
+Include subtle English service positioning if visually suitable:
+Landscape Design • Outdoor Living • Irrigation • Water Features
+Hero should have:
+* Strong visual hierarchy
+* Primary CTA
+* Secondary CTA
+* Trust-through-quality messaging
+* Elegant scroll cue
+* No fake numbers
+________________
+
+
+9. HEADER
+Create an attractive premium header.
+Desktop:
+Logo + navigation + prominent CTA.
+Suggested navigation:
+الرئيسية
+الخدمات
+أعمالنا
+من نحن
+لماذا البيت الأخضر
+آلية العمل
+الأسئلة الشائعة
+المدونة
+تواصل معنا
+CTA:
+اطلب استشارة
+Header behavior:
+* Transparent over hero when appropriate
+* Transitions to solid/light background on scroll
+* Sticky
+* High readability
+* Elegant micro-animation
+Mobile:
+Create a modern slide-out/menu drawer with:
+* Logo
+* Navigation
+* CTA buttons
+* WhatsApp
+* Call button
+Do not create a generic hamburger menu.
+________________
+
+
+10. HOMEPAGE STRUCTURE
+Create a premium homepage containing approximately:
+Section 01 — Hero
+Large visual hero with concise positioning statement.
+Section 02 — Introduction
+Introduce Green House without making unsupported claims.
+Position the company around:
+* Landscape design
+* Outdoor spaces
+* Villa gardens
+* Water features
+* Irrigation
+* Green spaces
+* Outdoor living
+Section 03 — Core Services
+Display major services using premium visual cards.
+Every card must contain:
+Arabic title
+English title
+Short benefit-focused description
+Image
+CTA
+Section 04 — Landscape Vision
+Large editorial split section explaining how outdoor spaces can improve:
+* جمال المنزل
+* الراحة
+* الاستخدام اليومي
+* القيمة البصرية
+* الأجواء الخارجية
+Section 05 — Featured Services
+Highlight premium services such as:
+* Garden Landscaping
+* Waterfalls & Fountains
+* Outdoor Seating
+* Pergolas & Shades
+* Automatic Irrigation
+* Natural Grass
+Section 06 — Riyadh Climate Expertise
+Do NOT claim years of expertise.
+Instead explain considerations such as:
+* Heat
+* Sun exposure
+* Water efficiency
+* Plant selection
+* Irrigation planning
+* Material durability
+* Seasonal maintenance
+This section should strongly differentiate the brand for Riyadh.
+Section 07 — Process
+Use a refined 4–6 step process:
+1. الاستشارة وفهم الاحتياج
+2. معاينة المساحة
+3. التصميم والتخطيط
+4. اختيار العناصر والمواد
+5. التنفيذ والتركيب
+6. اللمسات النهائية والمتابعة
+Do not make unsupported promises.
+Section 08 — Project Gallery
+Large premium visual gallery.
+Use filters where appropriate:
+حدائق
+فلل
+جلسات خارجية
+شلالات ونوافير
+ثيل
+برجولات
+مساحات خارجية
+Do not invent project names, locations, clients, or completed-project statistics.
+Use neutral labels such as:
+تصميم حديقة سكنية
+مساحة خارجية لفيلا
+جلسة خارجية عصرية
+Where actual project information is unavailable, present it as a visual portfolio/gallery rather than claiming the images are completed company projects.
+Section 09 — Why Green House
+Use honest value propositions:
+* تصميم متوافق مع طبيعة الرياض
+* حلول عملية للمساحات الخارجية
+* اهتمام بالتفاصيل
+* حلول ري أكثر كفاءة
+* تنسيق يجمع الجمال والوظيفة
+* خيارات متعددة للنباتات والخامات
+* تنفيذ منظم وواضح
+Section 10 — Service Areas
+Strong Riyadh local SEO section.
+Create a visually elegant neighborhood/service-area grid.
+Section 11 — FAQ
+Use real useful questions related to:
+* landscaping costs
+* natural vs artificial grass
+* irrigation
+* fountains
+* waterfalls
+* pergolas
+* maintenance
+* rooftop landscaping
+* villa landscaping
+* Riyadh climate
+* consultation process
+Do not invent pricing unless explicitly provided.
+Section 12 — Final CTA
+Strong visual closing CTA:
+حوّل مساحتك الخارجية إلى مكان تحب أن تعيش فيه
+CTA:
+تواصل معنا اليوم
+Buttons:
+اتصال
+واتساب
+Section 13 — Footer
+Include:
+* Logo
+* Short brand description
+* Services
+* Important pages
+* Riyadh service areas
+* Phone
+* WhatsApp
+* Email
+* Address
+* Social links placeholders
+* Privacy
+* Terms
+* Sitemap
+* Copyright
+________________
+
+
+11. SERVICES
+Create dedicated service landing pages for EVERY major service.
+Services:
+1. تنسيق حدائق بالرياض
+Garden Landscaping
+تصميم وتنسيق حدائق منزلية وفلل بأحدث الأساليب.
+2. تنسيق الأسطح والمساحات الخارجية بالنرجس
+Rooftop Spaces
+تحويل أسطح فلل النرجس إلى جلسات عصرية وحدائق معلقة مع مراعاة العزل المائي والحراري.
+3. توريد وتركيب ثيل صناعي
+Artificial Grass
+ثيل صناعي عالي الجودة مناسب للظروف المناخية، مع توريد وتركيب احترافي.
+4. تركيب ثيل طبيعي
+Natural Grass
+توريد وتركيب الثيل الطبيعي مع خيارات صيانة مناسبة للمساحات الخضراء.
+5. تركيب شلالات ونوافير
+Waterfalls & Fountains
+شلالات ونوافير بتصاميم عصرية مع خيارات إضاءة LED وتجارب مائية جذابة.
+6. تركيب شبكة ري أوتوماتيكية
+Automatic Irrigation
+أنظمة ري آلية تساعد على تنظيم استهلاك المياه وتوزيع الري بكفاءة.
+7. تصميم وتنفيذ جلسات خارجية
+Outdoor Seating
+جلسات خارجية مريحة وعصرية تناسب الفلل والمنازل والمساحات الخاصة.
+8. تركيب برجولات ومظلات
+Pergolas & Shades
+برجولات خشبية ومعدنية ومظلات حديثة للظل والحماية وتحسين المظهر الخارجي.
+9. تصميم وتركيب أحواض زراعية
+Planter Boxes
+أحواض زراعية حديثة لتنظيم النباتات وإضافة عنصر معماري للمساحة.
+10. زراعة الأشجار والنخيل والزهور
+Trees, Palms & Flowers
+زراعة وتنسيق الأشجار والنخيل والزهور الموسمية والدائمة.
+11. تنسيق حدائق تحت الدرج
+Under-Stair Landscaping
+استثمار المساحات أسفل السلالم الخارجية وتحويلها إلى عناصر خضراء أنيقة.
+12. صيانة وتجميل الحدائق
+Garden Maintenance
+خدمات صيانة وتحسين مستمرة للمساحات الخضراء والحدائق.
+13. تصميم وإنشاء ملاعب كرة القدم
+Football Fields
+تصميم وتنفيذ ملاعب كرة قدم باستخدام خيارات الثيل الطبيعي أو الصناعي.
+________________
+
+
+12. INDIVIDUAL SERVICE PAGE TEMPLATE
+Every service page should have a dedicated SEO-friendly structure.
+Include:
+* Breadcrumb
+* Hero
+* Arabic title
+* English service name
+* Introduction
+* Service benefits
+* Suitable use cases
+* Process
+* Materials/options where relevant
+* Riyadh climate considerations
+* Visual gallery
+* FAQ
+* Related services
+* CTA
+* Contact block
+Do not duplicate the exact same content across all service pages.
+Each service should have unique, useful, search-intent-focused Arabic content.
+________________
+
+
+13. CITY + NEIGHBORHOOD LOCAL SEO
+Target Riyadh as the primary location.
+Correct location:
+الرياض، المملكة العربية السعودية
+The prompt originally mentions "Madina Specific"; ignore that. This website is specifically for Riyadh.
+Create local SEO architecture targeting popular Riyadh neighborhoods and areas.
+Potential neighborhood targets include, where natural and relevant:
+* النرجس
+* الياسمين
+* الصحافة
+* العارض
+* الملقا
+* حطين
+* القيروان
+* النخيل
+* الغدير
+* الورود
+* الرحمانية
+* الرائد
+* المحمدية
+* العليا
+* السليمانية
+* المروج
+* التعاون
+* قرطبة
+* الندى
+* الروضة
+* الشهداء
+* غرناطة
+* الرمال
+* اشبيلية
+* المونسية
+* اليَـرموك
+* الخليج
+* النهضة
+* ظهرة لبن
+* عرقة
+* أم الحمام
+* لبن
+* العزيزية
+* الشفا
+* السويدي
+* بدر
+* الدار البيضاء
+Do NOT keyword-stuff.
+Use neighborhoods naturally in:
+* Dedicated landing pages where justified
+* Service-area sections
+* Internal links
+* FAQs
+* Blog content
+* Location copy
+* Metadata
+Do not claim an office exists in each neighborhood.
+________________
+
+
+14. SEO KEYWORD STRATEGY
+Build the content architecture around high-intent Riyadh searches related to:
+* تنسيق حدائق بالرياض
+* تصميم حدائق بالرياض
+* شركة تنسيق حدائق بالرياض
+* تنسيق حدائق منزلية بالرياض
+* تنسيق حدائق فلل بالرياض
+* تصميم حدائق منزلية
+* تنسيق حدائق فلل
+* تركيب ثيل صناعي بالرياض
+* تركيب ثيل طبيعي بالرياض
+* سعر الثيل الصناعي بالرياض
+* تركيب شبكات ري بالرياض
+* تركيب ري أوتوماتيكي بالرياض
+* تركيب شلالات بالرياض
+* تركيب نوافير بالرياض
+* تصميم جلسات خارجية بالرياض
+* جلسات حدائق بالرياض
+* تركيب برجولات بالرياض
+* تركيب مظلات حدائق بالرياض
+* تنسيق أسطح بالرياض
+* حدائق أسطح بالرياض
+* زراعة نخيل بالرياض
+* زراعة أشجار بالرياض
+* صيانة حدائق بالرياض
+* تصميم ملاعب كرة قدم بالرياض
+* تنسيق حدائق النرجس
+* تنسيق حدائق الياسمين
+* تنسيق حدائق الملقا
+* تنسيق حدائق العارض
+* تنسيق حدائق الصحافة
+* تنسيق حدائق الياسمين
+* تنسيق حدائق حطين
+* تنسيق حدائق القيروان
+* تنسيق حدائق قرطبة
+* تنسيق حدائق الرمال
+Also cover semantic variants and search intent rather than mechanically repeating keywords.
+________________
+
+
+15. SEO PAGE TITLES & META DESCRIPTIONS
+Every page needs unique:
+* <title>
+* Meta description
+* Canonical URL
+* Robots directives
+* Open Graph title
+* Open Graph description
+* Open Graph image
+* Twitter Card metadata
+Do not use the same metadata on every page.
+Use natural Arabic SEO copy.
+________________
+
+
+16. TECHNICAL SEO
+Implement:
+* Semantic HTML5
+* Correct heading hierarchy
+* One primary H1 per page
+* Logical H2/H3 structure
+* Canonical tags
+* XML sitemap
+* robots.txt
+* Breadcrumbs
+* Internal linking
+* Clean URLs
+* Descriptive slugs
+* Image optimization
+* Lazy loading where appropriate
+* Responsive images
+* Proper Arabic lang
+* Proper RTL handling
+* Accessible forms
+* Accessible navigation
+* Core Web Vitals optimization
+Use Next.js SEO architecture correctly.
+________________
+
+
+17. STRUCTURED DATA
+Implement valid JSON-LD.
+Primary business structured data:
+LocalBusiness + ProfessionalService
+Include accurate available business information only.
+Business information:
+Name:
+Green House / البيت الأخضر
+Location:
+Riyadh, Saudi Arabia
+Phone:
++966557401773
+WhatsApp:
++966557401773
+Email:
+riyadhgreenhouse@gmail.com
+Service:
+Landscaping / Garden Landscaping / Outdoor Living
+Do not fabricate opening hours if they are not supplied.
+Do not invent coordinates.
+Do not invent review counts.
+Do not invent aggregate ratings.
+Implement:
+* LocalBusiness / ProfessionalService
+* BreadcrumbList
+* Service schema for individual major services
+* FAQPage where the page genuinely contains FAQs
+IMPORTANT REVIEW SCHEMA RULE
+Do NOT create fake Review or AggregateRating structured data.
+Only implement Review / AggregateRating schema when real verified review information is actually available.
+________________
+
+
+18. GOOGLE BUSINESS / LOCAL SEO PREPARATION
+Prepare the website for Google Business Profile and local SEO.
+Ensure consistency of:
+* Business name
+* Phone
+* Website
+* Riyadh location
+* Service category
+* Service descriptions
+Create website areas suitable for supporting local citations and Google Business Profile links.
+Do NOT falsely state that the Google Business Profile has been verified or optimized unless actually performed.
+________________
+
+
+19. GOOGLE MAP
+Homepage/contact page should include an embedded Google Map focused on:
+Riyadh, Saudi Arabia
+Do not invent a fake street address.
+Use Riyadh as the location reference until an exact verified address is available.
+________________
+
+
+20. CONTACT INFORMATION
+Use exactly:
+Address
+الرياض، المملكة العربية السعودية
+Calling
+0557401773
+WhatsApp
++966557401773
+Email
+riyadhgreenhouse@gmail.com
+Create:
+* Call link
+* WhatsApp deep link
+* Mailto link
+WhatsApp CTA should open WhatsApp correctly.
+________________
+
+
+21. MOBILE UX
+Mobile-first design is mandatory.
+On mobile:
+* Sticky bottom action bar
+* Call button
+* WhatsApp button
+Use:
+اتصال
+واتساب
+The sticky bar must not block important content.
+Create a premium mobile navigation experience.
+Ensure touch targets are large enough.
+No horizontal overflow.
+No broken RTL alignment.
+________________
+
+
+22. GALLERY
+Create a premium gallery experience.
+Use:
+* Masonry-inspired layouts
+* Large visual cards
+* Category filters
+* Lightbox
+* Smooth transitions
+Gallery categories:
+* حدائق
+* فلل
+* جلسات خارجية
+* شلالات
+* نوافير
+* ثيل طبيعي
+* ثيل صناعي
+* برجولات
+* ري
+* مساحات أسطح
+IMPORTANT:
+Do not falsely label stock or concept images as actual completed company projects.
+Where actual project data is unavailable, use neutral visual labels.
+________________
+
+
+23. ABOUT PAGE
+About page must position Green House professionally without invented company history.
+Focus on:
+* Vision
+* Design philosophy
+* Customer-focused planning
+* Riyadh climate awareness
+* Quality-focused execution
+* Landscape functionality
+* Outdoor lifestyle
+* Attention to details
+Do not manufacture founder biographies or team credentials.
+________________
+
+
+24. WHY US PAGE
+Create a dedicated page explaining why customers might choose the company.
+Use genuine differentiators:
+* حلول مخصصة للمساحة
+* تصميم يجمع الجمال والوظيفة
+* اهتمام بالتفاصيل
+* مراعاة المناخ المحلي
+* حلول ري فعالة
+* خيارات مناسبة للفلل والمنازل
+* خدمات متكاملة للمساحات الخارجية
+* تواصل مباشر وسهل
+Do not manufacture numerical claims.
+________________
+
+
+25. PROCESS PAGE
+Create an elegant visual process page.
+Suggested:
+01 — الاستشارة
+02 — المعاينة
+03 — التصميم
+04 — اختيار العناصر
+05 — التنفيذ
+06 — اللمسات النهائية
+Add explanatory copy for each step.
+________________
+
+
+26. FAQ PAGE
+Create comprehensive Saudi/Riyadh-specific FAQs.
+Possible questions:
+* كم تكلفة تنسيق الحدائق بالرياض؟
+* ما الفرق بين الثيل الطبيعي والثيل الصناعي؟
+* هل يمكن تنسيق حديقة فيلا صغيرة؟
+* هل يمكن تركيب شبكة ري أوتوماتيكية؟
+* هل تقدمون تصميم جلسات خارجية؟
+* هل يمكن تركيب شلال أو نافورة في المنزل؟
+* هل تنسيق الأسطح مناسب لفلل الرياض؟
+* ما النباتات المناسبة لمناخ الرياض؟
+* كم تستغرق عملية تنسيق الحديقة؟
+* هل تقدمون صيانة للحدائق؟
+* هل يمكن تنسيق المساحات تحت الدرج؟
+* هل يمكن تنفيذ ملعب كرة قدم بالثيل الصناعي؟
+Do not provide made-up exact prices or guaranteed durations.
+________________
+
+
+27. BLOG
+Create a real multi-page blog system.
+Blog categories:
+* تنسيق الحدائق
+* تصميم الحدائق
+* الثيل الطبيعي
+* الثيل الصناعي
+* الري
+* النباتات
+* الشلالات والنوافير
+* الجلسات الخارجية
+* البرجولات والمظلات
+* صيانة الحدائق
+* حدائق الرياض
+* أفكار للفلل
+Create SEO-friendly article templates.
+Blog content should target informational search intent and support service pages through internal linking.
+Suggested article themes:
+* أفضل أفكار تنسيق حدائق الفلل في الرياض
+* الثيل الطبيعي أم الصناعي؟
+* أفضل طرق تقليل استهلاك المياه في الحدائق
+* أفكار لتصميم جلسة خارجية للفيلا
+* نباتات مناسبة لمناخ الرياض
+* أفكار تنسيق الأسطح والروف
+* كيف تختار نظام الري المناسب لحديقتك؟
+* أفكار شلالات ونوافير للحدائق المنزلية
+Do not create fake author credentials.
+________________
+
+
+28. TERMS & PRIVACY
+Create professional Arabic:
+* سياسة الخصوصية
+* الشروط والأحكام
+* سياسة ملفات تعريف الارتباط if applicable
+Keep them readable and professional.
+Do not insert fake legal company registration information.
+________________
+
+
+29. ANALYTICS
+Prepare integration architecture for:
+* Google Analytics 4
+* Google Search Console
+Implement event tracking for:
+* whatsapp_click
+* phone_click
+* email_click
+* contact_form_submit
+* service_cta_click
+* map_interaction
+Use environment variables for analytics IDs.
+Do not hard-code fake tracking IDs.
+________________
+
+
+30. CONTACT FORM
+Create a premium Arabic contact form.
+Fields:
+* الاسم
+* رقم الجوال
+* نوع الخدمة
+* الحي
+* وصف مختصر للمشروع
+* رفع صور للمساحة (optional)
+* أفضل وقت للتواصل
+CTA:
+اطلب استشارتك
+Form must have:
+* validation
+* loading state
+* success state
+* error state
+* accessible labels
+* RTL layout
+Do not claim that email delivery works unless a backend/email provider is actually configured.
+________________
+
+
+31. CALL TO ACTION STRATEGY
+Use contextual CTAs throughout the site.
+Examples:
+اطلب استشارة
+احصل على تصور لمساحتك
+تواصل معنا
+اطلب عرضًا لمشروعك
+تحدث معنا عبر واتساب
+استكشف خدماتنا
+شاهد أعمالنا
+Do not repeat one identical CTA everywhere.
+________________
+
+
+32. IMAGE ART DIRECTION
+Images are extremely important.
+Use visuals that feel:
+* Photorealistic
+* Architectural
+* Premium
+* Natural
+* Saudi-relevant
+* High-end residential
+* Warm and inviting
+Preferred scenes:
+* Riyadh villa gardens
+* Palm trees
+* Green lawns
+* Modern stone
+* Water features
+* Outdoor lounges
+* Pergolas
+* Evening garden lighting
+* Contemporary villas
+* Elegant pathways
+* Carefully selected plants
+Avoid generic Western suburban gardens that do not resemble the Saudi market.
+Use correct image aspect ratios for each layout.
+All images need useful Arabic alt text where appropriate.
+Do not keyword-stuff image alt text.
+________________
+
+
+33. MICRO-INTERACTIONS
+Use tasteful animation:
+* Fade-up
+* Image reveal
+* Hover movement
+* Soft scale
+* Navigation transitions
+* Scroll reveal
+* Button micro-interactions
+Animation should be:
+subtle + premium + fast
+Never make the site feel like a motion-design demo.
+Respect prefers-reduced-motion.
+________________
+
+
+34. ACCESSIBILITY
+Follow strong accessibility practices:
+* Good contrast
+* Keyboard navigation
+* Visible focus states
+* Semantic buttons
+* Correct labels
+* Alt text
+* Accessible mobile menu
+* Proper ARIA only when required
+Arabic RTL must remain accessible.
+________________
+
+
+35. PERFORMANCE
+Prioritize Core Web Vitals.
+Use:
+* Next/Image
+* Proper image dimensions
+* WebP/AVIF where possible
+* Lazy loading
+* Code splitting
+* Minimal JavaScript
+* Efficient fonts
+* Avoid unnecessary libraries
+* Avoid heavy animation packages unless genuinely needed
+Do not sacrifice speed for decorative effects.
+________________
+
+
+36. URL STRUCTURE
+Use clean SEO-friendly Arabic or transliterated URLs consistently.
+Preferred structure:
+/
+/services
+/services/garden-landscaping-riyadh
+/services/artificial-grass
+/services/natural-grass
+/services/waterfalls-fountains
+/services/automatic-irrigation
+/services/outdoor-seating
+/services/pergolas-shades
+/services/rooftop-landscaping
+/services/garden-maintenance
+/gallery
+/about
+/why-us
+/process
+/faq
+/blog
+/contact
+/privacy
+/terms
+/sitemap
+Create neighborhood pages only when they contain genuinely useful, differentiated content.
+Do not create thin doorway pages for every neighborhood.
+________________
+
+
+37. INTERNAL LINKING
+Build a strong contextual internal-linking structure.
+Examples:
+Homepage → Services
+Services → Individual Service Pages
+Service Pages → Related Services
+Service Pages → Riyadh Area Pages where relevant
+Blog → Service Pages
+Blog → Related Blog Posts
+Neighborhood Pages → Relevant Services
+FAQ → Relevant Services
+Gallery → Service Pages
+Use meaningful Arabic anchor text.
+________________
+
+
+38. DESIGN DETAILS
+Use:
+* 12-column desktop grid
+* Strong vertical rhythm
+* Large section spacing
+* Elegant borders
+* Premium image cards
+* Subtle rounded corners
+* Editorial composition
+* Full-width visual sections
+* Alternating layouts
+* Strong contrast between content sections
+Do not make every section a boxed card.
+Use sections as part of one coherent visual story.
+________________
+
+
+39. FOOTER SEO AREA
+Footer should contain a useful but natural Riyadh service-area paragraph.
+Mention Riyadh and selected neighborhoods naturally.
+Do NOT create a giant keyword dump.
+________________
+
+
+40. CONTENT QUALITY
+All copy must be:
+* Human-sounding
+* Natural Arabic
+* Saudi-market appropriate
+* Conversion focused
+* SEO-aware
+* Specific
+* Helpful
+* Concise where possible
+Avoid AI clichés such as:
+"نحن الأفضل بلا منازع"
+"خبرة لا مثيل لها"
+"خدمات عالمية المستوى" unless objectively supported.
+Avoid repetitive phrases.
+________________
+
+
+41. FINAL VISUAL IMPRESSION
+When someone opens the site, the emotional sequence should be:
+فخامة → ثقة → إلهام → وضوح → رغبة في التواصل
+The user should immediately understand:
+1. What Green House does
+2. That it serves Riyadh
+3. Which landscaping services are available
+4. Why the service is relevant to Saudi villas/homes
+5. How to contact the company
+________________
+
+
+42. IMPORTANT V0 IMPLEMENTATION RULES
+Do NOT generate a generic template.
+Do NOT use fake statistics.
+Do NOT use fake testimonials.
+Do NOT use fake reviews.
+Do NOT use fake certifications.
+Do NOT use fake project counts.
+Do NOT invent a precise business address.
+Do NOT invent opening hours.
+Do NOT invent pricing.
+Do NOT invent awards.
+Do NOT invent client logos.
+Do NOT claim Google Business Profile verification.
+Do NOT claim Google rankings.
+Do NOT claim SEO results.
+Do NOT create thin neighborhood pages.
+Do NOT keyword-stuff.
+Do NOT make the website look like a cheap gardening company.
+Do NOT make the entire site green.
+Do NOT use excessive gradients.
+Do NOT make every component rounded.
+Do NOT create an English-first layout.
+Do NOT forget RTL.
+Do NOT make mobile an afterthought.
+Do NOT produce a single-page website.
+________________
+
+
+43. REQUIRED FINAL OUTPUT FROM V0
+Generate the complete website experience with:
+Pages
+* Home
+* Services
+* Individual Service Pages
+* Gallery
+* About
+* Why Us
+* Process
+* FAQ
+* Blog
+* Blog Article Template
+* Contact
+* Privacy Policy
+* Terms
+* Sitemap
+Components
+* Header
+* Desktop Navigation
+* Mobile Navigation
+* Hero
+* Service Sections
+* Service Cards
+* Gallery
+* FAQ Accordion
+* Process Timeline
+* Local Areas
+* CTA Sections
+* Contact Form
+* Footer
+* Breadcrumbs
+* Sticky Mobile Call/WhatsApp Bar
+* WhatsApp CTA
+* Call CTA
+* Map section
+Technical
+* Next.js App Router
+* TypeScript
+* Tailwind
+* Responsive
+* RTL
+* Semantic HTML
+* SEO metadata
+* JSON-LD
+* Sitemap
+* Robots
+* Canonicals
+* Open Graph
+* Twitter Cards
+* Core Web Vitals-focused implementation
+* Accessible UI
+* Analytics-ready event architecture
+________________
+
+
+44. BUSINESS DATA
+Use these exact verified details:
+Brand: Green House
+Arabic Brand: البيت الأخضر
+City: Riyadh
+Country: Saudi Arabia
+Address: Riyadh, Saudi Arabia
+Phone: 0557401773
+WhatsApp: +966557401773
+Email: riyadhgreenhouse@gmail.com
+Use these details consistently throughout the website.
+________________
+
+
+45. FINAL DESIGN DIRECTIVE
+The final website should feel like:
+A premium Riyadh landscape architecture studio built for modern Saudi villas and outdoor spaces.
+Not:
+* A generic gardener website
+* A template
+* A local classifieds page
+* A SaaS website
+* A basic WordPress-style business page
+Think:
+Luxury Saudi Villa × Contemporary Landscape Architecture × Modern Arabic Editorial Design × Conversion-focused Local Business Website
+Every design decision must support that positioning.
+Prioritize brand credibility without fabricated claims, premium visual hierarchy, local Riyadh relevance, Arabic RTL usability, search visibility, and real-world conversion.
+Build the site as a polished, scalable Next.js production architecture rather than a visual-only mockup.
+🌿 Green House — Website Color Palette
+Role
+Color
+HEX
+Usage
+Primary Dark
+Deep Forest
+#042A11
+Header, footer, dark sections
+Primary
+Forest Green
+#186718
+Main brand color, buttons
+Secondary
+Rich Green
+#087616
+Links, active states
+Accent
+Fresh Green
+#2E7E18
+Highlights, icons, hover
+Accent Bright
+Lime Green
+#63A919
+CTA accents, gradients
+Light Accent
+Leaf Green
+#8AC222
+Small highlights, badges
+Soft Background
+Green Tint
+#EAEFE5
+Section backgrounds
+Neutral
+White
+#FFFFFF
+Main website background
+Text Dark
+Logo Dark
+#042A11
+Headings/body emphasis
+🎨 Recommended ratio
+80% Light / 20% Dark — exactly the premium direction we discussed:
+White #FFFFFF → 55%
+Soft Green #EAEFE5 → 15%
+Green tones #186718 / #087616 → 15%
+Deep Forest #042A11 → 10%
+Lime accents #63A919 / #8AC222 → 5%
+Website feel
+White + Deep Forest + Natural Greens + controlled Lime accents
