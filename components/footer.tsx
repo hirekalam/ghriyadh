@@ -140,6 +140,7 @@ export default function Footer() {
           <div className="flex items-center gap-5">
             <Link href="/privacy" className="hover:text-lime-leaf">سياسة الخصوصية</Link>
             <Link href="/terms" className="hover:text-lime-leaf">الشروط والأحكام</Link>
+            <Link href="/disclaimer" className="hover:text-lime-leaf">إخلاء المسؤولية</Link>
             <Link href="/sitemap" className="hover:text-lime-leaf">خريطة الموقع</Link>
           </div>
         </div>
