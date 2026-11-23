@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { ExternalLink, Leaf, Mail, MapPin, Phone } from "lucide-react";
+import Image from "next/image";
+import { ExternalLink, Mail, MapPin, Phone } from "lucide-react";
 import { footerAreas } from "@/lib/neighborhoods";
 import { site, whatsappLink, defaultWhatsappMsg } from "@/lib/site";
 import { services } from "@/lib/services";
@@ -25,8 +26,14 @@ export default function Footer() {
       <div className="container-site relative grid gap-12 py-16 lg:grid-cols-12 lg:py-20">
         <div className="lg:col-span-4">
           <div className="flex items-center gap-3">
-            <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-gradient text-white">
-              <Leaf className="h-6 w-6" strokeWidth={1.8} />
+            <span className="flex h-12 w-16 shrink-0 items-center justify-center rounded-2xl bg-white p-2 shadow-card">
+              <Image
+                src="/green-house-riyadh-logo.webp"
+                alt="شعار البيت الأخضر — Green House"
+                width={804}
+                height={580}
+                className="h-full w-full object-contain"
+              />
             </span>
             <div className="leading-none">
               <p className="font-latin text-xl font-bold tracking-tight">Green House</p>

@@ -11,7 +11,7 @@ export function localBusinessJsonLd() {
     url: site.url,
     telephone: site.phoneTel,
     email: site.email,
-    logo: `${site.url}/icon.svg`,
+    logo: `${site.url}/green-house-riyadh-logo.webp`,
     priceRange: "$$",
     image: [
       "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1200&q=80",
@@ -64,7 +64,7 @@ export function websiteJsonLd() {
         "@id": `${site.url}/#organization`,
         url: site.url,
         name: brandName,
-        logo: `${site.url}/icon.svg`,
+        logo: `${site.url}/green-house-riyadh-logo.webp`,
         telephone: site.phoneTel,
         email: site.email,
         contactPoint: {

@@ -146,14 +146,13 @@ export const services: Service[] = [
         a: "تواصل معنا عبر الهاتف أو واتساب، نخبرك بخطواتنا ثم نحدد موعداً لمعاينة المساحة ووضع التصور المناسب لك.",
       },
     ],
-    image:
-      "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1400&q=80",
+    image: "/images/service-garden-landscaping.webp",
     imageAlt:
       "تصميم حديقة سكنية منسقة بالرياض بمسطح عشبي أخضر وممرات ونباتات محلية",
     gallery: [
-      "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80",
+      "/images/service-garden-design.jpg",
+      "/images/service-natural-turf.webp",
+      "/images/project-2.jpg",
     ],
     keywords: [
       "تنسيق حدائق بالرياض",
@@ -260,13 +259,12 @@ export const services: Service[] = [
         a: "المعاينة الميدانية تجيب على ذلك: نفحص البنية والعزل والتصريف ونقرر معاً الجاهزية وخطة العمل.",
       },
     ],
-    image:
-      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1400&q=80",
+    image: "/images/service-outdoor-and-seating-area.jpg",
     imageAlt: "تنسيق سطح فيلا في الرياض بجلسة عصرية ونباتات متحملة للحرارة",
     gallery: [
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1620121692029-d088224ddc74?auto=format&fit=crop&w=1000&q=80",
+      "/images/service-shade-structures.jpg",
+      "/images/service-garden-design.jpg",
+      "/images/project-3.jpg",
     ],
     keywords: [
       "تنسيق أسطح بالرياض",
@@ -389,13 +387,12 @@ export const services: Service[] = [
         a: "الارتفاع المنخفض (25-30مم) يناسب الجلسات والممرات، والمتوسط للحدائق، والطويل للملاعب والأماكن كثيفة الاستخدام.",
       },
     ],
-    image:
-      "https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=1400&q=80",
+    image: "/images/service-artificial-turf.webp",
     imageAlt: "تركيب ثيل صناعي أخضر في حديقة بالرياض مقاوم لأشعة الشمس",
     gallery: [
-      "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1000&q=80",
+      "/images/service-artificial-grass.jpg",
+      "/images/service-football.webp",
+      "/images/service-natural-turf.webp",
     ],
     keywords: [
       "تركيب ثيل صناعي بالرياض",
@@ -500,13 +497,12 @@ export const services: Service[] = [
         a: "نعم، لكن نختار أصنافاً تتحمل الظل الجزئي ونراعي تقليل الاحتياج للشمس عند اختيار النوع.",
       },
     ],
-    image:
-      "https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?auto=format&fit=crop&w=1400&q=80",
+    image: "/images/service-natural-turf.webp",
     imageAlt: "تركيب ثيل طبيعي أخضر في حديقة فيلا بالرياض",
     gallery: [
-      "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1620121692029-d088224ddc74?auto=format&fit=crop&w=1000&q=80",
+      "/images/service-natural-grass.jpg",
+      "/images/service-garden-landscaping.webp",
+      "/images/project-4.jpg",
     ],
     keywords: [
       "تركيب ثيل طبيعي بالرياض",
@@ -623,13 +619,12 @@ export const services: Service[] = [
         a: "نعم، نوفر تصاميم جدارية ومدمجة تناسب المساحات الصغيرة دون أن تشغل حيزاً كبيراً.",
       },
     ],
-    image:
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=80",
+    image: "/images/service-waterfalls-fauntains.jpg",
     imageAlt: "نافورة مائية عصرية بإضاءة في حديقة فيلا بالرياض",
     gallery: [
-      "https://images.unsplash.com/photo-1620121692029-d088224ddc74?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1000&q=80",
+      "/images/service-garden-design.jpg",
+      "/images/service-outdoor-and-seating-area.jpg",
+      "/images/hero-garden-path.jpg",
     ],
     keywords: [
       "تركيب شلالات بالرياض",
@@ -747,13 +742,12 @@ export const services: Service[] = [
         a: "نعم، هذا من أهم مزايا الري الأوتوماتيكي؛ يعمل بجدول مبرمج دون تدخل منك، ويمكن متابعته عن بعد في الأنظمة الذكية.",
       },
     ],
-    image:
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=80",
+    image: "/images/service-automatic-irrigation.jpg",
     imageAlt: "شبكة ري أوتوماتيكية تعمل على مسطح أخضر في حديقة بالرياض",
     gallery: [
-      "https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=1000&q=80",
+      "/images/blog-irrigation.jpg",
+      "/images/service-natural-turf.webp",
+      "/images/service-garden-landscaping.webp",
     ],
     keywords: [
       "تركيب شبكات ري بالرياض",
@@ -858,13 +852,12 @@ export const services: Service[] = [
         a: "نعم، نراعي كثافة الاستخدام عند اختيار الخامات والمفروشات، ونوصي بمواد متينة للعائلات التي تستخدم الجلسة باستمرار.",
       },
     ],
-    image:
-      "https://images.unsplash.com/photo-1620121692029-d088224ddc74?auto=format&fit=crop&w=1400&q=80",
+    image: "/images/service-outdoor-and-seating-area.jpg",
     imageAlt: "جلسة خارجية عصرية مريحة في حديقة فيلا بالرياض مع مظلة وإنارة",
     gallery: [
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1000&q=80",
+      "/images/service-shade-structures.jpg",
+      "/images/service-pergolas-and-awnings.jpg",
+      "/images/service-garden-design.jpg",
     ],
     keywords: [
       "تصميم جلسات خارجية بالرياض",
@@ -981,13 +974,12 @@ export const services: Service[] = [
         a: "نعم، نوفر خيارات إضاءة مدمجة أو معلقة تجعل البرجولة نقطة جذب ليلية في الحديقة.",
       },
     ],
-    image:
-      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1400&q=80",
+    image: "/images/service-pergolas-and-awnings.jpg",
     imageAlt: "تركيب برجولة خشبية توفر الظل لجلسة خارجية في حديقة بالرياض",
     gallery: [
-      "https://images.unsplash.com/photo-1620121692029-d088224ddc74?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?auto=format&fit=crop&w=1000&q=80",
+      "/images/service-shade-structures.jpg",
+      "/images/service-outdoor-and-seating-area.jpg",
+      "/images/project-2.jpg",
     ],
     keywords: [
       "تركيب برجولات بالرياض",
@@ -1093,13 +1085,12 @@ export const services: Service[] = [
         a: "نعم، نقدم تصاميم تجمع بين الأحواض والمقاعد أو تضيف إنارة مدمجة لنتيجة معمارية متكاملة.",
       },
     ],
-    image:
-      "https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?auto=format&fit=crop&w=1400&q=80",
+    image: "/images/flowers-pots.webp",
     imageAlt: "أحواض زراعية حديثة تنظم النباتات في مدخل فيلا بالرياض",
     gallery: [
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=80",
+      "/images/flowers-supply.webp",
+      "/images/service-planting-tree-palm-flowers.webp",
+      "/images/service-garden-design.jpg",
     ],
     keywords: [
       "أحواض زراعية بالرياض",
@@ -1204,13 +1195,12 @@ export const services: Service[] = [
         a: "نعم، بعض الأشجار المثمرة تنمو جيداً في الرياض مع اختيار الأصناف المناسبة وتوفير العناية والري المناسبين.",
       },
     ],
-    image:
-      "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1400&q=80",
+    image: "/images/service-planting-tree-palm-flowers.webp",
     imageAlt: "زراعة نخيل وأشجار في حديقة فيلا بالرياض لخلق ظل وخضرة",
     gallery: [
-      "https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=1000&q=80",
+      "/images/flowers-supply.webp",
+      "/images/flowers-pots.webp",
+      "/images/service-garden-landscaping.webp",
     ],
     keywords: [
       "زراعة نخيل بالرياض",
@@ -1315,13 +1305,12 @@ export const services: Service[] = [
         a: "تواصل معنا وأرسل صور المساحة أو حدد موعد معاينة، وسنقترح عليك التصميم المناسب والخيارات المتاحة.",
       },
     ],
-    image:
-      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1400&q=80",
+    image: "/images/service-shade-structures.jpg",
     imageAlt: "تنسيق المساحة تحت الدرج بنباتات ظليلة وأحواض أنيقة في الرياض",
     gallery: [
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1620121692029-d088224ddc74?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1000&q=80",
+      "/images/service-garden-design.jpg",
+      "/images/flowers-pots.webp",
+      "/images/service-natural-turf.webp",
     ],
     keywords: [
       "تنسيق تحت الدرج بالرياض",
@@ -1424,13 +1413,12 @@ export const services: Service[] = [
         a: "نعم، نقدم تقريراً موجزاً عن الحالة والأعمال المنفذة وأي توصيات، لتبقى على اطلاع كامل بحديقتك.",
       },
     ],
-    image:
-      "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=1400&q=80",
+    image: "/images/service-maintenance.jpg",
     imageAlt: "صيانة وتجميل حديقة في الرياض بالقص والري والتسميد الدوري",
     gallery: [
-      "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80",
+      "/images/service-natural-turf.webp",
+      "/images/service-garden-landscaping.webp",
+      "/images/service-automatic-irrigation.jpg",
     ],
     keywords: [
       "صيانة حدائق بالرياض",
@@ -1547,13 +1535,12 @@ export const services: Service[] = [
         a: "نعم، ننفذ الخطوط والعلامات وفق الأبعاد المطلوبة، ويمكن تركيب أهداف بسيطة عند الطلب.",
       },
     ],
-    image:
-      "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=1400&q=80",
+    image: "/images/service-football.webp",
     imageAlt: "تصميم ملعب كرة قدم بالثيل الصناعي في فيلا بالرياض",
     gallery: [
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?auto=format&fit=crop&w=1000&q=80",
+      "/images/service-artificial-turf.webp",
+      "/images/service-artificial-grass.jpg",
+      "/images/service-natural-turf.webp",
     ],
     keywords: [
       "تصميم ملاعب كرة قدم بالرياض",

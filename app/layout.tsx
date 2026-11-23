@@ -35,6 +35,13 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   applicationName: `${site.name} | ${site.nameAr}`,
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/green-house-riyadh-favicon.webp", type: "image/webp" },
+    ],
+    apple: [{ url: "/green-house-riyadh-favicon.webp", type: "image/webp" }],
+  },
   title: "تنسيق حدائق بالرياض | البيت الأخضر Green House",
   description:
     "تصميم وتنسيق الحدائق والمساحات الخارجية في الرياض. خدمات متكاملة تشمل تنسيق الحدائق والجلسات الخارجية والشلالات والنوافير وشبكات الري وتركيب الثيل.",

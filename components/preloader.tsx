@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export default function Preloader() {
@@ -43,17 +44,15 @@ export default function Preloader() {
       </div>
 
       <div className="relative flex flex-col items-center">
-        <div className="animate-leaf-float relative flex h-20 w-20 items-center justify-center rounded-[1.75rem] bg-brand-gradient text-white shadow-lift">
-          <svg
-            viewBox="0 0 24 24"
-            className="h-10 w-10 fill-none stroke-current"
-            strokeWidth="1.7"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
-            <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
-          </svg>
+        <div className="animate-leaf-float relative flex h-24 w-24 items-center justify-center rounded-[1.75rem] bg-white p-3 shadow-lift">
+          <Image
+            src="/green-house-riyadh-logo.webp"
+            alt="شعار البيت الأخضر — Green House"
+            width={804}
+            height={580}
+            priority
+            className="h-full w-full object-contain"
+          />
           <span className="absolute -right-1 -top-1 flex h-5 w-5 items-center justify-center rounded-full bg-lime text-forest">
             <span className="h-2 w-2 animate-ping rounded-full bg-forest opacity-60" />
           </span>

@@ -1,17 +1,24 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useState, type CSSProperties } from "react";
-import { Leaf, Phone, X } from "lucide-react";
+import { Phone, X } from "lucide-react";
 import { navLinks, site, whatsappLink, defaultWhatsappMsg } from "@/lib/site";
 import { trackEvent } from "./analytics";
 
 function Logo({ onDark = false }: { onDark?: boolean }) {
   return (
     <Link href="/" className="group flex items-center gap-3" aria-label="الرئيسية">
-      <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-brand-gradient text-white shadow-card transition-transform duration-300 group-hover:-rotate-6">
-        <Leaf className="h-6 w-6" strokeWidth={1.8} />
+      <span className="flex h-11 w-14 shrink-0 items-center justify-center rounded-2xl bg-white p-1.5 shadow-card ring-1 ring-forest/10 transition-transform duration-300 group-hover:-rotate-6">
+        <Image
+          src="/green-house-riyadh-logo.webp"
+          alt="شعار البيت الأخضر — Green House"
+          width={804}
+          height={580}
+          className="h-full w-full object-contain"
+        />
       </span>
       <span className="flex flex-col leading-none">
         <span
